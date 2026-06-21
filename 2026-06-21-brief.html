@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signal Brief — the valuation lens goes live — 21 June 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4EC; --ink:#27241D; --muted:#6E6A5E; --faint:#928C7C;
+    --hair:#E4DDCD; --hair-strong:#D8CFB9;
+    --clay:#C9663F; --clay-soft:#E8C4AE; --clay-wash:#F3E5DA;
+    --leading:#5F7355; --leading-wash:#E7ECDF;
+    --hot:#B8862F; --hot-wash:#F1E7CF;
+    --basing:#8A8475; --basing-wash:#EAE5D7;
+    --serif:"Newsreader", Georgia, "Times New Roman", serif;
+    --sans:"Inter", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink)}
+  body{font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:700px;margin:0 auto;padding:56px 28px 72px}
+  .kicker,.sec h2,.sec .sub,.tag,.badge,.meta,.cal .d,.foot{font-family:var(--sans)}
+
+  .mast{display:flex;align-items:flex-start;gap:16px;margin-bottom:8px}
+  .spark{flex:0 0 auto;margin-top:8px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin:0 0 6px}
+  h1.title{font-family:var(--serif);font-weight:500;font-size:42px;line-height:1.05;letter-spacing:-.01em;margin:0 0 10px}
+  .meta{font-size:13px;color:var(--muted);margin:0}
+  .meta b{color:var(--ink);font-weight:600}
+  .rule{height:2px;background:var(--clay);border:0;margin:22px 0 0;width:64px;border-radius:2px}
+
+  .lede{font-size:22px;line-height:1.5;margin:30px 0 8px;font-weight:400}
+  .lede em{font-style:italic}
+  .tldr{margin:14px 0 0;padding:0;list-style:none}
+  .tldr li{position:relative;padding:7px 0 7px 22px;border-bottom:1px solid var(--hair)}
+  .tldr li:last-child{border-bottom:0}
+  .tldr li::before{content:"";position:absolute;left:2px;top:16px;width:6px;height:6px;border-radius:50%;background:var(--clay)}
+  .tldr b{font-weight:600}
+
+  .sec{display:flex;align-items:center;gap:10px;margin:72px 0 24px}
+  .sec .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .sec h2{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0;color:var(--ink)}
+  .sec .sub{font-size:12.5px;color:var(--faint);margin-left:auto;font-weight:500}
+  .sec.hot .dot{background:var(--hot)} .sec.lead .dot{background:var(--leading)}
+  .sec.base .dot{background:var(--basing)} .sec.entry .dot{background:var(--clay)}
+  .sec.plain .dot{background:var(--ink)}
+
+  .grades{display:flex;flex-direction:column;gap:15px;margin:0}
+  .grade-row{display:flex;gap:13px;align-items:baseline}
+  .badge{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:15px;color:#fff;margin-top:2px}
+  .badge.A{background:var(--clay)} .badge.B{background:var(--clay-soft);color:#7a3d22}
+  .badge.C{background:var(--hot-wash);color:#7a5c14;border:1px solid #d8bd7e}
+  .gl{font-size:16px}
+  .gl .lab{font-weight:600;color:var(--ink)} .gl .tk{font-weight:600;color:var(--clay)} .gl .muted{color:var(--muted)}
+
+  .name{padding:40px 0 8px;border-top:1px solid var(--hair)}
+  .name:first-of-type{border-top:0;padding-top:8px}
+  .name .ch{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+  .name .sdot{width:9px;height:9px;border-radius:50%;flex:0 0 auto;align-self:center}
+  .name.hot .sdot{background:var(--hot)} .name.lead .sdot{background:var(--leading)} .name.base .sdot{background:var(--basing)}
+  .name .nm{font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:-.01em}
+  .name .px{margin-left:auto;font-family:var(--serif);font-size:19px;color:var(--ink)}
+  .name .tags{display:flex;gap:6px;margin:14px 0 26px;flex-wrap:wrap}
+  .tag{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--clay-wash);color:#8a4a2c}
+  .tag.s-hot{background:var(--hot-wash);color:#7a5c14}
+  .tag.s-lead{background:var(--leading-wash);color:#445239}
+  .tag.s-base{background:var(--basing-wash);color:#5d584b}
+
+  .field{margin:0 0 24px}
+  .field .h{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:0;color:var(--ink);margin:0 0 6px}
+  .field .b{font-size:16.5px;line-height:1.6;color:var(--ink);margin:0}
+  .field.read{margin-top:28px}
+  .field.read .h{color:var(--clay)}
+  .field.read .b{font-style:italic;font-size:18px;line-height:1.55}
+
+  .quote{border-left:3px solid var(--clay);background:var(--clay-wash);padding:16px 20px;border-radius:0 10px 10px 0;margin:0;font-size:18px;line-height:1.5}
+  .quote .src{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:10px;font-style:normal;line-height:1.5}
+
+  .cal{margin:0}
+  .cal .row{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:13px 0;font-size:16px;border-top:1px solid var(--hair)}
+  .cal .row:first-child{border-top:0}
+  .cal .d{font-weight:600;color:var(--clay);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+
+  .foot{margin-top:50px;padding-top:18px;border-top:1px solid var(--hair-strong);font-size:12.5px;color:var(--faint);line-height:1.6}
+  .foot a{color:var(--clay);text-decoration:none}
+  .foot .nfa{font-style:italic;margin-top:10px;font-family:var(--serif)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <svg class="spark" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><g fill="#C9663F"><rect x="11" y="1" width="2" height="22" rx="1"/><rect x="1" y="11" width="22" height="2" rx="1"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(45 12 12)"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(-45 12 12)"/></g></svg>
+    <div>
+      <p class="kicker">AI-Trade · Daily Brief</p>
+      <h1 class="title">Signal Brief — the valuation lens goes live</h1>
+      <p class="meta"><b>21 June 2026</b> · 48 names · benchmark <b>QQQ</b> · data 21 Jun · 16:21 UTC</p>
+    </div>
+  </header>
+  <hr class="rule">
+
+  <p class="lede">Today the brief gains a sense it never had: <em>price</em>. Every name now carries a forward-PEG valuation read, and it immediately re-sorts the board — separating the leaders you'd actually pay for from the ones where the whole move is the multiple.</p>
+  <ul class="tldr">
+    <li><b>New today:</b> a valuation layer. Each name now shows forward P/E, next-year EPS growth, and <b>forward PEG</b> (price/earnings ÷ expected growth — under ~1 = paying little for a lot of growth, over ~2 = the opposite). This is Jordi Visser's "strong <em>and</em> cheap-ish" tilt, now in the model.</li>
+    <li><b>The bullseye — leading, buyable, AND cheap for growth (PEG ≤1.5):</b> TSM (0.95), AMD (0.53), DELL (1.16), ASML (1.25), ETN (1.5), FLNC (0.5). These pass both the trend filter and the value filter.</li>
+    <li><b>Memory is still the hottest, most stretched corner</b> — MU and SNDK are parabolic into Micron's earnings <b>Wed 24 Jun</b>. Dirt-cheap on PEG (0.1), but that's a binary print three days out, bought at the top of the range.</li>
+    <li><b>The lens catches two traps:</b> ARM (PEG 3.4, two fresh downgrades) is leading-but-pricey; GOOGL screens cheap on P/E but PEG 13 on just +2% growth — the Street pricing in a stall. That's Jordi's "Gemini falling behind," in numbers.</li>
+    <li><b>NVDA flipped back to Leading</b>, resting right on its 50-day at the cheapest PEG (0.39) it has ever screened — a coiled base, not yet a pack leader.</li>
+  </ul>
+
+  <div class="sec entry"><span class="dot"></span><h2>Entry Watchlist</h2><span class="sub">relative strength + entry timing</span></div>
+  <div class="grades">
+    <div class="grade-row"><span class="badge A">A</span><span class="gl"><span class="lab">Prime add — leading, trend intact, at an entry</span> &nbsp; <span class="tk">IREN&nbsp; USAR&nbsp; ETN</span></span></div>
+    <div class="grade-row"><span class="badge B">B</span><span class="gl"><span class="lab">Add small — leading, slightly extended (🎯 in notes = cheap for growth)</span> &nbsp; <span class="tk">TSM&nbsp; AMD&nbsp; ASML&nbsp; DELL&nbsp; ANET</span></span></div>
+    <div class="grade-row"><span class="badge C">C</span><span class="gl"><span class="lab">On the list, wait — strong trend, hot/parabolic entry</span> &nbsp; <span class="muted">MU&nbsp; ARM&nbsp; MRVL&nbsp; ALAB&nbsp; SNDK&nbsp; ENTG</span></span></div>
+  </div>
+
+  <div class="sec hot"><span class="dot"></span><h2>Run Too Hot</h2><span class="sub">strong, but stretched — and now, priced</span></div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">MU · Micron</span><span class="px">$1,134</span></div>
+      <div class="tags"><span class="tag s-hot">Overheated</span><span class="tag">Entry C · wait</span><span class="tag">Memory & Storage</span><span class="tag">🎯 cheap, but hot</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">HBM (the high-bandwidth memory AI servers need) is <b>sold out for all of 2026</b>; Micron sees the HBM market hitting $100B by 2028 (~40% annual growth). Just logged its best week since 2008; some bull targets run to $1,750.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Parabolic — trading ~55% above its 50-day average (~$733), at the very top of its range with no support beneath it. A Harvard cycle-watcher warns "this too will pass" — every memory cycle has eventually cracked. And earnings Wed 24 Jun is a coin-flip: estimates span $33.7–40.9B.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~9.6 on +93% next-year EPS growth → <b>forward PEG ~0.10</b> (PEG = price/earnings ÷ expected growth; under ~1 means you're paying little for a lot of growth, over ~2 the opposite). On paper the cheapest grower in the whole universe — but only if the earnings are real, which Wednesday tests.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day ~$733; sitting at its 52-week high ~$1,134. First real shelf of support is far below.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade C — best-in-class fundamentals, but a parabolic entry: this is wait-for-pullback, not chase. A 0.10 PEG doesn't protect you if you buy at the top into a binary earnings print. Constructive only on a flush toward the rising 50-day, or after the 24 Jun number clears.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The poster child for "strong and cheap — but not at this price, not three days before earnings."</p></div>
+    </div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">ARM · Arm Holdings</span><span class="px">$439</span></div>
+      <div class="tags"><span class="tag s-hot">Overheated</span><span class="tag">Entry C · wait</span><span class="tag">Semiconductors</span><span class="tag">⚠ leading but pricey</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Still the model's hottest name (heat 93, momentum maxed). Custom-silicon push and AI licensing demand keep the story alive.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">New Street cut it to Neutral (18 Jun) and Goldman to Sell — both on valuation. Senior execs have been selling shares; the move into direct chip-making risks alienating big licensees like Nvidia and Qualcomm. Trading ~66% above its 50-day.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~143 on +42% growth → <b>forward PEG ~3.4</b> — the most expensive leader in the book. Here the entire move is multiple expansion, not value.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day ~$265; at its 52-week high ~$439.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade C and the clearest "leading but pricey" flag: strong trend, but you're paying up for every unit of growth — and two desks just downgraded on exactly that. No edge for new money here; if held, the trend's intact but risk/reward for adding is poor.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Hottest chart, priciest valuation, two fresh downgrades — the textbook don't-chase.</p></div>
+    </div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">TSM · Taiwan Semiconductor</span><span class="px">$462</span></div>
+      <div class="tags"><span class="tag s-hot">Overheated</span><span class="tag">Entry B</span><span class="tag">Semiconductors</span><span class="tag">🎯 cheap-ish</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Monthly sales up ~30% year-on-year; raised its 2026 outlook; the CEO says supply can't meet AI demand "for years." Every AI chip routes through this foundry.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Flipped to Overheated this snapshot — ~14% above its 50-day and at a fresh high. The least-stretched of the hot names, but extended nonetheless.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~23.5 on +25% growth → <b>forward PEG ~0.95</b> — reasonably priced for its growth, which is rare for a name at all-time highs.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day ~$405; at its 52-week high ~$462.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade B and on the "strong &amp; still cheap-ish" list — leading, only mildly extended, fair value. Best risk/reward of the hot cohort: an add-on-strength name, with a cleaner entry on any dip toward the ~$405 50-day.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The hot name you'd actually pay for — strong, only mildly stretched, and not expensive.</p></div>
+    </div>
+  <div class="sec lead"><span class="dot"></span><h2>Leading</h2><span class="sub">strong &amp; healthy</span></div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">NVDA · NVIDIA</span><span class="px">$211</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry D · at 50-day</span><span class="tag">Mega-cap</span><span class="tag">🎯 cheapest it's screened</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Flipped back to Leading. Vera Rubin ships H2 2026 with a claimed step-change in inference cost; Jensen guiding ~$1T of Blackwell + Rubin orders across 2026–27. Just reclaimed its 21- and 50-day averages.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Down ~9% from early-June highs as the market digests a $25B debt raise (15 Jun). At ~$5T and >32x trailing earnings, any Rubin execution slip is a sell-the-news risk. Relative strength is still middling (RS rank 41 — lagging the leaders).</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~16.6 on +42% growth → <b>forward PEG ~0.39</b> — strikingly cheap for the franchise, and the lowest it has screened in this model.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day ~$209 — price is sitting right on it at $211. 52-week high ~$235.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Resting on its 50-day in a "base" zone — the reset entry the model likes — but entry grade D, because relative strength lagged through the pullback (it isn't leading the pack right now). Cheap value + a base make it constructive for patient money; an upturn in RS would upgrade it.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Cheapest it's ever looked, coiled on support — a base, just not yet a leader.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">DELL · Dell Technologies</span><span class="px">$410</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry B</span><span class="tag">Data Center & Networking</span><span class="tag">cooled from hot</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Cooled out of Overheated into Leading (heat 91→69) while momentum stays maxed — the textbook "strong leader cooling off" that a pullback screen hunts. AI-server backlog underpins it.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Still ~45% above its 50-day (~$282) — the cooling is off a high base, not a genuine pullback yet. Sits ~12% below its high.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~19 on +16% growth → <b>forward PEG ~1.16</b> — fairly priced.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day ~$282; 52-week high ~$466.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade B and on the cheap-ish list — leading, fairly valued, heat falling week-on-week (the cooling Visser's screen rewards). The catch: still well above its 50-day, so "cooling" isn't "cheap entry" yet. Add-small on strength; a deeper cool toward the 50-day is the better add.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The cleanest live example of "strong leader cooling off" — fair value, just not pulled back far enough to be a bargain.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">GOOGL · Alphabet</span><span class="px">$368</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry D</span><span class="tag">Mega-cap</span><span class="tag">⚠ rich on weak growth</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Flipped to Leading and sitting right at its 50-day (~$367). Screens as the cheapest mega-cap hyperscaler on headline P/E.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Trend is stalling — price is below its 21-day. Jordi Visser (21 Jun) flags Gemini "falling behind," shipping fewer model upgrades while rivals race ahead; hyperscalers are his core short.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~25 but on only +2% next-year EPS growth → <b>forward PEG ~13</b> — by far the most expensive-for-growth name in the book. The high PEG is the growth estimate collapsing, not the price running: a flag the Street sees earnings stalling.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day ~$367 (price $368, right on it); 52-week high ~$402.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D — at its 50-day but with no relative-strength edge and a growth estimate that's cratered. For once the signal and the wiki agree: decent chart, but fundamentals (and Jordi) say the AI race is leaving it behind. Not a momentum buy here.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Looks cheap on P/E, isn't on growth — the valuation lens catches what the chart hides.</p></div>
+    </div>
+  <div class="sec base"><span class="dot"></span><h2>Oversold / Basing</h2><span class="sub">weak or bottoming — the other end of the lens</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">BTC · Bitcoin</span><span class="px">$64,161</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D</span><span class="tag">Crypto & Miners</span><span class="tag">below 200-day</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Long-term thesis intact as the settlement layer for agentic AI (Jordi). Washed-out heat (7) is the kind of extreme that can precede a turn.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Still a bear market by trend — below the 50-day (~$72k) and ~44% below its high (~$115k); momentum near zero. Jordi: not adding until it reclaims the 200-day.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day ~$72,100; 52-week high ~$115,300.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D, no trend edge — below every key average. Jordi's stance mirrors the model: wait for a 200-day reclaim before treating the next move as real. Patience, not bottom-fishing.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Still in the penalty box — feels cheap, but there's no trend to buy yet.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">CRCL · Circle</span><span class="px">$80</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D</span><span class="tag">Crypto & Miners</span><span class="tag">deep washout</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The most beaten-down name in the book (~70% off its high), so real mean-reversion potential if sentiment turns. And it actually screens cheap (see Valuation).</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Heat 5, momentum 0, ~21% below its 50-day — a falling knife with no base formed yet.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~36 on +78% growth → <b>forward PEG ~0.46</b> — cheap for its growth on paper, but "cheap and still falling" until a base forms.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day ~$101; 52-week high ~$263.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D — cheap valuation, zero trend support. The valuation lens flags it as interesting; the trend lens says not yet. Wants a base and a reclaim of the 21-day before it's anything but a catch-the-knife. Watch, don't touch.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The mirror image of the hot names — cheap with no trend, versus them strong with no value. The lens shows both failure modes.</p></div>
+    </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>What the Smart Money Is Saying</h2></div>
+  <blockquote class="quote">“Your capex is my opportunity.”<span class="src">— Jordi Visser, 21 Jun · long the AI thematic basket, short the hyperscalers; argues the S&P's PEG at a 22-year low means the market is "nowhere near bubble territory" — the same cheap-for-growth logic this brief's new valuation lens now applies name by name.</span></blockquote>
+
+  <div class="sec plain"><span class="dot"></span><h2>Catalyst Calendar</h2><span class="sub">next ~2 weeks</span></div>
+  <div class="cal">
+    <div class="row key"><span class="d">Wed 24 Jun</span><span><b>Micron (MU) earnings</b>, after the close — the week's hinge for the whole memory complex. Guide ~$33.5B rev / ~$19.15 EPS; estimates span $33.7–40.9B.</span></div>
+    <div class="row"><span class="d">H2 2026</span><span>Nvidia <b>Vera Rubin</b> platform ships — the next compute generation and NVDA's main catalyst.</span></div>
+    <div class="row"><span class="d">Approaching</span><span>Hyperscaler Q2 earnings — Jordi flags this as a bigger risk to the spenders than Q1 (CapEx air-pocket, open-source pressure).</span></div>
+  </div>
+
+  <footer class="foot"><b>Sources:</b> signal data — Signal-Model dashboard (Yahoo close history + fundamentals, asOf 21 Jun 16:21 UTC). Smart-money — <code>wiki/ai-midcycle-slowdown-jordi-visser.md</code> (Jordi Visser, 21 Jun). News/catalysts — Fortune, Motley Fool, Bloomberg, CNBC, Nasdaq (Jun 2026). Valuation = forward PEG computed from Yahoo forward P/E ÷ next-year consensus EPS growth.<div class="nfa">Not financial advice — this surfaces signals to inform your own decisions.</div></footer>
+</div>
+</body>
+</html>

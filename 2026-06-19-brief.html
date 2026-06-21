@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Friday Signal Brief — 19 June 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4EC; --ink:#27241D; --muted:#6E6A5E; --faint:#928C7C;
+    --hair:#E4DDCD; --hair-strong:#D8CFB9;
+    --clay:#C9663F; --clay-soft:#E8C4AE; --clay-wash:#F3E5DA;
+    --leading:#5F7355; --leading-wash:#E7ECDF;
+    --hot:#B8862F; --hot-wash:#F1E7CF;
+    --basing:#8A8475; --basing-wash:#EAE5D7;
+    --serif:"Newsreader", Georgia, "Times New Roman", serif;
+    --sans:"Inter", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink)}
+  body{font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:700px;margin:0 auto;padding:56px 28px 72px}
+  .kicker,.sec h2,.sec .sub,.tag,.badge,.meta,.cal .d,.foot{font-family:var(--sans)}
+
+  .mast{display:flex;align-items:flex-start;gap:16px;margin-bottom:8px}
+  .spark{flex:0 0 auto;margin-top:8px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin:0 0 6px}
+  h1.title{font-family:var(--serif);font-weight:500;font-size:42px;line-height:1.05;letter-spacing:-.01em;margin:0 0 10px}
+  .meta{font-size:13px;color:var(--muted);margin:0}
+  .meta b{color:var(--ink);font-weight:600}
+  .rule{height:2px;background:var(--clay);border:0;margin:22px 0 0;width:64px;border-radius:2px}
+
+  .lede{font-size:22px;line-height:1.5;margin:30px 0 8px;font-weight:400}
+  .lede em{font-style:italic}
+  .tldr{margin:14px 0 0;padding:0;list-style:none}
+  .tldr li{position:relative;padding:7px 0 7px 22px;border-bottom:1px solid var(--hair)}
+  .tldr li:last-child{border-bottom:0}
+  .tldr li::before{content:"";position:absolute;left:2px;top:16px;width:6px;height:6px;border-radius:50%;background:var(--clay)}
+  .tldr b{font-weight:600}
+
+  .sec{display:flex;align-items:center;gap:10px;margin:72px 0 24px}
+  .sec .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .sec h2{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0;color:var(--ink)}
+  .sec .sub{font-size:12.5px;color:var(--faint);margin-left:auto;font-weight:500}
+  .sec.hot .dot{background:var(--hot)} .sec.lead .dot{background:var(--leading)}
+  .sec.base .dot{background:var(--basing)} .sec.entry .dot{background:var(--clay)}
+  .sec.plain .dot{background:var(--ink)}
+
+  .grades{display:flex;flex-direction:column;gap:15px;margin:0}
+  .grade-row{display:flex;gap:13px;align-items:baseline}
+  .badge{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:15px;color:#fff;margin-top:2px}
+  .badge.A{background:var(--clay)} .badge.B{background:var(--clay-soft);color:#7a3d22}
+  .badge.C{background:var(--hot-wash);color:#7a5c14;border:1px solid #d8bd7e}
+  .gl{font-size:16px}
+  .gl .lab{font-weight:600;color:var(--ink)} .gl .tk{font-weight:600;color:var(--clay)} .gl .muted{color:var(--muted)}
+
+  .name{padding:40px 0 8px;border-top:1px solid var(--hair)}
+  .name:first-of-type{border-top:0;padding-top:8px}
+  .name .ch{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+  .name .sdot{width:9px;height:9px;border-radius:50%;flex:0 0 auto;align-self:center}
+  .name.hot .sdot{background:var(--hot)} .name.lead .sdot{background:var(--leading)} .name.base .sdot{background:var(--basing)}
+  .name .nm{font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:-.01em}
+  .name .px{margin-left:auto;font-family:var(--serif);font-size:19px;color:var(--ink)}
+  .name .tags{display:flex;gap:6px;margin:14px 0 26px;flex-wrap:wrap}
+  .tag{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--clay-wash);color:#8a4a2c}
+  .tag.s-hot{background:var(--hot-wash);color:#7a5c14}
+  .tag.s-lead{background:var(--leading-wash);color:#445239}
+  .tag.s-base{background:var(--basing-wash);color:#5d584b}
+
+  .field{margin:0 0 24px}
+  .field .h{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:0;color:var(--ink);margin:0 0 6px}
+  .field .b{font-size:16.5px;line-height:1.6;color:var(--ink);margin:0}
+  .field.read{margin-top:28px}
+  .field.read .h{color:var(--clay)}
+  .field.read .b{font-style:italic;font-size:18px;line-height:1.55}
+
+  .quote{border-left:3px solid var(--clay);background:var(--clay-wash);padding:16px 20px;border-radius:0 10px 10px 0;margin:0;font-size:18px;line-height:1.5}
+  .quote .src{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:10px;font-style:normal;line-height:1.5}
+
+  .cal{margin:0}
+  .cal .row{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:13px 0;font-size:16px;border-top:1px solid var(--hair)}
+  .cal .row:first-child{border-top:0}
+  .cal .d{font-weight:600;color:var(--clay);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+
+  .foot{margin-top:50px;padding-top:18px;border-top:1px solid var(--hair-strong);font-size:12.5px;color:var(--faint);line-height:1.6}
+  .foot a{color:var(--clay);text-decoration:none}
+  .foot .nfa{font-style:italic;margin-top:10px;font-family:var(--serif)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <svg class="spark" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><g fill="#C9663F"><rect x="11" y="1" width="2" height="22" rx="1"/><rect x="1" y="11" width="22" height="2" rx="1"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(45 12 12)"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(-45 12 12)"/></g></svg>
+    <div>
+      <p class="kicker">AI-Trade · Daily Brief</p>
+      <h1 class="title">Friday Signal Brief</h1>
+      <p class="meta"><b>19 June 2026</b> · 45 names · benchmark <b>QQQ</b> · data 07:58 UTC · Juneteenth (US markets closed)</p>
+    </div>
+  </header>
+  <hr class="rule">
+
+  <p class="lede">Yesterday the heat <em>broadened</em>; today it <em>drained</em>. Four of the names that flipped into Overheated a day ago have already cooled back to Leading, memory and Marvell took the sharpest knocks, and the one name running hard against the tide did it on raised guidance, not hype.</p>
+  <ul class="tldr">
+    <li><b>The broadening reversed.</b> Four names dropped out of Overheated back into Leading in one snapshot — Taiwan Semi, Intel, Entegris and Bloom Energy — as heat fell across nearly the entire list. This is the model resetting its overbought readings, not a breakdown: trends are still intact.</li>
+    <li><b>Memory and optical led the cooldown.</b> Marvell (heat 73), Micron (81) and Sandisk (78) all registered sharp pullbacks (-7% to -10% in the snapshot) while staying Overheated — strong names letting air out of stretched charts. The entry grades still flag them B: right names, still-extended spots.</li>
+    <li><b>Against the tide: Steel Dynamics</b> — the rare name whose heat <em>rose</em> (+30), on a raised Q2 profit guide. It's an Entry A: leading, trend intact, sitting near its 50-day rather than stretched.</li>
+    <li><b>Still the hottest, still parabolic: Arm</b> (heat 91) sits right on its 52-week high after a wave of $410–500 analyst targets — best trend on the board, worst spot to chase.</li>
+    <li><b>Cold end unchanged: Bitcoin</b> is again the most washed-out name in the whole model (heat 3, RSI 34) after a record ETF-outflow streak. US markets are closed today for Juneteenth, so these readings reflect Thursday's close.</li>
+  </ul>
+
+  <div class="sec entry"><span class="dot"></span><h2>Entry Watchlist</h2><span class="sub">relative strength + entry timing</span></div>
+  <div class="grades">
+    <div class="grade-row"><span class="badge A">A</span><span class="gl"><span class="lab">Prime add — leading, trend intact, on an entry</span> &nbsp; <span class="tk">CLSK&nbsp; FLNC&nbsp; STLD&nbsp; ANET&nbsp; IREN&nbsp; TSM</span></span></div>
+    <div class="grade-row"><span class="badge B">B</span><span class="gl"><span class="lab">Add small — leading, slightly extended</span> &nbsp; <span class="tk">DELL&nbsp; ALAB&nbsp; MRVL&nbsp; MU&nbsp; SNDK&nbsp; CIFR&nbsp; ASML&nbsp; ENTG&nbsp; AMD&nbsp; INTC&nbsp; BE</span></span></div>
+    <div class="grade-row"><span class="badge C">C</span><span class="gl"><span class="lab">On the list, wait — strong trend, hot entry</span> &nbsp; <span class="muted">ARM&nbsp; USAR&nbsp; FSLR</span></span></div>
+  </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>Market Backdrop</h2><span class="sub">indices · semis · the Fed</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">Indices, semis & the Fed</span></div>
+      <div class="tags"></div>
+      <div class="field"><p class="h">Tape</p><p class="b">US markets are <b>closed today for Juneteenth</b>, so the model's numbers reflect Thursday's close. Thursday the chip complex actually <em>rebounded</em> (Nasdaq 100 +2.3%) after Wednesday's Fed-driven dip — yet the model's overbought readings cooled, with heat falling across almost every name. Read the cooldown as the model letting air out of stretched charts after yesterday's broad heat-up, not as Thursday's price action.</p></div>
+      <div class="field"><p class="h">Backdrop</p><p class="b">The 17 Jun Fed under chair Kevin Warsh held rates at 3.50–3.75% but leaned hawkish, nudging up rate-hike odds for later in 2026 — so every CPI and jobs print now carries extra weight for high-multiple growth names. The early-June memory glut and Broadcom's soft AI-networking guide still hang over the memory and optical names that led today's pullback.</p></div>
+      <div class="field"><p class="h">Smart money (from the wiki)</p><p class="b">The live debate is memory — fitting, since Micron, Sandisk and Marvell led the cooldown. <b>InvestAnswers (IA)</b> stays structurally long: a dip toward ~$700 on Micron is a buy (long-term target $3,000), and Marvell's earlier ~$260 "quick buy on a dip" zone is back in view. <b>Jordi Visser</b> is the other side: he exited Micron around $600–650, wouldn't reconsider until ~$400, and argues token growth doesn't translate into linear memory demand. He prefers optical (Marvell) and the "your-capex-is-my-opportunity" suppliers over memory at these prices. Hold both views.</p></div>
+    </div>
+  <div class="sec hot"><span class="dot"></span><h2>Run Too Hot</h2><span class="sub">strong, but stretched</span></div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">ARM · Arm Holdings</span><span class="px">$418.88</span></div>
+      <div class="tags"><span class="tag s-hot">Overheated</span><span class="tag">Entry C · wait</span><span class="tag">Semiconductors</span><span class="tag">Hottest in model</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The model's single hottest name (heat 91) and its strongest trend (relative-strength rank #1 of 45). A wave of analyst target hikes — Wells Fargo to $410, Mizuho and Bernstein up to $500 — on agentic-AI CPU demand, plus a new Super Micro partnership putting Arm processors in energy-efficient AI servers and a push for $15B in own-chip sales by decade-end.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Trading ~62% above its average price of the last 50 days — stretched far above its recent baseline — and sitting right on its 52-week high with no overhead room and no cushion below. Valuation is extreme: P/E above 180, price-to-sales near 24. Momentum is maxed at 100; parabolic moves snap back hard.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average ≈ <b>$259</b> — a long way down to trend support. At its 52-week high ($418.88): no resistance overhead, but nothing holding it up on a wobble either.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade <b>C</b> — best trend on the board, but a parabolic entry ~62% above its 50-day. Model read: the textbook "right name, wrong price" — risk/reward favours waiting for a pullback (the $350s or lower, toward the rising shorter-term averages) over chasing a record high. An opinion to weigh, not a directive.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Elite franchise, maxed momentum, worst possible spot to reach for it — patience over chase.</p></div>
+    </div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">MRVL · Marvell</span><span class="px">$289.54</span></div>
+      <div class="tags"><span class="tag s-hot">Overheated</span><span class="tag">Entry B · add small</span><span class="tag">Semiconductors</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Core AI-optical name: custom XPUs, silicon photonics and co-packaged optics, anchored by Nvidia's ~$2B stake and NVLink Fusion tie-up; Jensen Huang has publicly called it a future trillion-dollar company. Now an S&P 500 member, which keeps a structural bid under the shares.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">One of the sharpest pullbacks in the snapshot (~-10%) as the "parabolic" memory/optical trade unwound — yet still ~49% above its 50-day average, so even after the drop it's stretched. Heat 73, momentum maxed at 100.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average ≈ <b>$194</b>; 52-week high ≈ $316 (price ~8% below it). IA's ~$260 "quick buy on a dip" zone is now close again after the pullback — price $289 vs his $260 line (see prior briefs; nothing new from the source since).</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade <b>B</b> — top-tier relative strength (#4 of 45), trend intact, but still extended after the drop. Model read: today's fall improves the risk/reward but doesn't reset it — a pullback into IA's ~$260 area would be the cleaner add; chasing the bounce here is the weaker spot. Both followed sources stay constructive on Marvell for the next leg, on price.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Elite optical franchise letting air out — better, not yet cheap; IA's ~$260 dip-buy is back within reach.</p></div>
+    </div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">MU · Micron</span><span class="px">$1,043</span></div>
+      <div class="tags"><span class="tag s-hot">Overheated</span><span class="tag">Entry B · add small</span><span class="tag">Memory & Storage</span><span class="tag">Earnings 24 Jun</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The memory-cycle bellwether: tight DRAM/NAND supply and AI/HBM demand underpin a multi-year upcycle, and Jensen has singled out Micron as the early HBM believer. IA treats it as a core holding with a long-term $3,000 target — "demand for memory is effectively infinite."</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Led the memory cooldown (~-7% in the snapshot) but is still ~45% above its 50-day average — heat 81, momentum 100. A glut narrative (output steered to data-center customers, away from phones) and Broadcom's soft AI guide are the overhang. Fiscal Q3 lands 24 Jun — a binary event either way.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average ≈ <b>$718</b> (~31% below here); 52-week high ≈ $1,088 (price ~4% under it).</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade <b>B</b> — leading and trend intact, but extended. This is where the two followed sources openly split: IA would buy a dip toward ~$700; Jordi exited near $600–650 and wouldn't reconsider until ~$400, on the view that token growth doesn't equal linear memory demand. Model read: at ~$1,043, well above both their entry zones, the risk/reward favours patience into the 24 Jun print rather than chasing — the call is yours.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Real upcycle, stretched price, and a live source disagreement on the dip — earnings on 24 Jun is the swing factor.</p></div>
+    </div>
+  <div class="sec lead"><span class="dot"></span><h2>Leading & Buyable</h2><span class="sub">strong and healthy</span></div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">STLD · Steel Dynamics</span><span class="px">$270.13</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry A · prime</span><span class="tag">Materials & Rare Earth</span><span class="tag">Bucked the tape (+7%)</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The one name running against the cooldown — up ~7% with heat jumping 30 points, on a raised Q2 guide of $3.51–$3.55 per share (vs $2.78 in Q1), driven by strong steel demand, metal-margin expansion and low inventories. Order activity remains firm across non-residential construction, energy, automotive and industrial.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Guidance noted a $16M write-down from relocating a planned aluminum slab center out of Arizona. After a +7% day it's ~14% above its 50-day — not parabolic, but the easy part of this pop is done. Steel is cyclical and tied to the rate/construction backdrop the hawkish Fed just made murkier.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average ≈ <b>$237</b> (~14% below here); 52-week high ≈ $283 (price ~4% under it, room before resistance).</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade <b>A</b> — leading, trend intact, sitting in the healthy pullback/base zone rather than extended: a genuine prime-entry profile today, and the rare one backed by a fresh fundamental catalyst. Model read: of the featured names this is where risk/reward most favours a starter here, with the ~$237 50-day as the line that keeps the move honest.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The day's standout — strength on raised numbers, not froth, and the cleanest entry on the board.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">TSM · Taiwan Semiconductor</span><span class="px">$432.15</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry A · prime</span><span class="tag">Semiconductors</span><span class="tag">Flipped: Overheated → Leading</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The foundry essentially every important AI chip runs through, guiding to 30%+ revenue growth in 2026 on AI demand. Cooled from Overheated back to Leading without breaking trend — strength without the stretch — and analysts remain near-unanimously positive.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Heat fell 15 points and price eased ~4% in the snapshot; it sits ~3% below its 52-week high. Geopolitical (Taiwan) and customer-concentration risks are ever-present for the name the whole stack depends on.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average ≈ <b>$403</b> (~7% below here); 52-week high ≈ $446. A dip toward the ~$403 50-day would be the cleaner add.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade <b>A</b> — leading, trend intact, in the pullback zone (≤8% above its 50-day): the calmest profile among the AI-chip leaders today. Model read: this is the bedrock holding of the AI-chip stack, and the cooldown to Leading puts it in a more ownable spot than the parabolic names — a constructive starter here, cleaner still on a fade toward ~$403.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The foundation name cooled into a healthier setup — strong and ownable without the vertigo.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">INTC · Intel</span><span class="px">$121.10</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry B · add small</span><span class="tag">Semiconductors</span><span class="tag">Flipped: Overheated → Leading</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Trump said on 18 Jun that Apple will work with Intel to design and build chips in the US (Oregon/Arizona/Ohio fabs), spiking the stock ~10% intraday before it gave some back — stacking on prior foundry-turnaround optimism. Cooled from Overheated to Leading while holding its uptrend.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Headline-driven and unconfirmed — neither Apple nor Intel has formally verified the deal, and production wouldn't begin until 2027. Still ~21% above its 50-day; relative-strength rank is only mid-pack, so the trend edge is thinner than the move suggests.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average ≈ <b>$100</b>; 52-week high ≈ $129 (price ~6% below it). The ~$115–120 zone is the first place a pullback would test.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade <b>B</b> — leading, trend intact, but mid-pack relative strength means it's a scale-in on strength, not an all-in into a headline. Model read: better risk/reward on a pullback toward the $115–120 area than chasing the deal-news spike; the foundry story is real but still years from proving out.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Genuine foundry validation, but today's price pays for a turnaround that hasn't happened yet — add on weakness, not the headline.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">BE · Bloom Energy</span><span class="px">$284.99</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry B · add small</span><span class="tag">Solar & Energy</span><span class="tag">Flipped: Overheated → Leading</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Fuel-cell power for AI data centers — squarely in the "electrons in, tokens out" bottleneck the followed sources keep flagging (power is the binding constraint on the AI buildout). Cooled hard from Overheated (heat -28) back to Leading while keeping a strong trend and 12-month momentum.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">One of the snapshot's larger pullbacks (~-8%) and still ~11% above its 50-day. It's a volatile, valuation-rich name whose moves are amplified by sentiment swings; it sits ~7% below its 52-week high.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average ≈ <b>$258</b> (~10% below here); 52-week high ≈ $308. The ~$258 50-day is the line that keeps the uptrend intact.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade <b>B</b> — leading, trend intact, mildly extended after the cooldown. Model read: the flush out of Overheated improves the entry but doesn't reset it; a constructive scale-in for those who want power-bottleneck exposure, cleaner on a fade toward the ~$258 50-day. The power theme is durable; the stock is high-beta.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Power-bottleneck leader that just let off steam — better entry than yesterday, still high-beta.</p></div>
+    </div>
+  <div class="sec base"><span class="dot"></span><h2>Oversold / Basing</h2><span class="sub">weak, possibly bottoming</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">BTC · Bitcoin</span><span class="px">$62,548</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D · no trend edge</span><span class="tag">Crypto & Miners</span><span class="tag">Most washed-out in model</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The most washed-out name in the entire model (heat 3, RSI 34) — historically the zone where long-term buyers nibble. Followed sources stay structurally constructive: Jordi treats sub-200-week-MA dips as accumulation for the longer crypto/tokenization thesis; IA flags the ~$60K area as a double-bottom to watch.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Roughly $3.4B of spot-ETF outflows in a single week — the largest since launch, capping a ~13-day outflow streak — as capital rotates into AI stocks. It's below a falling 200-day average (a downtrend by every source's own rule) and down ~46% from its high, with a Strategy (MSTR) sale adding supply.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average ≈ <b>$72,900</b> (price well below); prior high ≈ $115,000. Sources watch the ~$60K double-bottom and a reclaim of the 200-day as the trend-change tell.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade <b>D</b> — below the 200-day, no trend edge: this is an accumulation decision, not a momentum trade. Model read: deeply oversold favours patient nibbling for long-term holders, but trend confirmation needs a 200-day reclaim and the flows have to turn first. A clean break of ~$60K is the level the sources are watching either way.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Maximum washout with long-term bulls nibbling, but still a downtrend — accumulation, not a trend trade.</p></div>
+    </div>
+  <div class="sec plain"><span class="dot"></span><h2>What Changed Today</h2><span class="sub">vs yesterday's snapshot</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">Status flips & quiet names</span></div>
+      <div class="tags"></div>
+      <div class="field"><p class="h">Out of Overheated (4)</p><p class="b">Taiwan Semi, Intel, Entegris and Bloom Energy all cooled from Overheated back to Leading — heat fell 15–28 points on each. Yesterday's broad heat-up partly reversed; ASML, Marvell, Dell, Micron, Sandisk, Astera and Cipher stay Overheated but with heat draining too.</p></div>
+      <div class="field"><p class="h">Cooling / dropped</p><p class="b">Corning (GLW) slipped Leading → Neutral (heat -18) and Vertiv (VRT) flipped Leading → Basing (momentum -28) — both gave back recent gains. Steel Dynamics was the lone heat-<em>gainer</em> (+30) on raised guidance.</p></div>
+      <div class="field"><p class="h">Cold end</p><p class="b">Bitcoin (heat 3), Solana (7) and Circle (6) remain the most washed-out names; Circle sits ~69% below its high with momentum at zero. Mega-caps (NVDA, GOOGL, AMZN, AVGO) stay Neutral/Basing while the specialists move.</p></div>
+      <div class="field"><p class="h">Quiet today (benched)</p><p class="b">ASML, ALAB, SNDK, CIFR, AMD, DELL (still hot, covered recently); ANET, IREN, CLSK, FLNC, QCOM, COHR, ENTG, FSLR, ENPH, MARA, SOLS, USAR (leading/steady); NVDA, GOOGL, AVGO, AAOI, GLW, NXT, WOLF (neutral); TSLA, AMZN, MP, UUUU, CC, NEE, CEG, LITE, VRT, SOL, CRCL (basing/soft).</p></div>
+    </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>What the Smart Money Is Saying</h2></div>
+  <blockquote class="quote">“Micron is a core holding — demand for memory is effectively infinite; I'd buy a dip toward ~$700.” … “I took my exit around $600–650; I wouldn't reconsider until ~$400. You can't linearly extrapolate token growth into memory demand.”<span class="src">— InvestAnswers vs Jordi Visser (followed sources), via the wiki. Two credible reads, opposite conclusions on memory's risk/reward — a live split made sharper by today's memory cooldown. Micron trades ~$1,043, above both their entry zones. Weigh both; the call is yours.</span></blockquote>
+
+  <div class="sec plain"><span class="dot"></span><h2>Catalyst Calendar</h2><span class="sub">next ~2 weeks</span></div>
+  <div class="cal">
+    <div class="row key"><span class="d">Fri 19 Jun</span><span>US markets closed — Juneteenth. Today's signal readings reflect Thursday's close.</span></div>
+    <div class="row key"><span class="d">Tue 24 Jun</span><span>Micron (MU) fiscal Q3 — the week's marquee event and a direct read on HBM/DRAM pricing; likely mover for MU, SNDK and the broader memory/AI-server complex.</span></div>
+    <div class="row"><span class="d">Ongoing</span><span>Intel–Apple US chip deal — watch for formal confirmation from either company (neither has verified Trump's claim yet).</span></div>
+    <div class="row"><span class="d">Ongoing</span><span>Fed path — after the 17 Jun hawkish hold under chair Warsh, every CPI and jobs print carries extra weight for rate-sensitive names.</span></div>
+    <div class="row"><span class="d">Ongoing</span><span>Bitcoin ETF flows — a turn from outflows to inflows is the tell the followed sources are watching for a trend change.</span></div>
+  </div>
+
+  <footer class="foot"><b>Sources:</b> local Signal-Model files (<code>signals-latest.json</code>, asOf 19 Jun 2026 07:58 UTC; <code>signals-changes.json</code>) + <code>entry-grades.json</code>; wiki theme pages (ai-trade-rotation, memory-chips, marvell-mrvl, nvidia-nvda, bitcoin); web-searched June 2026 news (Bloomberg / Yahoo Finance, CNBC, CBS News, PRNewswire / StockTitan, Investing.com, CoinDesk, StocksToTrade).<div class="nfa">Not financial advice — this surfaces signals to inform your own decisions.</div></footer>
+</div>
+</body>
+</html>
