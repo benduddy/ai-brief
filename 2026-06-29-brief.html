@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monday Pre-Open Brief — 29 June 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4EC; --ink:#27241D; --muted:#6E6A5E; --faint:#928C7C;
+    --hair:#E4DDCD; --hair-strong:#D8CFB9;
+    --clay:#C9663F; --clay-soft:#E8C4AE; --clay-wash:#F3E5DA;
+    --leading:#5F7355; --leading-wash:#E7ECDF;
+    --hot:#B8862F; --hot-wash:#F1E7CF;
+    --basing:#8A8475; --basing-wash:#EAE5D7;
+    --serif:"Newsreader", Georgia, "Times New Roman", serif;
+    --sans:"Inter", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink)}
+  body{font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:700px;margin:0 auto;padding:56px 28px 72px}
+  .kicker,.sec h2,.sec .sub,.tag,.badge,.meta,.cal .d,.foot{font-family:var(--sans)}
+
+  .mast{display:flex;align-items:flex-start;gap:16px;margin-bottom:8px}
+  .spark{flex:0 0 auto;margin-top:8px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin:0 0 6px}
+  h1.title{font-family:var(--serif);font-weight:500;font-size:42px;line-height:1.05;letter-spacing:-.01em;margin:0 0 10px}
+  .meta{font-size:13px;color:var(--muted);margin:0}
+  .meta b{color:var(--ink);font-weight:600}
+  .rule{height:2px;background:var(--clay);border:0;margin:22px 0 0;width:64px;border-radius:2px}
+
+  .lede{font-size:22px;line-height:1.5;margin:30px 0 8px;font-weight:400}
+  .lede em{font-style:italic}
+  .tldr{margin:14px 0 0;padding:0;list-style:none}
+  .tldr li{position:relative;padding:7px 0 7px 22px;border-bottom:1px solid var(--hair)}
+  .tldr li:last-child{border-bottom:0}
+  .tldr li::before{content:"";position:absolute;left:2px;top:16px;width:6px;height:6px;border-radius:50%;background:var(--clay)}
+  .tldr b{font-weight:600}
+
+  .sec{display:flex;align-items:center;gap:10px;margin:72px 0 24px}
+  .sec .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .sec h2{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0;color:var(--ink)}
+  .sec .sub{font-size:12.5px;color:var(--faint);margin-left:auto;font-weight:500}
+  .sec.hot .dot{background:var(--hot)} .sec.lead .dot{background:var(--leading)}
+  .sec.base .dot{background:var(--basing)} .sec.entry .dot{background:var(--clay)}
+  .sec.plain .dot{background:var(--ink)}
+
+  .grades{display:flex;flex-direction:column;gap:15px;margin:0}
+  .grade-row{display:flex;gap:13px;align-items:baseline}
+  .badge{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:15px;color:#fff;margin-top:2px}
+  .badge.A{background:var(--clay)} .badge.B{background:var(--clay-soft);color:#7a3d22}
+  .badge.C{background:var(--hot-wash);color:#7a5c14;border:1px solid #d8bd7e}
+  .gl{font-size:16px}
+  .gl .lab{font-weight:600;color:var(--ink)} .gl .tk{font-weight:600;color:var(--clay)} .gl .muted{color:var(--muted)}
+
+  .name{padding:40px 0 8px;border-top:1px solid var(--hair)}
+  .name:first-of-type{border-top:0;padding-top:8px}
+  .name .ch{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+  .name .sdot{width:9px;height:9px;border-radius:50%;flex:0 0 auto;align-self:center}
+  .name.hot .sdot{background:var(--hot)} .name.lead .sdot{background:var(--leading)} .name.base .sdot{background:var(--basing)}
+  .name .nm{font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:-.01em}
+  .name .px{margin-left:auto;font-family:var(--serif);font-size:19px;color:var(--ink)}
+  .name .tags{display:flex;gap:6px;margin:14px 0 26px;flex-wrap:wrap}
+  .tag{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--clay-wash);color:#8a4a2c}
+  .tag.s-hot{background:var(--hot-wash);color:#7a5c14}
+  .tag.s-lead{background:var(--leading-wash);color:#445239}
+  .tag.s-base{background:var(--basing-wash);color:#5d584b}
+
+  .field{margin:0 0 24px}
+  .field .h{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:0;color:var(--ink);margin:0 0 6px}
+  .field .b{font-size:16.5px;line-height:1.6;color:var(--ink);margin:0}
+  .field.read{margin-top:28px}
+  .field.read .h{color:var(--clay)}
+  .field.read .b{font-style:italic;font-size:18px;line-height:1.55}
+
+  .quote{border-left:3px solid var(--clay);background:var(--clay-wash);padding:16px 20px;border-radius:0 10px 10px 0;margin:0;font-size:18px;line-height:1.5}
+  .quote .src{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:10px;font-style:normal;line-height:1.5}
+
+  .cal{margin:0}
+  .cal .row{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:13px 0;font-size:16px;border-top:1px solid var(--hair)}
+  .cal .row:first-child{border-top:0}
+  .cal .d{font-weight:600;color:var(--clay);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+
+  .foot{margin-top:50px;padding-top:18px;border-top:1px solid var(--hair-strong);font-size:12.5px;color:var(--faint);line-height:1.6}
+  .foot a{color:var(--clay);text-decoration:none}
+  .foot .nfa{font-style:italic;margin-top:10px;font-family:var(--serif)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <svg class="spark" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><g fill="#C9663F"><rect x="11" y="1" width="2" height="22" rx="1"/><rect x="1" y="11" width="22" height="2" rx="1"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(45 12 12)"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(-45 12 12)"/></g></svg>
+    <div>
+      <p class="kicker">AI-Trade · Daily Brief</p>
+      <h1 class="title">Monday Pre-Open Brief</h1>
+      <p class="meta"><b>29 June 2026</b> · 48 names · benchmark <b>QQQ</b> · data Fri close · re-synced Mon 08:09 UTC</p>
+    </div>
+  </header>
+  <hr class="rule">
+
+  <p class="lede">A quiet print: US markets are still shut, so every stock here sits exactly where Friday left it — the cooling week's picture is unchanged. The only thing that moved over the weekend was crypto, and only gently: Bitcoin ticked up to sit right on the ~$59K level a source called a triple-bottom, Solana drifted +2%. No name changed status, nothing new ran hot. So today is less a fresh read than a checkpoint before the open — what to watch when the tape reopens, not what just happened.</p>
+  <ul class="tldr">
+    <li><b>How to read the scores:</b> <em>heat</em> 0 = washed-out / cheap-looking, 100 = red-hot / overextended; <em>momentum</em> = strength of the recent up-move; <em>status</em> bands are Leading (strong &amp; healthy), Overheated (strong but stretched), Basing (weak / bottoming), Neutral (no clear signal). The <b>Setup</b> lines are opinions on risk/reward and timing to weigh — not directives; the call is yours.</li>
+    <li><b>Equities are frozen at Friday's close.</b> This data was re-fetched Monday pre-open, so it's newer by the clock but identical in substance to yesterday's brief — 45 of 48 names show the exact same price. <b>Zero status flips, zero new overheated.</b> For the full read on last week's broad cool-down (Bloom's −18% wreck, Vertiv/Qualcomm rolling over, Nvidia losing its support line) see <em>Friday's brief</em> — none of it has changed.</li>
+    <li><b>The only movers were crypto.</b> Over the weekend Bitcoin rose +0.5% to ~$59,847 and Solana +2.1% to ~$72.51 — small drifts, both still deep in Basing. The notable bit: BTC is sitting right on the ~$59K zone InvestAnswers (24 Jun) called a "triple-bottom" where buyers stepped in heavy. The level is being retested, quietly, rather than broken.</li>
+    <li><b>What to watch at today's open:</b> whether Friday's fifth-straight-down-day de-risking continues or stabilises; Nvidia's ~$196 line (it closed <em>below</em> it Friday — a reclaim would repair the break, a further slip confirms it); and whether the rotation Jordi Visser flagged (out of hyperscalers, into breadth) is still "rotation, not a top." Nothing in the signal has pre-empted that — it's a live question for the session.</li>
+    <li><b>Strong &amp; still cheap-ish (the bullseye) — unchanged from Friday:</b> the names that are leading <em>and</em> buyable on timing <em>and</em> reasonably priced for growth are the same — MRVL, DELL, ASML, TSM, CIFR, GEV (all A-grade) plus SNDK, MU (B). The watchlist hasn't moved because the prices haven't; this is a standing list, not a fresh signal today.</li>
+  </ul>
+
+  <div class="sec entry"><span class="dot"></span><h2>Entry Watchlist</h2><span class="sub">relative strength + entry timing</span></div>
+  <div class="grades">
+    <div class="grade-row"><span class="badge A">A</span><span class="gl"><span class="lab">Prime add — leading, trend intact, on a pullback/base entry (unchanged from Fri)</span> &nbsp; <span class="tk">MRVL&nbsp; DELL&nbsp; ENTG&nbsp; ASML&nbsp; AMD&nbsp; CIFR&nbsp; TSM&nbsp; NEE&nbsp; GEV</span></span></div>
+    <div class="grade-row"><span class="badge B">B</span><span class="gl"><span class="lab">Add small — leading, slightly extended</span> &nbsp; <span class="tk">SNDK&nbsp; MU&nbsp; ALAB&nbsp; GLW&nbsp; INTC</span></span></div>
+    <div class="grade-row"><span class="badge C">C</span><span class="gl"><span class="lab">On the list, wait — strong trend, hot or rolling entry</span> &nbsp; <span class="muted">ARM&nbsp; ANET&nbsp; COHR&nbsp; ETN&nbsp; STLD&nbsp; VRT</span></span></div>
+  </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>Market Backdrop</h2><span class="sub">a frozen tape — checkpoint before the open</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">TAPE · Indices & tone</span><span class="px">US closed (Mon pre-open)</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span><span class="tag">equities = Fri close</span><span class="tag">weekend: crypto only</span></div>
+      <div class="field"><p class="h">Where things stand</p><p class="b">Friday closed the AI trade's worst week since March — Nasdaq −4.6% w/w, the SOX semis index −5.3%, a fifth straight down day, money rotating out of large-cap AI into healthcare / utilities / small-caps. That is the backdrop into today, unchanged: this snapshot is the same Friday close, just re-fetched Monday morning before the US open. Nothing has happened in equities since.</p></div>
+      <div class="field"><p class="h">Weekend tape</p><p class="b">Crypto trades through the weekend and barely budged: Bitcoin +0.5% to ~$59,847, Solana +2.1% to ~$72.51, a fractional Siemens Energy tick. Everything else is frozen. So there is no new equity signal to act on today — only the question of how the reopening tape resolves Friday's de-risk.</p></div>
+      <div class="field"><p class="h">Smart money (wiki)</p><p class="b">No new source has dropped since Friday, so the standing reads hold: <b>Jordi Visser (28 Jun)</b> — last week's hyperscaler −14% month is <em>rotation, not a top</em>, with breadth and the 200-day intact and the hawkish-Fed scare unwound. <b>InvestAnswers (24 Jun)</b> — structurally bullish memory, and on crypto a "triple-bottom ~$59K" where buyers stepped in. With BTC sitting on that exact level this weekend, IA's call is the live one to watch. (Full smart-money detail in Friday's brief — not repeated here.)</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">A genuine non-event print. The honest takeaway is "nothing changed over the weekend except a quiet BTC retest of $59K." Treat today as a checkpoint: the real information comes when the US tape reopens and either continues Friday's de-risk or steadies.</p></div>
+    </div>
+  <div class="sec hot"><span class="dot"></span><h2>Run Too Hot</h2><span class="sub">still the two stretched names — unchanged since Friday</span></div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">GLW · Corning</span><span class="px">$221</span></div>
+      <div class="tags"><span class="tag s-hot">Overheated</span><span class="tag">Entry B · add small</span><span class="tag">Materials & Rare Earth</span><span class="tag">PEG 1.66</span></div>
+      <div class="field"><p class="h">Status</p><p class="b">Still the hottest name on the board (heat 77) and still Overheated, exactly as Friday. Trades ~21% above its 50-day average and only ~3% under its 52-week high — near the top of its range with little cushion. The Amazon optical-fibre data-centre deal thesis is intact; nothing new since the full write-up in Friday's brief.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~52.6, next-year EPS growth ~+32%, forward PEG ~1.66 — its price/earnings divided by expected growth; under ~1 you're paying little for a lot of growth, over ~2 the opposite. At 1.66 it's fairly-to-fully priced for its growth, not the cheap-for-growth screen of the memory names.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">Price ~$221; 50-day average ~$183; 52-week high ~$228 (~3% away). ~$183 is the line between "healthy uptrend" and "fell back to its average" — a long way below here, which is the risk of buying near the high.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b"><b>Entry grade B</b> — leading but pinned near its highs and extended, so risk/reward still favours waiting for a pullback toward the low-$200s over buying at the top of the range. No change from Friday's read; the freeze just means the wait continues.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Same picture as Friday: great AI-fibre catalyst, but run to its highs — let it breathe before adding.</p></div>
+    </div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">MU · Micron</span><span class="px">$1,132</span></div>
+      <div class="tags"><span class="tag s-hot">Overheated</span><span class="tag">Entry B · add small</span><span class="tag">Memory & Storage</span><span class="tag">PEG 0.07</span></div>
+      <div class="field"><p class="h">Status</p><p class="b">Still Overheated (heat 75), still the best fundamental story in the universe — 2026 HBM sold out, Q3 $41.5B revenue with Q4 guided ~$50B, Anthropic supply deal, $1T valuation crossed. Held Overheated through Friday's −6.7% cool and hasn't moved since. The IA-vs-Jordi memory fork (IA: still cheap; Jordi trimmed at $600–700 calling it "hot, not cheap") remains the live debate.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~7.6, next-year EPS growth ~+103%, forward PEG ~0.07 — screens almost absurdly cheap for its growth. The catch is unchanged: the market is pricing peak-cycle memory earnings it may not trust as durable.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">Price ~$1,132; 50-day average ~$802; 52-week high ~$1,214 (~7% below). IA's roadmap stands: sell zone ~$1,600, buy back near/under $1,000, long-term $3,000. ~$1,000 is the line whose loss on a daily close would turn this cool-down into a real pullback.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b"><b>Entry grade B</b> — leading and trend-intact but ~41% above its 50-day, so add-small-on-strength, not a fresh full entry. Model and the bull (IA's own "buy under $1,000") agree the better risk/reward is a pullback toward ~$1,000, not chasing ~$1,130. Unchanged from Friday.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Cheapest growth story in the book, but the entry is still hot. Patience near $1,000 beats chasing here.</p></div>
+    </div>
+  <div class="sec lead"><span class="dot"></span><h2>Leading & Buyable</h2><span class="sub">the standing A-grade entries — prices unchanged</span></div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">MRVL · Marvell</span><span class="px">$267</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry A · prime add</span><span class="tag">Semiconductors</span><span class="tag">PEG 0.82</span></div>
+      <div class="field"><p class="h">Status</p><p class="b">Still the top relative-strength name in the whole universe (+252% trailing year) and still in a base, not extended — same as Friday. Recently joined the S&P 500 (22 Jun), bought Celestial AI + XConn, KeyBanc Street-high $385 target. Frozen at $267 over the weekend.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~43.2, next-year EPS growth ~+52%, forward PEG ~0.82 — cheap for its growth. A rare pairing of #1 momentum with a sub-1 PEG; this is the bullseye (strong + cheap-ish).</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">Price ~$267; 50-day average ~$213; 52-week high ~$316. IA's snipe-buy ~$260 is essentially hit; target $380–400, though as of 24 Jun he'd shifted to calling it a summer range-trade rather than a fresh chase.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b"><b>Entry grade A</b> — leading, trend intact, sitting in its base near IA's ~$260 level, with the ~$213 50-day as the trend marker. The cleanest A-grade entry on the list — unchanged. IA's nuance still applies: expect chop this summer, so accumulate-on-weakness rather than breakout-chase.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Best trend in the book, still in its base, still cheap for the growth. The standing A-grade pick — no change.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">AMD · AMD</span><span class="px">$522</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry A · prime add</span><span class="tag">Semiconductors</span><span class="tag">PEG 0.51</span></div>
+      <div class="field"><p class="h">Status</p><p class="b">Cooled Overheated → Leading last week (a healthy reset) and holding there — frozen at $522. The MI400 accelerator line is the catalyst; the July "Advancing AI 2026" event should give production timelines and benchmarks. Data-centre GPU revenue forecast +114% YoY to ~$15B in 2026.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~39.6, next-year EPS growth ~+78%, forward PEG ~0.51 — cheap for its growth, one of the better growth-adjusted prices among the large-cap GPU names.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">Price ~$522; 50-day average ~$439; 52-week high ~$552 (~5% above). ~$439 is the uptrend's cushion — the first real support if last week's cool-down extends when the tape reopens.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b"><b>Entry grade A</b> — top-half relative strength, trend intact, in a pullback zone rather than parabolic; a starter works with a mental stop below the ~$439 50-day, and the July event is a near-term catalyst. Crossed with its 0.51 PEG it's a "strong and still cheap-ish" bullseye. Unchanged from Friday.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Great trend, buyable price, July catalyst ahead — the standing A-grade with the cleanest near-term event.</p></div>
+    </div>
+  <div class="sec base"><span class="dot"></span><h2>Oversold / Basing</h2><span class="sub">the weekend movers — crypto retesting its lows</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">BTC-USD · Bitcoin</span><span class="px">$59,847</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Crypto — no PEG</span><span class="tag">Crypto & Miners</span><span class="tag">weekend mover</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">This is the level that matters: BTC is sitting right on the ~$59K zone InvestAnswers (24 Jun) called a "triple-bottom" — within ~$100 of the February and early-June lows — where he said buyers stepped in heavy (~$59,100) and it bounced ~$1,600 off the bottom. His top/bottom indicator was "deep in the blue (oversold) zone," like 2022. Coinbase's Brian Armstrong (11 Jun) separately called a likely bottom ~$60K, $100–200K year-end "plausible." IA's implied 1-year target ~$120K.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">It's still deep in Basing (heat 2 — the lowest reading on the entire board, RSI ~32) and ~48% below its 52-week high — a long, slow downtrend, not a turn. "Triple-bottom" only holds until it doesn't; a clean daily close below ~$59K would say the floor that bounced three times has finally given way, with little obvious support beneath. Total crypto market cap is back at ~April-2021 levels.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">Price ~$59,847; the ~$59K triple-bottom is the line directly underfoot — the whole bull/bear question sits on it. 50-day average ~$69K is overhead resistance; 52-week high ~$114K is far above. The weekend's +0.5% is a quiet retest holding, not a breakout.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Model: deep Basing, no momentum edge — not a trend buy. But this is the spot where the model (oversold, no edge) and the source (IA: "close to the bottom of the bear," good risk/reward) genuinely diverge, and the level is being tested in real time. Constructive only on a visible hold-and-bounce off ~$59K; a daily close below it flips the read. Risk/reward is a level call, not a trend call here.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Sitting exactly on the $59K floor IA flagged. The weekend held it quietly — watch whether that bounce builds or the level finally breaks.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">SOL-USD · Solana</span><span class="px">$72.51</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Crypto — no PEG</span><span class="tag">Crypto & Miners</span><span class="tag">weekend mover</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The weekend's best mover here (+2.1%). IA's 24-Jun read: nine consecutive red monthly candles, so as "the math guy" he puts low odds on a tenth and calls it "good risk/reward" for a mean-reversion bounce given the chain's fundamentals. Circle minting ~$0.5B/day settling on Solana is an AI-agent-payments tailwind, and SOL trades far cheaper than ETH.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Still Basing (heat 14, RSI ~51) and ~64% below its 52-week high — the deepest drawdown of the featured names. IA also flags Tron now has more daily active users (~3.9M vs ~3.5M), and his earlier note warned it had broken ~$78 support with "no floor beneath." The bounce thesis is risk/reward on an oversold chart, not a confirmed trend.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">Price ~$72.51; 50-day average ~$77 (overhead — price is below it); 52-week high ~$200. Reclaiming ~$77 on a daily close would be the first sign the bounce has legs; the ~$64 area is the prior breakdown level to watch on the downside.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Model: Basing, below its 50-day, no momentum edge — a repair situation, not a momentum buy. IA leans constructive on risk/reward (he disclosed a small perp long) but on a weak chart. The honest read: a high-risk mean-reversion setup where the source and the signal agree it's oversold but disagree on whether to step in. Wait for a reclaim of ~$77 to confirm, or treat any add as small-and-speculative.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Nine red months and oversold — IA likes the odds of a bounce, the chart doesn't confirm one yet. ~$77 is the line to reclaim.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">NVDA · Nvidia</span><span class="px">$193</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Mega-cap</span><span class="tag">PEG 0.36</span><span class="tag">watch the $196 line at open</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Still the cheapest mega-cap on growth and the core of the whole trade — 36 of 37 analysts Buy/Strong Buy, consensus target ~$309. IA holds it as steady "ballast." Frozen at $192.53 over the weekend; unchanged since Friday.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Deep in Basing (heat 8, RSI ~38), ~18% below its high, and it led the index lower last week. Falling GPU rental prices feed the "is the buildout cooling?" worry. The alpha has been in the suppliers, not NVDA.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~15.1, next-year EPS growth ~+42%, forward PEG ~0.36 — the cheapest-for-growth mega-cap on the board. The valuation case only improved as the price fell.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">Price ~$192.53; 50-day average ~$210 (above price); 52-week high ~$235. <b>The line to watch at today's open:</b> it closed Friday <em>below</em> IA's ~$196 support — the level he said held "on the nose" on 24 Jun. A reclaim of ~$196–200 repairs the break; a further slip confirms the floor that bounced last week is gone.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b"><b>Entry grade D</b> — below the 50-day, no momentum edge, so the model reads basing/repair, not a buy. The disagreement is the whole story: valuation (PEG 0.36) and the analyst base are as bullish as ever, but the price just broke the line the bulls drew as support. Constructive only on a reclaim-and-hold of ~$196; until then it's a falling laggard. This is the single most useful thing to watch when the tape reopens.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Cheapest mega-cap on growth, still below the ~$196 line it lost Friday. The open will say whether the break sticks.</p></div>
+    </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>What the Smart Money Is Saying</h2></div>
+  <blockquote class="quote">“BTC printed a triple-bottom around $59K — within $100 of the Feb and early-June lows — and buyers stepped in heavy. The top/bottom indicator's deep in the blue, like 2022: close to the bottom of the bear.”<span class="src">— InvestAnswers, 24 Jun 2026 ("Market Bloodbath"). With Bitcoin sitting on that exact ~$59K level this weekend, it's the live call into the week. See [[bitcoin]].</span></blockquote>
+
+  <div class="sec plain"><span class="dot"></span><h2>Catalyst Calendar</h2><span class="sub">next ~2 weeks</span></div>
+  <div class="cal">
+    <div class="row key"><span class="d">Today (Mon 29 Jun)</span><span>US market reopen — the first real signal since Friday. Watch whether the de-risk continues or steadies, and Nvidia's ~$196 line (lost Friday).</span></div>
+    <div class="row"><span class="d">July 2026</span><span>AMD "Advancing AI 2026" event — MI400 production timelines, pricing and benchmarks. The near-term catalyst for AMD and the broader GPU complex.</span></div>
+    <div class="row"><span class="d">Ongoing</span><span>Memory pricing — Micron's 2026 HBM sold out; DRAM +mid-60% / NAND +high-70% sequentially. The supply story underpinning MU/SNDK/ENTG.</span></div>
+    <div class="row"><span class="d">Watch</span><span>Fed commentary + next CPI/PCE prints. The hawkish-hike scare drove last week's de-risking; Jordi argues inflation expectations have already given it back. Whether the data confirms that is the macro swing factor.</span></div>
+  </div>
+
+  <footer class="foot"><b>Sources:</b> Local signal model (Yahoo data, Fri close re-synced Mon 29 Jun 08:09 UTC — equities unchanged from 28 Jun) · entry-grades v1 cache-only proxy · Investing/wiki (bitcoin, solana-sol, ai-trade-rotation, ai-midcycle-slowdown-jordi-visser, memory-chips, nvidia-nvda, marvell-mrvl) · prior brief 28 Jun 2026 (full Friday-close detail not repeated here). No new web search — no equity move since Friday and no new source since the 28 Jun Jordi video. Entry grades are a v1 trend proxy; the full 200-day/EMA version comes from the dashboard repo. <b>Not financial advice.</b><div class="nfa">Not financial advice — this surfaces signals to inform your own decisions.</div></footer>
+</div>
+</body>
+</html>
