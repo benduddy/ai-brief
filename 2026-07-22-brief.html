@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wednesday Signal Brief — 22 July 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4EC; --ink:#27241D; --muted:#6E6A5E; --faint:#928C7C;
+    --hair:#E4DDCD; --hair-strong:#D8CFB9;
+    --clay:#C9663F; --clay-soft:#E8C4AE; --clay-wash:#F3E5DA;
+    --leading:#5F7355; --leading-wash:#E7ECDF;
+    --hot:#B8862F; --hot-wash:#F1E7CF;
+    --basing:#8A8475; --basing-wash:#EAE5D7;
+    --serif:"Newsreader", Georgia, "Times New Roman", serif;
+    --sans:"Inter", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink)}
+  body{font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:700px;margin:0 auto;padding:56px 28px 72px}
+  .kicker,.sec h2,.sec .sub,.tag,.badge,.meta,.cal .d,.foot{font-family:var(--sans)}
+
+  .mast{display:flex;align-items:flex-start;gap:16px;margin-bottom:8px}
+  .spark{flex:0 0 auto;margin-top:8px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin:0 0 6px}
+  h1.title{font-family:var(--serif);font-weight:500;font-size:42px;line-height:1.05;letter-spacing:-.01em;margin:0 0 10px}
+  .meta{font-size:13px;color:var(--muted);margin:0}
+  .meta b{color:var(--ink);font-weight:600}
+  .rule{height:2px;background:var(--clay);border:0;margin:22px 0 0;width:64px;border-radius:2px}
+
+  .lede{font-size:22px;line-height:1.5;margin:30px 0 8px;font-weight:400}
+  .lede em{font-style:italic}
+  .tldr{margin:14px 0 0;padding:0;list-style:none}
+  .tldr li{position:relative;padding:7px 0 7px 22px;border-bottom:1px solid var(--hair)}
+  .tldr li:last-child{border-bottom:0}
+  .tldr li::before{content:"";position:absolute;left:2px;top:16px;width:6px;height:6px;border-radius:50%;background:var(--clay)}
+  .tldr b{font-weight:600}
+
+  .sec{display:flex;align-items:center;gap:10px;margin:72px 0 24px}
+  .sec .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .sec h2{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0;color:var(--ink)}
+  .sec .sub{font-size:12.5px;color:var(--faint);margin-left:auto;font-weight:500}
+  .sec.hot .dot{background:var(--hot)} .sec.lead .dot{background:var(--leading)}
+  .sec.base .dot{background:var(--basing)} .sec.entry .dot{background:var(--clay)}
+  .sec.plain .dot{background:var(--ink)}
+
+  .grades{display:flex;flex-direction:column;gap:15px;margin:0}
+  .grade-row{display:flex;gap:13px;align-items:baseline}
+  .badge{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:15px;color:#fff;margin-top:2px}
+  .badge.A{background:var(--clay)} .badge.B{background:var(--clay-soft);color:#7a3d22}
+  .badge.C{background:var(--hot-wash);color:#7a5c14;border:1px solid #d8bd7e}
+  .gl{font-size:16px}
+  .gl .lab{font-weight:600;color:var(--ink)} .gl .tk{font-weight:600;color:var(--clay)} .gl .muted{color:var(--muted)}
+
+  .name{padding:40px 0 8px;border-top:1px solid var(--hair)}
+  .name:first-of-type{border-top:0;padding-top:8px}
+  .name .ch{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+  .name .sdot{width:9px;height:9px;border-radius:50%;flex:0 0 auto;align-self:center}
+  .name.hot .sdot{background:var(--hot)} .name.lead .sdot{background:var(--leading)} .name.base .sdot{background:var(--basing)}
+  .name .nm{font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:-.01em}
+  .name .px{margin-left:auto;font-family:var(--serif);font-size:19px;color:var(--ink)}
+  .name .tags{display:flex;gap:6px;margin:14px 0 26px;flex-wrap:wrap}
+  .tag{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--clay-wash);color:#8a4a2c}
+  .tag.s-hot{background:var(--hot-wash);color:#7a5c14}
+  .tag.s-lead{background:var(--leading-wash);color:#445239}
+  .tag.s-base{background:var(--basing-wash);color:#5d584b}
+
+  .field{margin:0 0 24px}
+  .field .h{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:0;color:var(--ink);margin:0 0 6px}
+  .field .b{font-size:16.5px;line-height:1.6;color:var(--ink);margin:0}
+  .field.read{margin-top:28px}
+  .field.read .h{color:var(--clay)}
+  .field.read .b{font-style:italic;font-size:18px;line-height:1.55}
+
+  .quote{border-left:3px solid var(--clay);background:var(--clay-wash);padding:16px 20px;border-radius:0 10px 10px 0;margin:0;font-size:18px;line-height:1.5}
+  .quote .src{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:10px;font-style:normal;line-height:1.5}
+
+  .cal{margin:0}
+  .cal .row{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:13px 0;font-size:16px;border-top:1px solid var(--hair)}
+  .cal .row:first-child{border-top:0}
+  .cal .d{font-weight:600;color:var(--clay);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+
+  .foot{margin-top:50px;padding-top:18px;border-top:1px solid var(--hair-strong);font-size:12.5px;color:var(--faint);line-height:1.6}
+  .foot a{color:var(--clay);text-decoration:none}
+  .foot .nfa{font-style:italic;margin-top:10px;font-family:var(--serif)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <svg class="spark" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><g fill="#C9663F"><rect x="11" y="1" width="2" height="22" rx="1"/><rect x="1" y="11" width="22" height="2" rx="1"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(45 12 12)"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(-45 12 12)"/></g></svg>
+    <div>
+      <p class="kicker">AI-Trade · Daily Brief</p>
+      <h1 class="title">Wednesday Signal Brief</h1>
+      <p class="meta"><b>22 July 2026</b> · 48 names · benchmark <b>QQQ</b> · data 07:29 UTC</p>
+    </div>
+  </header>
+  <hr class="rule">
+
+  <p class="lede">The mid-July washout is being <em>bought</em> — memory and AI-chips ripped back today, led by a Micron breakout and AMD running into its own product event — and, tellingly, nothing is overheated yet.</p>
+  <ul class="tldr">
+    <li><b>How to read this:</b> <b>heat</b> 0 = washed-out, 100 = red-hot; <b>momentum</b> = strength of the recent up-move; status bands are <b>Leading</b> (strong &amp; healthy), <b>Overheated</b> (strong but stretched), <b>Basing</b> (weak/bottoming), <b>Neutral</b> (no clear signal). The <b>Setup</b> lines are opinions on risk/reward and timing to weigh for yourself — not directives; the call is yours.</li>
+    <li><b>The washout is being bought.</b> After mid-July's Chinese open-model (Moonshot/Kimi) scare flushed semis ~13%, memory and AI-chips snapped back hard today — <b>MU +12%</b>, <b>AMD +8%</b> into its event, with INTC, ARM, LITE, TSM and SNDK all higher.</li>
+    <li><b>Micron is the headline flip</b> — Basing → Leading on a fresh BofA $1,550 target, and it's <em>still</em> cheap (PEG 0.06) and barely above its 50-day. The value-accumulation name just confirmed.</li>
+    <li><b>AMD's ‘Advancing AI' event is today–tomorrow</b> (MI450/Helios; Meta + OpenAI 6GW commitments the setup) — a binary marquee it has already run +8% into. Great trend, hot entry.</li>
+    <li><b>Nothing is Overheated</b> — heat tops out at 50 (AMD). Leaders are getting bought but still cheap for their growth: today's pullback-hunter bullseye is wide — <b>GEV, AMD, NVDA, AVGO, MU, ASML, LITE</b> all lead-or-base <em>and</em> screen cheap (PEG ≤ ~1).</li>
+    <li>Quiet-tape value: <b>MRVL, ALAB, AVGO</b> are basing but cheap-for-growth — accumulate-into-weakness candidates. (Exception: <b>MP</b> is below its 50-day and still making lower lows — a falling knife, not a base.)</li>
+    <li>Counter-current: <b>AMZN</b> slid Neutral → Lagging while peers rallied, one week before its <b>30-Jul Q2</b> (record capex vs free cash flow) — the book's biggest binary.</li>
+  </ul>
+
+  <div class="sec entry"><span class="dot"></span><h2>Entry Watchlist</h2><span class="sub">relative strength + entry timing</span></div>
+  <div class="grades">
+    <div class="grade-row"><span class="badge A">A</span><span class="gl"><span class="lab">Prime add — leading/basing, trend intact, on an entry</span> &nbsp; <span class="tk">MU&nbsp; NVDA&nbsp; AMD&nbsp; GEV&nbsp; AVGO&nbsp; ANET&nbsp; ASML&nbsp; ENR.DE&nbsp; AMZN</span></span></div>
+    <div class="grade-row"><span class="badge B">B</span><span class="gl"><span class="lab">Add small — leading, slightly extended</span> &nbsp; <span class="tk">LITE&nbsp; CLSK</span></span></div>
+    <div class="grade-row"><span class="badge C">C</span><span class="gl"><span class="lab">On the list, wait — strong trend, hot or sub-trend entry</span> &nbsp; <span class="muted">NEE&nbsp; DELL&nbsp; ETN&nbsp; GOOGL&nbsp; STLD&nbsp; TSM&nbsp; VRT</span></span></div>
+  </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>Market Backdrop</h2><span class="sub">the tape, and what the smart money is saying</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">MACRO · Rates & risk mood</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span><span class="tag">29-Jul FOMC</span></div>
+      <div class="field"><p class="h">Macro</p><p class="b">June CPI came in soft (headline ~3.5% vs ~3.8% expected, core ~2.6% vs ~2.8%), which took a July hike off the table — odds of a hold at the 29-Jul Fed meeting are now high. Less-restrictive tone, risk assets caught a bid.</p></div>
+      <div class="field"><p class="h">Semis & memory</p><p class="b">After mid-July's flush — the SOX fell ~13% in two sessions on Chinese open-model (Moonshot/Kimi) fears, Micron off ~14% — the tape snapped back this week. Today's leadership is memory and AI-chips (MU, AMD, INTC, ARM, LITE, TSM, SNDK). The DRAM/HBM supply gap is the tightest since 2011; Samsung pre-announced Q2 profit up ~19x YoY. SOX still +82% YTD.</p></div>
+      <div class="field"><p class="h">Smart money (from the wiki)</p><p class="b"><b>Jordi Visser</b> (12 Jul): the mid-cycle slowdown is <em>ending</em>, not deepening — the last few weeks were a ‘leverage flush, not a top'; memory shortage runs ‘beyond 2030,' Nvidia at a decade-low valuation. Cautious on hyperscalers (AMZN/MSFT/META) on capex risk. <b>InvestAnswers</b> (8 Jul): summer chop, ~80% AI / 20% crypto; core conviction still the ‘Magnificent Three' (MU/MRVL/ALAB). Both dated a week+ back — today's memory breakout is the fresh data point testing Jordi's ‘beyond 2030' read.</p></div>
+      <div class="field"><p class="h">Where they diverge</p><p class="b"><b>MU</b>: Jordi exited in May and is ‘reconsidering re-entry'; IA holds a long-term $1,600 target — today's flip to Leading tilts the debate toward the bulls. <b>MRVL</b>: IA says it ‘broke down,' avoid; Jordi still holds it. <b>ALAB</b>: IA's $379–381 buy-zone has failed (price ~$320) — flagged already, still broken.</p></div>
+    </div>
+  <div class="sec hot"><span class="dot"></span><h2>Run Too Hot</h2><span class="sub">strong, heat building — the hot entries</span></div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">AMD · Advanced Micro Devices</span><span class="px">$544</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry A/B · hot into event</span><span class="tag">Semiconductors</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Its ‘Advancing AI' event runs today and tomorrow (22–23 Jul) — the setup is Meta's ~6GW commitment (incl. 1GW of custom MI450) and OpenAI's 6GW, with the MI450/Helios rack and an MI500 (Zen 7) preview expected; Jefferies is looking for ‘big announcements.' Already +8% on the day, momentum 82.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">A lot is now priced in — it's run ~8% in a session into a binary event, so a ‘sell-the-news' gap is the obvious risk. And it's still competing against Nvidia's far larger installed base. IA (8 Jul) had flagged the trend ‘rolled over' after 22 ATHs in 90 days; today's rip is the counter-move.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~40 with next-year EPS growth ~81%, so forward PEG ~0.5 — that's its price/earnings divided by expected growth; under ~1 means you're paying little for a lot of growth, over ~2 the opposite. On that screen AMD is genuinely cheap for the growth it's expected to deliver.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">UBS models ~$40–50B of GPU revenue in 2027 (~$83B total, ~$14.63 EPS) and a $700 target; management guides ‘tens of billions' of data-center AI revenue in 2027. If the MI450 ramp lands, today's price isn't fully discounting that — but the event itself is the test of whether that story is on track.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">Trading ~8% above its 50-day (~$503) and ~6% below its 52-week high (~$581) — extended, not parabolic. $503 is the line the uptrend has been riding; a daily close back below it would cool the trend.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade A/B — best-in-class trend, cheap for its growth, but heat has jumped to 50 into a binary event, so this is a hot entry. Risk/reward: don't chase the +8% into the print; prefer sizing small and keeping powder for a post-event pullback toward the 50-day ~$503. The event decides whether today's move sticks.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Elite trend and a cheap multiple — but +8% into a make-or-break event is the wrong spot to reach. Let the event clear first.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">ANET · Arista Networks</span><span class="px">$175</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry A · but priciest</span><span class="tag">Data Center & Networking</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">AI-networking demand is inflecting — Q2 guided ~$2.8B, FY2026 raised to ~27.7% growth (~$11.5B) and the AI target lifted to $3.5B (from $3.25B), with plans to roughly double AI sales annually; 100+ customers now on 800G Ethernet. Momentum 84 — the strongest reading in the whole book.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">It's the priciest featured name on growth-adjusted value, and it's ~8% above its 50-day into an Aug-4 print — a miss there would hit hardest.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~39, next-year EPS growth ~23%, forward PEG ~1.71 — fairly priced for its growth, not cheap. The move here is in the trend, not the valuation.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The 1.6T Ethernet scale-up (2027) and the ‘double AI revenue annually' guide point to a multi-year AI-networking runway; at PEG ~1.7 the market already gives it credit for a good chunk of that — the forward story is respected, not underpriced.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">~8% above the 50-day (~$162), ~7% below its high (~$187). Heat 49 — warm, not overheated.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade A on trend, but top-of-book momentum + a ~1.7 PEG + Aug-4 earnings make chasing here a hot entry. Constructive to add on a pullback toward the 50-day ~$162; less so at the highs into the print.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Strongest trend in the book and a real demand inflection — just the priciest, and hottest, way to play AI-networking right now.</p></div>
+    </div>
+  <div class="sec lead"><span class="dot"></span><h2>Leading & Buyable</h2><span class="sub">strong and healthy</span></div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">MU · Micron</span><span class="px">$971</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Flip: Basing → Leading</span><span class="tag">Entry A · prime</span><span class="tag">Memory & Storage</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The day's headline flip: Basing → Leading on a +12% jump. BofA's Vivek Arya put a $1,550 target on it (~60% above here), citing HBM sold out through 2027, 16 multi-year customer locks and a ~$246B HBM market by 2030. Samsung just pre-announced Q2 profit up ~19x YoY — the whole memory complex is re-rating.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">It's volatile — this is the same stock that fell ~14% intra-week in mid-July on China/open-model (Moonshot) fears. A single analyst note drove today's move, not a fresh earnings beat, so it can give some back.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~6, next-year EPS growth ~106%, forward PEG ~0.06 — the lowest in the whole book. That's partly a cyclical-trough artefact (memory earnings ramping off a low base), but even discounted heavily it screens as extremely cheap for the growth.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">If Jordi's read is right that the memory shortage now runs ‘beyond 2030,' Micron's HBM earnings power in FY2027–28 is a step-change from today — and at a ~6 forward P/E the market is nowhere near pricing that in. The clearest ‘where the business is going' story in the book.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">Only ~3% above its 50-day (~$944) despite the +12% — a fresh breakout, not a stretched one. ~20% below its 52-week high (~$1,213), so there's room before it revisits resistance.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Rare combination: a fresh Leading flip that is still un-extended (heat 18, ~3% over the 50-day) and the cheapest name on growth in the book. Risk/reward favours a constructive entry here with the 50-day ~$944 as the line to lean against. Sources split on timing — Jordi exited in May and is ‘reconsidering' (sees ‘significantly higher' in 6 months); IA holds a $1,600 long-term target but had flagged near-term mean-reversion. Today's breakout tilts that toward the bulls.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The value-accumulation name just confirmed — cheap, un-extended, and now leading. The most interesting flip on the board.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">GEV · GE Vernova</span><span class="px">$1,079</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry A · prime</span><span class="tag">Q2 today</span><span class="tag">Power & Grid</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Reports Q2 this morning (consensus ~$3.17 EPS, ~$10.77B revenue). The setup: Q1 orders +71% YoY to $18.3B, a ~$163B backlog, targeting ≥110GW by year-end — AI-datacenter power demand is filling its order book years out. Leading, with heat a moderate 40.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">It's priced richly (forward P/E mid-40s) and much of the backlog is arguably already in the stock, so the Q2 bar is high — upside needs pricing power on top of volume. Power/grid demand is also cyclical.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~44, next-year EPS growth ~62%, forward PEG ~0.71 — cheap-ish for its growth despite the high headline multiple. The cleanest ‘strong and still reasonably priced' name among the outright leaders.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">Order slots booked toward ~2030 give multi-year revenue and high-margin service visibility; if the ≥110GW trajectory holds, the forward earnings justify the multiple — but today's price already leans on that, so Q2 needs to confirm rather than just reassure.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">~4% above its 50-day (~$1,036), ~8% below its high (~$1,175). The 50-day is the trend line to watch through the print.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade A — leading, trend intact, only mildly extended. Risk/reward favours holding/adding on strength, but with Q2 dropping today the honest move is to let the number land: a beat-and-raise confirms the add; a rich-valuation wobble gives a cleaner entry toward the 50-day ~$1,036.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The best ‘strong and still cheap-ish' leader in the book — but it's reporting into that strength this morning, so the number is the near-term arbiter.</p></div>
+    </div>
+  <div class="sec base"><span class="dot"></span><h2>Oversold / Basing</h2><span class="sub">weak or bottoming — the accumulation candidates</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">NVDA · Nvidia</span><span class="px">$207</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry A · on support</span><span class="tag">Semiconductors</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">China H200 shipments just got limited US approval (small volumes to Alibaba/ByteDance); Vera Rubin's ramp is reportedly past its thermal issues; and it landed a Japan sovereign-AI order (13,750 Vera CPUs + 27,500 Rubin GPUs). KeyBanc lifted its target to $330.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">The China volumes are ‘very few' and heavily restricted — not a needle-mover yet. It's the name most exposed to the open-model (Moonshot/Kimi) competition scare that flushed semis in mid-July. Basing, not leading.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~16, next-year EPS growth ~43%, forward PEG ~0.38 — the cheapest mega-cap on growth in the book. For the franchise at the centre of the AI trade, that's a strikingly low multiple.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">Vera Rubin's inference-cost leadership into 2026–27 and the sovereign-AI pipeline point to durable growth; Raoul/GMI (older, 21 May) framed it as ‘the move has just started' if the compute supercycle holds. At a ~16 forward P/E the market is pricing NVDA like a maturing cyclical, not the platform — the forward story looks under-, not over-, priced here.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">Sitting right on its 50-day (~$210) and ~12% below its high (~$235). IA's $190–195 support has held since April; a daily close below it would be the first real crack in the uptrend. IA sees near-term chop toward ~$228 if the base holds.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade A on a base — leading relative strength, trend intact, sitting on (not above) its 50-day, so one of the cleaner accumulation spots in the book. Risk/reward: constructive to accumulate in the ~$195–210 zone with IA's $190–195 as the line to lean on. Jordi calls it a ‘fresh MACD buy at a decade-low valuation.'</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Cheapest mega-cap on growth, sitting on support with the trend intact — the textbook ‘accumulate into weakness' name, not a chase.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">AVGO · Broadcom</span><span class="px">$387</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry A · weak tape, strong future</span><span class="tag">Custom Silicon</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Custom-silicon franchise is compounding: Q2 AI revenue $10.8B (+143% YoY), a new Apple ASIC deal running through 2031, and six hyperscaler design-win customers (incl. Anthropic, Google, Meta, OpenAI). CEO guides AI revenue ‘in excess of $100B' in 2027; Bernstein's math gets to $180–200B.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">The Street wanted a formal FY2027 upgrade and got a reiteration, so it has been basing rather than breaking out. Heavy hyperscaler concentration is the structural risk. Below its 50-day.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~20, next-year EPS growth ~67%, forward PEG ~0.30 — very cheap for its growth. One of the two or three best value-for-growth reads in the whole book.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">If AI revenue really compounds toward $100–200B by 2027, today's ~20x forward multiple badly under-prices it — a fundamentals-forward accumulation case, not a momentum one. The catch is timing: the tape is quiet (Basing, below the 50-day) while the forward story keeps improving. You're early, not late.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">~4% below its 50-day (~$401), ~20% below its high (~$481). IA's ~$360 support (where it bought on the Apple-deal news) has held — price ~$387, above it.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade A on fundamentals, but the tape is soft (below the 50-day) — a ‘weak tape, strong future' accumulation candidate. Risk/reward favours scaling in toward the ~$360–387 zone rather than waiting for momentum to confirm; reclaiming the 50-day ~$401 would flip it from accumulate to add.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The ASIC compounder is cheap and basing while its forward numbers climb — a patience trade: accumulate into the quiet, don't wait for the breakout to start.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">CLSK · CleanSpark</span><span class="px">$15</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span><span class="tag">Flip: Basing → Neutral</span><span class="tag">Entry B · but BTC-beta</span><span class="tag">Crypto & Miners</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Flipped Basing → Neutral on +6.7%, part of a broad Bitcoin-miner-to-AI-datacenter re-rating (CIFR +11%, MARA +5% alongside). The thesis is now contracted, not optional: its 20-year, 175MW Sandersville GA lease (signed 10 Jul) is worth $6.6B ($11.6B if extended), plus an LOI + exclusivity on its ~885MW Texas portfolio.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Lease revenue doesn't start until Q4 2027, and the Texas deal is still an LOI, not signed (unlike Cipher's fully-signed mega-leases). Until then it trades as Bitcoin-mining beta — high volatility, BTC-linked. Still only Neutral, not Leading.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The Sandersville lease turns CleanSpark from ‘miner with AI optionality' into a contracted AI-infrastructure landlord — a genuine thesis change vs the wiki's older ‘optionality' framing (that page still needs updating). The forward value is real but back-end-loaded (2027+), so the market is only part-pricing it.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">Right on its 50-day (~$15.26), but still ~34% below its 52-week high (~$23.20) — a lot of ground to recover before it's stretched.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade B (leading trend, a touch extended) — but note the grade/status disagreement: the trend model likes it while status is only Neutral, the tell that this is Bitcoin-beta, not a clean equity trend. Risk/reward: size it as crypto exposure; the ~$15.26 50-day is the near-term line, and the lease is the multi-year floor under the story. No P/E — no valuation read on a stock still swinging on Bitcoin.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The miner-to-AI-landlord pivot is now contracted, not hypothetical — but it's back-end-loaded to 2027 and still trades as Bitcoin beta, so it's a theme trade, not a value one.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">AMZN · Amazon</span><span class="px">$248</span></div>
+      <div class="tags"><span class="tag s-base">Lagging</span><span class="tag">Flip: Neutral → Lagging</span><span class="tag">Q2 30-Jul</span><span class="tag">Hyperscaler</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">AWS is re-accelerating — 28% YoY (fastest in 15 quarters), ~$150B ARR, and $15B+ of AI revenue ARR from ~zero two years ago. Q2 lands 30 Jul; guidance is $194–199B sales, $20–24B operating income.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">It slipped Neutral → Lagging today while the rest of the complex ripped — the clear laggard. Jordi's hyperscaler-caution thesis is squarely on it: MSFT/META/AMZN are down ~8–9% month-to-date on capex/depreciation worry, and the $200B 2026 capex plan is the crux of the 30-Jul print.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~25, next-year EPS growth ~14%, forward PEG ~1.81 — the priciest featured name on growth-adjusted value. Fairly-to-fully priced; the cheapness in this book is in the others, not here.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">Bull case: AWS AI revenue compounds and record capex converts to free cash flow. Bear case (Jordi): $200B capex compresses margins and FCF first. Q2 is the direct test — the market isn't obviously pricing either outcome, which is why it's the featured binary.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">~1% below its 50-day (~$251) and ~10% below its high (~$275). Losing the 50-day while peers rally is the divergence to watch.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade A on relative strength but Lagging on status — a split signal. Risk/reward into 30-Jul is genuinely two-sided: a capex-with-FCF-and-AWS-beat print reclaims the 50-day ~$251 and the grade-A read wins; a capex-heavy, margin-light print validates Jordi's caution. Honest read: not a pre-earnings chase — let the number resolve the divergence, with $251 as the level that decides it.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The one name going the wrong way today, into the book's biggest binary — AWS re-acceleration vs record capex, settled 30 Jul. Wait for the print.</p></div>
+    </div>
+  <div class="sec plain"><span class="dot"></span><h2>What Changed · Quiet Today</h2><span class="sub">the day-over-day flips and the benched names</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">FLIPS · Status changes</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span></div>
+      <div class="field"><p class="h">Improving</p><p class="b"><b>MU</b> Basing → Leading (+12%, the headline). <b>CLSK</b> &amp; <b>CIFR</b> Basing → Neutral — the Bitcoin-miners lifting off their base on +7–11% as the AI-datacenter-landlord re-rating continues.</p></div>
+      <div class="field"><p class="h">Deteriorating</p><p class="b"><b>AMZN</b> Neutral → Lagging (the lone laggard into 30-Jul Q2). <b>GLW</b> and <b>ENTG</b> Neutral → Basing (materials/consumables softening).</p></div>
+      <div class="field"><p class="h">Nothing overheated</p><p class="b">Still zero names at Overheated — heat tops out at 50 (AMD). Broad strength, but off a washed-out base, so this reads as a floor being bought rather than a top being made.</p></div>
+      <div class="field"><p class="h">Quiet today</p><p class="b">TSLA, GOOGL, TSM, ASML, MRVL, QCOM, ARM, INTC, ALAB, SNDK, MP, USAR, UUUU, CC, SOLS, WOLF, GLW, ENTG, STLD, VRT, DELL, LITE, COHR, AAOI, ENR.DE, ETN, BTC-USD, SOL-USD, IREN, CIFR, MARA, CRCL, ENPH, FSLR, NXT, BE, EOSE, FLNC, NEE, CEG. Note: several low-quality small-caps (SNDK +14%, AAOI +16%, BE +15%, COHR +11%) popped double-digits but remain Basing — noise on the memory-sympathy bid, not signal.</p></div>
+    </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>What the Smart Money Is Saying</h2></div>
+  <blockquote class="quote">“This was a speed-crash and a leverage flush — not the top of the AI trade.”<span class="src">— Jordi Visser's framing (12 Jul), paraphrased. He has the memory shortage now running ‘beyond 2030' — today's Micron breakout rhymes with that read.</span></blockquote>
+
+  <div class="sec plain"><span class="dot"></span><h2>Catalyst Calendar</h2><span class="sub">next ~2 weeks</span></div>
+  <div class="cal">
+    <div class="row key"><span class="d">Wed 22 Jul</span><span>GEV Q2 (before open) · AMD ‘Advancing AI' event opens (22–23 Jul, MI450/Helios) — today's marquee.</span></div>
+    <div class="row key"><span class="d">Wed 30 Jul</span><span>AMZN Q2 (after close) — record capex vs free cash flow; the book's biggest binary.</span></div>
+    <div class="row"><span class="d">Mon 4 Aug</span><span>AMD Q2, ANET Q2, ALAB Q2 (all after close).</span></div>
+    <div class="row"><span class="d">Tue 26 Aug</span><span>NVDA Q2 (FY2027, after close).</span></div>
+    <div class="row"><span class="d">Wed 3 Sep</span><span>AVGO Q3 (after close).</span></div>
+    <div class="row"><span class="d">Mon 29 Sep</span><span>MU Q3.</span></div>
+    <div class="row"><span class="d">Ongoing</span><span>Fed hold likely (29-Jul FOMC); Chinese open-model (Moonshot/Kimi) competition remains the overhang on semis.</span></div>
+  </div>
+
+  <footer class="foot"><b>Sources:</b> Signal-Model (keyless Yahoo data, 22 Jul 07:29 UTC, 48 names); company disclosures &amp; analyst notes via web search (BofA, UBS, Jefferies, KeyBanc, Bernstein; 8–21 Jul); Investing wiki syntheses of InvestAnswers, Jordi Visser and Raoul Pal/GMI (dated 8–12 Jul). Entry grades are a v1 cache-only proxy for the trend filter — the full 200-day/EMA version lives in the dashboard.<div class="nfa">Not financial advice — this surfaces signals to inform your own decisions.</div></footer>
+</div>
+</body>
+</html>
