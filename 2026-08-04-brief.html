@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tuesday Signal Brief — 4 August 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4EC; --ink:#27241D; --muted:#6E6A5E; --faint:#928C7C;
+    --hair:#E4DDCD; --hair-strong:#D8CFB9;
+    --clay:#C9663F; --clay-soft:#E8C4AE; --clay-wash:#F3E5DA;
+    --leading:#5F7355; --leading-wash:#E7ECDF;
+    --hot:#B8862F; --hot-wash:#F1E7CF;
+    --basing:#8A8475; --basing-wash:#EAE5D7;
+    --serif:"Newsreader", Georgia, "Times New Roman", serif;
+    --sans:"Inter", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink)}
+  body{font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:700px;margin:0 auto;padding:56px 28px 72px}
+  .kicker,.sec h2,.sec .sub,.tag,.badge,.meta,.cal .d,.foot{font-family:var(--sans)}
+
+  .mast{display:flex;align-items:flex-start;gap:16px;margin-bottom:8px}
+  .spark{flex:0 0 auto;margin-top:8px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin:0 0 6px}
+  h1.title{font-family:var(--serif);font-weight:500;font-size:42px;line-height:1.05;letter-spacing:-.01em;margin:0 0 10px}
+  .meta{font-size:13px;color:var(--muted);margin:0}
+  .meta b{color:var(--ink);font-weight:600}
+  .rule{height:2px;background:var(--clay);border:0;margin:22px 0 0;width:64px;border-radius:2px}
+
+  .lede{font-size:22px;line-height:1.5;margin:30px 0 8px;font-weight:400}
+  .lede em{font-style:italic}
+  .tldr{margin:14px 0 0;padding:0;list-style:none}
+  .tldr li{position:relative;padding:7px 0 7px 22px;border-bottom:1px solid var(--hair)}
+  .tldr li:last-child{border-bottom:0}
+  .tldr li::before{content:"";position:absolute;left:2px;top:16px;width:6px;height:6px;border-radius:50%;background:var(--clay)}
+  .tldr b{font-weight:600}
+
+  .sec{display:flex;align-items:center;gap:10px;margin:72px 0 24px}
+  .sec .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .sec h2{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0;color:var(--ink)}
+  .sec .sub{font-size:12.5px;color:var(--faint);margin-left:auto;font-weight:500}
+  .sec.hot .dot{background:var(--hot)} .sec.lead .dot{background:var(--leading)}
+  .sec.base .dot{background:var(--basing)} .sec.entry .dot{background:var(--clay)}
+  .sec.plain .dot{background:var(--ink)}
+
+  .grades{display:flex;flex-direction:column;gap:15px;margin:0}
+  .grade-row{display:flex;gap:13px;align-items:baseline}
+  .badge{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:15px;color:#fff;margin-top:2px}
+  .badge.A{background:var(--clay)} .badge.B{background:var(--clay-soft);color:#7a3d22}
+  .badge.C{background:var(--hot-wash);color:#7a5c14;border:1px solid #d8bd7e}
+  .gl{font-size:16px}
+  .gl .lab{font-weight:600;color:var(--ink)} .gl .tk{font-weight:600;color:var(--clay)} .gl .muted{color:var(--muted)}
+
+  .name{padding:40px 0 8px;border-top:1px solid var(--hair)}
+  .name:first-of-type{border-top:0;padding-top:8px}
+  .name .ch{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+  .name .sdot{width:9px;height:9px;border-radius:50%;flex:0 0 auto;align-self:center}
+  .name.hot .sdot{background:var(--hot)} .name.lead .sdot{background:var(--leading)} .name.base .sdot{background:var(--basing)}
+  .name .nm{font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:-.01em}
+  .name .px{margin-left:auto;font-family:var(--serif);font-size:19px;color:var(--ink)}
+  .name .tags{display:flex;gap:6px;margin:14px 0 26px;flex-wrap:wrap}
+  .tag{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--clay-wash);color:#8a4a2c}
+  .tag.s-hot{background:var(--hot-wash);color:#7a5c14}
+  .tag.s-lead{background:var(--leading-wash);color:#445239}
+  .tag.s-base{background:var(--basing-wash);color:#5d584b}
+
+  .field{margin:0 0 24px}
+  .field .h{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:0;color:var(--ink);margin:0 0 6px}
+  .field .b{font-size:16.5px;line-height:1.6;color:var(--ink);margin:0}
+  .field.read{margin-top:28px}
+  .field.read .h{color:var(--clay)}
+  .field.read .b{font-style:italic;font-size:18px;line-height:1.55}
+
+  .quote{border-left:3px solid var(--clay);background:var(--clay-wash);padding:16px 20px;border-radius:0 10px 10px 0;margin:0;font-size:18px;line-height:1.5}
+  .quote .src{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:10px;font-style:normal;line-height:1.5}
+
+  .cal{margin:0}
+  .cal .row{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:13px 0;font-size:16px;border-top:1px solid var(--hair)}
+  .cal .row:first-child{border-top:0}
+  .cal .d{font-weight:600;color:var(--clay);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+
+  .foot{margin-top:50px;padding-top:18px;border-top:1px solid var(--hair-strong);font-size:12.5px;color:var(--faint);line-height:1.6}
+  .foot a{color:var(--clay);text-decoration:none}
+  .foot .nfa{font-style:italic;margin-top:10px;font-family:var(--serif)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <svg class="spark" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><g fill="#C9663F"><rect x="11" y="1" width="2" height="22" rx="1"/><rect x="1" y="11" width="22" height="2" rx="1"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(45 12 12)"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(-45 12 12)"/></g></svg>
+    <div>
+      <p class="kicker">AI-Trade · Daily Brief</p>
+      <h1 class="title">Tuesday Signal Brief</h1>
+      <p class="meta"><b>4 August 2026</b> · 48 names · benchmark <b>QQQ</b> · data 07:24 UTC · equity prices = Fri 31-Jul close</p>
+    </div>
+  </header>
+  <hr class="rule">
+
+  <p class="lede">A thin-data morning: the US equity tape hasn't refreshed — every stock in the model is frozen at exactly Friday's close, so Monday's session isn't in the numbers yet. The one thing that genuinely moved is <em>crypto</em>: Bitcoin bounced +1.5% and the model's status flipped it back to Leading — but it's a momentum pop still <em>below</em> its 200-day line, not a trend reclaim. The live event to watch is <em>Arista (ANET) reporting Q2 tonight after the close.</em></p>
+  <ul class="tldr">
+    <li><b>Read-through, not re-run.</b> Yahoo hasn't posted Monday's close, so all 48 equities show Friday 31-Jul prices to the cent — identical to yesterday's brief. Today's equity lines are <b>referenced, not re-derived</b>; the fresh signal is crypto + tonight's Arista print.</li>
+    <li><b>Bitcoin flipped back to Leading</b> (from Basing) on a +1.5% bounce to ~$63.5k — reversing yesterday's downgrade. But it's still <b>below its 200-day average</b> and 34% under its highs, so by the followed sources' own rule this is a bear-market bounce until the 200-day is reclaimed, not the all-clear.</li>
+    <li><b>Arista (ANET) reports Q2 after the close tonight</b> (call 4:30pm ET). Street wants ~$0.79 adj EPS (+18% YoY) on ~$2.83B revenue; the whole AI-networking thesis ($3.5B of AI revenue in the FY guide) gets a fresh read. Signal has it Leading but hot (heat 56, ~8% above its 50-day).</li>
+    <li><b>Still just one overheated name:</b> Amazon (heat 70) remains the sole stretched leader after Friday's AWS blowout — unchanged from yesterday.</li>
+    <li><b>Strong &amp; still cheap-ish</b> (leading/near-entry AND cheap for their growth): <b>STLD</b> (PEG 1.01), <b>AVGO</b> (0.30), <b>CIFR</b> (0.21), <b>ENR.DE</b> (0.65). <b>Quiet-tape value</b> (basing but very cheap for strong forward growth): <b>MU</b> (PEG 0.05, growth +112%), <b>MRVL</b> (0.57).</li>
+  </ul>
+
+  <div class="sec entry"><span class="dot"></span><h2>Entry Watchlist</h2><span class="sub">relative strength + entry timing</span></div>
+  <div class="grades">
+    <div class="grade-row"><span class="badge A">A</span><span class="gl"><span class="lab">Prime add — leading, trend intact, near a pullback/base entry</span> &nbsp; <span class="tk">STLD&nbsp; AVGO&nbsp; ETN&nbsp; GOOGL&nbsp; CIFR&nbsp; ENR.DE</span></span></div>
+    <div class="grade-row"><span class="badge B">B</span><span class="gl"><span class="lab">Add small — leading, slightly extended</span> &nbsp; <span class="tk">AMZN&nbsp; ANET</span></span></div>
+    <div class="grade-row"><span class="badge C">C</span><span class="gl"><span class="lab">On the list, wait — strong trend but a hot/below-50-day entry</span> &nbsp; <span class="muted">NVDA&nbsp; DELL&nbsp; TSM&nbsp; AMD&nbsp; ASML&nbsp; LITE&nbsp; NEE&nbsp; GEV&nbsp; CLSK</span></span></div>
+  </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>Market backdrop</h2><span class="sub">the tape behind the signals</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">MACRO · What's moving the AI trade</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span><span class="tag">Backdrop</span></div>
+      <div class="field"><p class="h">Tape</p><p class="b">Last week the Nasdaq snapped a 6-day losing streak (+2.8% to ~25,120), led by Microsoft's +16% jump on Azure &gt;$100B — i.e. capex being re-read as demand. But the bounce narrowed: chips lagged (the SMH semis ETF fell a fourth straight day, ~-3% on the week) even as the mega-caps ripped. That's the same narrow, mega-cap-led snapback flagged in the last two briefs, not a broad all-clear.</p></div>
+      <div class="field"><p class="h">What the smart money is saying (from the wiki)</p><p class="b"><b>InvestAnswers</b> (29-Jul): sell-off and China-chip fears both overblown — "start putting your toe in the water," but expects August/September to stay rough; sees QQQ drifting toward its 200-day (~$643) and crypto possibly rebounding in ~60 days. <b>Jordi Visser</b> (2-Aug): still cautious on crypto — it stays a bear market until Bitcoin and Ether reclaim their 200-day lines, and he wants retail energy back before he'd turn positive (doesn't expect it soon). Where they diverge: IA is nibbling now; Jordi wants the 200-day reclaim first. Both dated views — the newest is only 2–5 days old.</p></div>
+      <div class="field"><p class="h">Macro watch</p><p class="b">New Fed chair Kevin Warsh has flagged inflation still well above target, keeping a September rate-hike risk on the table (~mid-70s% odds per IA's read) — a cloud over the tape into the next meeting. Next hard macro print: CPI on 12-Aug.</p></div>
+    </div>
+  <div class="sec lead"><span class="dot"></span><h2>Leading — but read tonight's print first</h2><span class="sub">strong & healthy; ANET is the live event</span></div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">ANET · Arista Networks</span><span class="px">$180.35</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry B · add small</span><span class="tag">Reports tonight</span><span class="tag">Data Center & Networking</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The one live catalyst in this brief: Q2 lands after tonight's close. AI networking is the engine — the FY26 guide already bakes in $3.5B of AI-driven revenue, and Q1 grew sales ~35% YoY. The new 7060XE7 switch (1.6 terabits/sec, built for AI rack-scale) drove a ~7% rally on launch, and 21 of 26 analysts rate it a strong buy. A clean beat-and-raise would confirm the AI-buildout demand story is still accelerating.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Expectations are high and the stock is priced for a good print — a merely in-line quarter can sell off. The specific worry the Street keeps flagging: supply bottlenecks could push out AI-related upside and squeeze gross margins. Signal-wise it's hot going in — heat 56 (heat = how stretched a name looks; 0 = washed-out, 100 = red-hot) and trading ~8% above its 50-day average, near its highs, so there's little cushion if the print disappoints.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~41 (rich), next-year earnings growth ~+23%, forward PEG ~1.81 — that's price-to-earnings divided by expected growth; under ~1 means you're paying little for a lot of growth, over ~2 the opposite. At 1.8 it sits in the "fairly-to-fully priced for its growth" band — the move here is in the trend, not the valuation.</p></div>
+      <div class="field"><p class="h">Forward view / TAM</p><p class="b">The bull case is that AI back-end networking (the switching fabric between GPUs) is a multi-year, expanding market as clusters scale, and Arista is the merchant-silicon leader taking share from Cisco in the data center. Tonight's number and — more importantly — the forward guide will tell you whether the market has already priced that in (P/E ~41 says a lot is priced) or whether the AI-revenue ramp is running ahead of estimates.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">~$180 now, roughly 8% above its 50-day average (~$167) and only ~3.5% below its 52-week high (~$187). $167 is the line that's kept the uptrend intact; the earnings reaction will likely set the next move well outside these levels either way.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade B: leading and buyable, but mildly extended into a binary event. Model + reality: this is a hold-through-or-wait, not a chase-into-print. Risk/reward favours letting the number clear first — a beat that gaps it up is still addable on the first pullback toward the 50-day; a miss likely offers a better entry lower. Note: Arista still has no wiki page despite featuring for days — worth writing one.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The only genuine event today. Don't chase into the print; let tonight's guide reset the levels, then act.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">STLD · Steel Dynamics</span><span class="px">$251.26</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry A · prime add</span><span class="tag">Strong & cheap</span><span class="tag">Frozen at Fri close</span></div>
+      <div class="field"><p class="h">Status</p><p class="b">Frozen at Friday's close — no new session to add. Referenced from yesterday's brief: still the model's strongest name on relative strength (rank #1), Leading, trend intact, sitting right on its 50-day (~$248) rather than stretched.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">The pullback-hunter bullseye: forward P/E ~14, growth ~+14%, forward PEG ~1.01 — leading AND reasonably priced for its growth. Cheapest-for-growth alongside AVGO (PEG 0.30) among the A-grades.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Nothing new to say until the tape moves — but it stays the cleanest "strong and not expensive" name on the list.</p></div>
+    </div>
+  <div class="sec hot"><span class="dot"></span><h2>Run too hot</h2><span class="sub">strong, but stretched</span></div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">AMZN · Amazon</span><span class="px">$271.58</span></div>
+      <div class="tags"><span class="tag s-hot">Overheated</span><span class="tag">Entry B</span><span class="tag">Sole overheated name</span><span class="tag">Frozen at Fri close</span></div>
+      <div class="field"><p class="h">Status</p><p class="b">Still the only overheated name in the universe (heat 70), unchanged from yesterday — frozen at Friday's close after the AWS blowout (+37% cloud growth, fastest in 18 quarters) sent it up ~15% Friday. Trading ~10% above its 50-day and right at its highs, so there's little downside cushion at these levels.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">No PEG read — next-year EPS growth screens negative on the heavy capex swing, so the growth-adjusted screen doesn't apply; forward P/E ~28 on a name whose free cash flow just turned negative on data-center spend.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Referenced, not re-run. The signal is the same as yesterday: best-in-class print, but a hot entry right at the highs — wait for it to cool toward the 50-day (~$247).</p></div>
+    </div>
+  <div class="sec base"><span class="dot"></span><h2>Oversold / basing & the one real mover</h2><span class="sub">crypto flipped; equities frozen</span></div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">BTC-USD · Bitcoin</span><span class="px">$63,513</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Status flip · Basing → Leading</span><span class="tag">Trend: still below 200-day</span><span class="tag">The genuine mover</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The one name in the model that actually moved overnight: +1.5% to ~$63.5k, and the momentum swing (up 25 points) was enough to flip the model's status from Basing back to Leading — reversing yesterday's downgrade. It's been resilient given who's NOT buying: per InvestAnswers (29-Jul), ETFs and corporate treasuries have "hardly been buying," yet BTC has held the low-$60s — which IA reads as bullish for when they return.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">This is a bounce, not a breakout. Bitcoin is still <b>below its 200-day average</b> and ~34% under its 52-week high — the model's "Leading" tag here reflects a one-day momentum pop, not a healthy trend (the trend-based entry lens still grades it D, "below," and its 12-month return is -28%). Volumes are subdued and the market is waiting on macro catalysts (CPI, the Fed's September call).</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">~$63.5k, sitting right on its 50-day (~$63.3k) but still below the 200-day — the line the followed sources treat as the bull/bear divide. Wiki reference points (dated, so treat as context not live): IA's 58–60K "killer buy zone" and a not-ruled-out $30K tail case; 52-week high ~$97k is a long way up.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Model says Leading; the sources say wait. Jordi Visser's standing rule (reaffirmed 2-Aug): crypto stays a bear market until BTC reclaims its 200-day — he wants retail energy back first and doesn't expect it soon. So the honest read is: this flip is encouraging but unconfirmed. The risk/reward turns genuinely constructive on a daily close back above the 200-day; below that it's a bounce to be respected, not chased. Weakness toward IA's high-$50s zone is where the followed sources would add, not here.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">A real bounce that flipped the signal green — but it's still under the 200-day, so it's a bear-market bounce until proven otherwise. Watch the 200-day reclaim, not the status pill.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">SOL-USD · Solana</span><span class="px">$73.25</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Crypto</span><span class="tag">Also below 200-day</span></div>
+      <div class="field"><p class="h">Status</p><p class="b">Up ~1% overnight but still Basing — didn't get the momentum flip Bitcoin did, and remains ~50% below its highs and under its 200-day. The weaker crypto of the two; wiki notes flag it as the worst-performing major on a monthly-candle basis. A tag-along on any BTC strength, not a leader.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Follows Bitcoin, doesn't lead it — same 200-day caveat, weaker chart.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">MU · Micron</span><span class="px">$823.03</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Quiet-tape value</span><span class="tag">PEG 0.05</span><span class="tag">Frozen at Fri close</span></div>
+      <div class="field"><p class="h">Status</p><p class="b">Frozen at Friday's close (faded the Thursday +18% memory spike, as the Friday brief warned). Referenced, not re-run.</p></div>
+      <div class="field"><p class="h">Forward view / TAM</p><p class="b">The clearest quiet-tape value case on the board: weak momentum now, but forward P/E ~5, next-year EPS growth ~+112%, forward PEG ~0.05 — priced as if the HBM/AI-memory upcycle won't happen. If the memory-demand story holds, this is a name to accumulate into weakness rather than dismiss for lacking momentum. Basing (holding a level), not free-falling.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">No new tape, but it stays the headline "cheap for a strong forward story" accumulation candidate.</p></div>
+    </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>What the Smart Money Is Saying</h2></div>
+  <blockquote class="quote">“Crypto stays a bear market until Bitcoin and Ether reclaim their 200-day averages — and I want to see retail energy come back first.”<span class="src">— Jordi Visser (2-Aug), on why today's Bitcoin bounce isn't yet the all-clear. InvestAnswers is more willing to nibble the low-$60s. Wiki: [[bitcoin]], [[ai-trade-rotation]].</span></blockquote>
+
+  <div class="sec plain"><span class="dot"></span><h2>Catalyst Calendar</h2><span class="sub">next ~2 weeks</span></div>
+  <div class="cal">
+    <div class="row key"><span class="d">Tue 4 Aug</span><span><b>Arista (ANET) Q2</b> — after the close (call 4:30pm ET). The marquee event; AI-networking demand read.</span></div>
+    <div class="row"><span class="d">Tue 12 Aug</span><span>US CPI — next hard inflation print; feeds the September rate-hike debate.</span></div>
+    <div class="row"><span class="d">Wed 20 Aug</span><span>Marvell (MRVL) Q2 — key for the quiet-tape memory/networking value cohort.</span></div>
+    <div class="row"><span class="d">22–24 Aug</span><span>Jackson Hole symposium — Fed tone into September.</span></div>
+    <div class="row"><span class="d">Tue 26 Aug</span><span>NVIDIA (NVDA) Q2 — the whole trade's tentpole.</span></div>
+  </div>
+
+  <footer class="foot"><b>Sources:</b> Signal model — <code>signals-latest.json</code> (asOf 4-Aug 07:14 UTC; <b>equity prices = Fri 31-Jul close — Monday's session not yet in Yahoo</b>) + <code>signals-changes.json</code> + <code>entry-grades.json</code>. Wiki: bitcoin, ai-trade-rotation, memory-chips. News/catalysts via web search (BTC price context; ANET Q2 preview — consensus ~$0.79 EPS / ~$2.83B rev, reports 4-Aug; market backdrop — Nasdaq +2.8% week, semis lagging). Not financial advice.<div class="nfa">Not financial advice — this surfaces signals to inform your own decisions.</div></footer>
+</div>
+</body>
+</html>
