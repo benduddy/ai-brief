@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monday Signal Brief — 10 August 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4EC; --ink:#27241D; --muted:#6E6A5E; --faint:#928C7C;
+    --hair:#E4DDCD; --hair-strong:#D8CFB9;
+    --clay:#C9663F; --clay-soft:#E8C4AE; --clay-wash:#F3E5DA;
+    --leading:#5F7355; --leading-wash:#E7ECDF;
+    --hot:#B8862F; --hot-wash:#F1E7CF;
+    --basing:#8A8475; --basing-wash:#EAE5D7;
+    --serif:"Newsreader", Georgia, "Times New Roman", serif;
+    --sans:"Inter", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink)}
+  body{font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:700px;margin:0 auto;padding:56px 28px 72px}
+  .kicker,.sec h2,.sec .sub,.tag,.badge,.meta,.cal .d,.foot{font-family:var(--sans)}
+
+  .mast{display:flex;align-items:flex-start;gap:16px;margin-bottom:8px}
+  .spark{flex:0 0 auto;margin-top:8px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin:0 0 6px}
+  h1.title{font-family:var(--serif);font-weight:500;font-size:42px;line-height:1.05;letter-spacing:-.01em;margin:0 0 10px}
+  .meta{font-size:13px;color:var(--muted);margin:0}
+  .meta b{color:var(--ink);font-weight:600}
+  .rule{height:2px;background:var(--clay);border:0;margin:22px 0 0;width:64px;border-radius:2px}
+
+  .lede{font-size:22px;line-height:1.5;margin:30px 0 8px;font-weight:400}
+  .lede em{font-style:italic}
+  .tldr{margin:14px 0 0;padding:0;list-style:none}
+  .tldr li{position:relative;padding:7px 0 7px 22px;border-bottom:1px solid var(--hair)}
+  .tldr li:last-child{border-bottom:0}
+  .tldr li::before{content:"";position:absolute;left:2px;top:16px;width:6px;height:6px;border-radius:50%;background:var(--clay)}
+  .tldr b{font-weight:600}
+
+  .sec{display:flex;align-items:center;gap:10px;margin:72px 0 24px}
+  .sec .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .sec h2{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0;color:var(--ink)}
+  .sec .sub{font-size:12.5px;color:var(--faint);margin-left:auto;font-weight:500}
+  .sec.hot .dot{background:var(--hot)} .sec.lead .dot{background:var(--leading)}
+  .sec.base .dot{background:var(--basing)} .sec.entry .dot{background:var(--clay)}
+  .sec.plain .dot{background:var(--ink)}
+
+  .grades{display:flex;flex-direction:column;gap:15px;margin:0}
+  .grade-row{display:flex;gap:13px;align-items:baseline}
+  .badge{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:15px;color:#fff;margin-top:2px}
+  .badge.A{background:var(--clay)} .badge.B{background:var(--clay-soft);color:#7a3d22}
+  .badge.C{background:var(--hot-wash);color:#7a5c14;border:1px solid #d8bd7e}
+  .gl{font-size:16px}
+  .gl .lab{font-weight:600;color:var(--ink)} .gl .tk{font-weight:600;color:var(--clay)} .gl .muted{color:var(--muted)}
+
+  .name{padding:40px 0 8px;border-top:1px solid var(--hair)}
+  .name:first-of-type{border-top:0;padding-top:8px}
+  .name .ch{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+  .name .sdot{width:9px;height:9px;border-radius:50%;flex:0 0 auto;align-self:center}
+  .name.hot .sdot{background:var(--hot)} .name.lead .sdot{background:var(--leading)} .name.base .sdot{background:var(--basing)}
+  .name .nm{font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:-.01em}
+  .name .px{margin-left:auto;font-family:var(--serif);font-size:19px;color:var(--ink)}
+  .name .tags{display:flex;gap:6px;margin:14px 0 26px;flex-wrap:wrap}
+  .tag{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--clay-wash);color:#8a4a2c}
+  .tag.s-hot{background:var(--hot-wash);color:#7a5c14}
+  .tag.s-lead{background:var(--leading-wash);color:#445239}
+  .tag.s-base{background:var(--basing-wash);color:#5d584b}
+
+  .field{margin:0 0 24px}
+  .field .h{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:0;color:var(--ink);margin:0 0 6px}
+  .field .b{font-size:16.5px;line-height:1.6;color:var(--ink);margin:0}
+  .field.read{margin-top:28px}
+  .field.read .h{color:var(--clay)}
+  .field.read .b{font-style:italic;font-size:18px;line-height:1.55}
+
+  .quote{border-left:3px solid var(--clay);background:var(--clay-wash);padding:16px 20px;border-radius:0 10px 10px 0;margin:0;font-size:18px;line-height:1.5}
+  .quote .src{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:10px;font-style:normal;line-height:1.5}
+
+  .cal{margin:0}
+  .cal .row{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:13px 0;font-size:16px;border-top:1px solid var(--hair)}
+  .cal .row:first-child{border-top:0}
+  .cal .d{font-weight:600;color:var(--clay);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+
+  .foot{margin-top:50px;padding-top:18px;border-top:1px solid var(--hair-strong);font-size:12.5px;color:var(--faint);line-height:1.6}
+  .foot a{color:var(--clay);text-decoration:none}
+  .foot .nfa{font-style:italic;margin-top:10px;font-family:var(--serif)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <svg class="spark" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><g fill="#C9663F"><rect x="11" y="1" width="2" height="22" rx="1"/><rect x="1" y="11" width="22" height="2" rx="1"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(45 12 12)"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(-45 12 12)"/></g></svg>
+    <div>
+      <p class="kicker">AI-Trade · Daily Brief · Macro: neutral</p>
+      <h1 class="title">Monday Signal Brief</h1>
+      <p class="meta"><b>10 August 2026</b> · 50 names · benchmark <b>QQQ</b> · data Fri close · 07:11 UTC</p>
+    </div>
+  </header>
+  <hr class="rule">
+
+  <p class="lede">After a week that punished the high-beta second tier, Friday flipped the script: a broad <em>broadening</em> bounce, with optical-networking leading the charge and the beaten-down names snapping back — while, tellingly, Alphabet went the other way.</p>
+  <ul class="tldr">
+    <li><b>Friday was a broad second-tier bounce.</b> The names that got hit hardest last week snapped back the most: optical/networking ripped — <b>COHR +13.4%</b> (flipped to Leading), <b>AAOI +9.2%</b>, <b>LITE +6.2%</b>, <b>GLW +5.4%</b> — and rare-earth (USAR +11%, UUUU +9.6%, MP +7.6%) and neoclouds (IREN +8.7%, CRWV +6.3%) all bounced. This is the mirror image of the tier-2 selloff the last brief reported.</li>
+    <li><b>Alphabet diverged the wrong way.</b> GOOGL flipped Leading→Basing (momentum −22) <em>while everything around it bounced</em> — the one leader that didn't participate. That fits the rotation the followed sources keep flagging: money favouring the supplier/infrastructure layer (chips, optical, memory, power) over the hyperscalers themselves.</li>
+    <li><b>Value-accumulation bucket (quiet tape, cheap for strong forward growth).</b> In the AI-compute baskets the model flags <b>MU</b> (PEG ~0.05), <b>AMD</b> (0.30), <b>MRVL</b> (0.65), <b>TSM</b> (0.68), <b>ASML</b> (0.83), <b>ALAB</b> (0.96) — all basing, all cheap for big FY-out growth. Low momentum here is a feature (early, not late), not a disqualifier.</li>
+    <li><b>Portfolio-vs-index gap worth noting.</b> The S&P closed Friday at a fresh record (~7,758, within ~1% of its high), yet the 48-name AI universe sits ~38% below its own 60-day highs on average. Index-level calm doesn't transfer to this portfolio.</li>
+    <li><em>Score key — heat: 0 = washed-out, 100 = red-hot/overextended. Momentum: strength of the recent up-move. Status: Leading = strong &amp; healthy, Overheated = strong but stretched, Basing = weak/bottoming, Neutral = no clear signal. 'Setup' lines are opinions on risk/reward and timing to weigh, not directives — the call is yours.</em></li>
+  </ul>
+
+  <div class="sec entry"><span class="dot"></span><h2>Entry Watchlist</h2><span class="sub">relative strength + entry timing</span></div>
+  <div class="grades">
+    <div class="grade-row"><span class="badge A">A</span><span class="gl"><span class="lab">Prime add — leading, trend intact, on an entry</span> &nbsp; <span class="tk">STLD&nbsp; ENR.DE&nbsp; GOOGL</span></span></div>
+    <div class="grade-row"><span class="badge B">B</span><span class="gl"><span class="lab">Add small — leading, slightly extended</span> &nbsp; <span class="tk">LITE&nbsp; AMZN&nbsp; ETN&nbsp; NVDA&nbsp; FSLR&nbsp; AVGO&nbsp; ENTG&nbsp; ANET&nbsp; DELL&nbsp; USAR</span></span></div>
+    <div class="grade-row"><span class="badge C">C</span><span class="gl"><span class="lab">On the list, wait — strong trend, hot/parabolic entry</span> &nbsp; <span class="muted">COHR&nbsp; AAOI</span></span></div>
+  </div>
+
+  <div class="sec hot"><span class="dot"></span><h2>Run Too Hot</h2><span class="sub">strong, but the entry is stretched — don't chase</span></div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">COHR · Coherent</span><span class="px">$379.13</span></div>
+      <div class="tags"><span class="tag s-hot">Leading</span><span class="tag">Entry C · parabolic</span><span class="tag">Optical / Networking</span><span class="tag">Earnings Tue</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The day's standout — up 13.4% and flipped from Basing to Leading. The optical/CPO supply chain is where Friday's leadership sat, and Coherent is the diversified giant of it: an Nvidia $2B strategic tie-up plus a multibillion CPO supply agreement, data-centre &amp; comms now ~75% of revenue, book-to-bill above 4x, and InP laser capacity set to double by year-end. Q4 earnings land <b>this Tuesday 12 Aug</b> after the close.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">A parabolic 13% pop straight into an earnings print is the definition of a hot entry — the setup can be right and the timing still wrong if the report disappoints or the guide merely meets a now-elevated bar. RSI 64 and ~10% above its 50-day baseline leave little cushion if the market fades the move.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~45, next-year EPS growth ~54%, forward PEG ~0.84 — its price/earnings divided by expected growth; under ~1 means you're paying little for a lot of growth, over ~2 the opposite. So even after the run, it screens as fairly-to-cheaply priced <em>for its growth</em> — the move isn't purely multiple expansion.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">Management is guiding new engines — optical circuit switching, co-packaged and near-packaged optics — toward a $20B+ incremental addressable market by 2030, with InP capacity doubling again into 2027. If CPO ramps as the hyperscalers wire up next-gen clusters, today's price is discounting a fraction of that; the bottleneck story (optics as the pinch-point of scale-up) is a structural tailwind, not a one-quarter trade.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">Trading ~$379, roughly 10% above its 50-day average (~$343) and ~11% below its 52-week high (~$427). The 50-day is the line that matters — a pullback that holds it keeps the new Leading trend intact; a close back below it would say Friday's flip was a head-fake.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Model: heat 51, grade C (parabolic) — best-in-class trend but the entry is hot right into a binary event. Risk/reward favours <b>waiting for the print</b> rather than chasing the +13% candle: a post-earnings pullback toward the ~$343 50-day would be the cleaner add if the trend holds; a strong report that gaps and holds is the confirmation-buyer's entry. Not a chase here.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The clearest expression of Friday's optical leadership — but grade C into Tuesday's earnings means this is a wait-for-confirmation, not a buy-the-spike.</p></div>
+    </div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">AAOI · Applied Optoelectronics</span><span class="px">$135.63</span></div>
+      <div class="tags"><span class="tag s-hot">Neutral</span><span class="tag">Entry C · parabolic</span><span class="tag">Optical / Networking</span><span class="tag">High-beta</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Up 9.2% Friday, riding the same optical wave. Its 6 Aug Q2 print was a genuine breakout — EPS $0.06 vs $0.01 expected, revenue $191.9M (+86% YoY), a fifth straight record quarter and a return to non-GAAP profit — with Q3 guided to $255–290M. It's the high-beta challenger to Coherent/Lumentum: bigger swings, faster torque when the group runs. Jordi Visser flagged buying more this month as a small 'rubble-combing' position alongside Marvell.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">The mirror of that torque: no Nvidia partnership (unlike its peers), a thinner balance sheet, and a stock still ~39% below its 52-week high — it whipsaws hard when the group turns. A Neutral status with heat only 18 says the model doesn't yet see a durable trend, just a sharp bounce off a low base.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~29, next-year EPS growth off a tiny base screens at ~568%, forward PEG ~0.05 — the number is real but flatters wildly because the denominator (this year's earnings) is near zero. Treat it as 'cheap if the profit inflection sticks,' not a precise multiple; the swing factor is execution on 800G/1.6T design wins, not the P/E.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">Management expects 800G/1.6T demand to outrun its capacity into mid-2027. If it converts hyperscaler design wins into sustained profitability, the operating leverage off today's small base is large — that's the bull case. But it's the least-derisked name in the optical stack; the forward story is real but binary in a way Coherent's and Lumentum's aren't.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">Trading ~$136, right around its 50-day (~$138) and a long way — ~39% — below its 52-week high (~$223). It's a recovering name off a deep hole, not a fresh breakout to new highs.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Model: grade C (parabolic on relative strength), Neutral status. The high-torque way to play the optical theme — and the riskiest. If you want optical exposure, Coherent/Lumentum are the higher-quality vehicles; AAOI is the leveraged bet that pays more if the group keeps running and hurts more if it doesn't. Favour sizing small and waiting for it to hold above the 50-day rather than chasing the bounce.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The high-beta optical lottery ticket — real Q2 inflection, but a parabolic bounce off a low base, not a clean trend yet.</p></div>
+    </div>
+  <div class="sec lead"><span class="dot"></span><h2>Leading</h2><span class="sub">strong & healthy — the buyable trends</span></div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">NVDA · Nvidia</span><span class="px">$223.96</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry B</span><span class="tag">Semiconductors</span><span class="tag">Q2 · 26 Aug</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The anchor held through last week's chop and firmed into Friday — momentum 87, still the highest-quality trend in the book. GPU rental pricing is reportedly firming ($2→$4/GPU-hr in places), Blackwell is ramping and Rubin is said to be ahead of schedule. Gavin Baker's read — that the selloff 'doesn't match the data,' with GPU availability, DRAM spot and token growth all accelerating — puts Nvidia at the centre of the bull case.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Q2 earnings on <b>26 Aug</b> are a marquee binary: consensus ~$91B revenue, and the bar is high after a strong run. The wider worry Baker himself names is regulation (data-centre moratoria, PR risk), not demand. Near ~$224 it sits close to its highs with less room to absorb a soft guide.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~17, next-year EPS growth ~43%, forward PEG ~0.40 — still one of the cheapest-for-its-growth names in the entire universe. (This is the same bullseye argued in recent briefs; no need to re-make the case — it simply remains intact.)</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">Rubin/Vera Rubin monetisation may be modelled conservatively by the Street per Baker's framing; if the platform ramps as guided, FY2–FY3 estimates look beatable rather than stretched. The debate isn't whether demand exists — it's how much of the 2027 compute build is already in the price. At PEG 0.40, not much is.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">Trading ~$224, about 9% above its 50-day (~$206) and only ~5% below its 52-week high (~$235). The 50-day near $206 is the trend line to watch; holding it keeps the leadership intact into the print.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Model: grade B (leading, slightly extended). The way most sources are positioned into earnings: a core hold, with any add favoured on weakness toward the ~$206 50-day rather than at the highs 10 trading days before a binary report. Entry grade B = add-on-strength, not prime-add — the trend is pristine, the timing is mid-range, and there's event risk on the calendar.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Still the cleanest trend in the book and cheap for its growth — but 26-Aug earnings mean adds are better on a dip than at the highs.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">STLD · Steel Dynamics</span><span class="px">$262.45</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry A · prime</span><span class="tag">#1 relative strength</span><span class="tag">Materials</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The #1 relative-strength name in the whole 50-name universe and a grade-A prime-add — leading, trend intact, and sitting right at a pullback/base entry rather than stretched. A record Q2 (~$3.80 EPS, shipments 3.74M tons, +11.7% YoY), steel above $1,000/ton, and tariff plus data-centre/grid construction demand underpin it. It's the under-owned, unglamorous back-door into the AI build-out (steel into data centres and the grid).</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">It's a cyclical, not a secular compounder — the tailwinds (tariffs, elevated steel prices) are cycle-high and mean-revert. The stock eased ~8% over the past month after the print, so the easy post-earnings pop is behind it. Expect 'steady,' not the torque of a semi name.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~14, next-year EPS growth ~14%, forward PEG ~1.03 — fairly priced for its growth, and cheap in absolute terms versus the AI-compute names. The value here is that it's a real-earnings, low-multiple way to touch the same demand theme.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The forward case rests on data-centre and grid construction staying elevated through 2027 — a genuine multi-year demand pull, but capped by the steel cycle rather than open-ended like compute. Don't underwrite semi-style growth; underwrite a well-run cyclical riding a durable construction wave.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">Trading ~$262, about 5% above its 50-day (~$250) and ~7% below its 52-week high (~$282). The tight gap to the 50-day is exactly why it grades A — it's near its baseline, not stretched, so the risk below is contained.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Model: grade A (prime add) — the cleanest timing in today's book. Risk/reward favours a constructive starter here with the ~$250 50-day as the line that defines the trend; a close below it would be the tell that the leadership is fading. Of the featured names, this is the one where the entry timing and the trend line up best right now.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The quiet grade-A leader — top relative strength, fair value, and an entry that's near its baseline rather than stretched.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">LITE · Lumentum</span><span class="px">$890.17</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry B</span><span class="tag">Optical / Networking</span><span class="tag">PEG 0.37</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Up 6.2% Friday and the cleanest 'picks-under-the-picks' of the optical stack — the EML/DFB laser leader with an Nvidia $2B deal plus a multibillion buy commitment, Google as an OCS lead customer, and 800G design-ins at Amazon and Meta. OCS revenue hit $10M in Q2 FY26 against a $400M+ backlog. Earnings are in the near-term window (this week).</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">It's up near $890 and ~15% below its 52-week high, so it's recovered a lot already; a soft print (the Apple 3D-sensing business is in decline) could stall it. Optical is where Friday's crowd chased hardest — a group that ran 6–13% in a day can give some back just as fast.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~48, next-year EPS growth ~128%, forward PEG ~0.37 — one of the cheapest-for-its-growth names in the universe. That is the pullback-hunter bullseye: a leading trend you're not overpaying for. Consensus looks for EPS up ~240% YoY on this cycle.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">If OCS scales from a $10M quarter against a $400M backlog, the forward earnings ramp is steep and largely ahead of it. Optical is a genuine bottleneck in scaling next-gen clusters; Lumentum is the highest-quality laser name levered to it. The market is pricing a good outcome but, at PEG 0.37, not a perfect one.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">Trading ~$890, about 9% above its 50-day (~$818) and ~15% below its 52-week high (~$1,054). Above the 50-day and trending; the ~$818 baseline is the pullback line to watch into the print.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Model: grade B (leading, slightly extended). The higher-quality way to own the optical theme than AAOI. Favour adding on strength or into a post-earnings dip toward the ~$818 50-day rather than chasing Friday's candle; the PEG-0.37 valuation gives it more margin for error than the pricier momentum names.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The quality optical pick — leading trend, cheapest-for-growth of the group, with earnings the near-term swing factor.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">ENTG · Entegris</span><span class="px">$152.08</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry B</span><span class="tag">Semi materials</span><span class="tag">Basing→Leading</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Flipped Basing→Leading Friday (+6.6%, momentum +24) — the semi-materials/capex proxy turning up. Its 4 Aug Q2 beat ($0.93 non-GAAP, revenue $883M, +11% YoY, adjusted net income +42%) and a Q3 guide (~$920M) ~4% above consensus back the move. As advanced-node and AI capex scales, the materials layer becomes an increasingly hard bottleneck — a quieter, less-crowded way to own the build-out.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">It's a capex derivative — if hyperscaler or foundry spending wobbles, materials demand follows with a lag. It sits ~17% below its 52-week high, so this is an early-stage trend re-establishing, not a proven new-high leader. No followed-source wiki page yet, so the read here is model- and earnings-driven, not thesis-corroborated.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~30, next-year EPS growth ~28%, forward PEG ~1.08 — fairly priced for its growth. Reasonable, not a bargain; you're paying a fair multiple for a steady compounder levered to capex.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The forward case is the 'materials as bottleneck' thesis: as nodes shrink and AI capex compounds, consumable/materials intensity per wafer rises. If that holds, Entegris is a multi-year beneficiary with less single-customer risk than the equipment names. Today's price looks like it's beginning to discount that, not fully pricing it.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">Trading ~$152, about 6% above its 50-day (~$144) and ~17% below its 52-week high (~$184). Fresh above the 50-day on the flip; holding ~$144 confirms the new Leading trend.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Model: grade B, fresh Basing→Leading flip. Risk/reward favours a small starter on the confirmed turn with the ~$144 50-day as the invalidation line; because the flip is one day old, size into strength rather than all at once. The under-the-radar semi-materials angle if you want capex exposure without the crowded mega-cap names.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">A fresh, under-owned semi-materials leader turning up on a solid Q2 — early in the trend, fairly valued, worth a starter.</p></div>
+    </div>
+  <div class="sec base"><span class="dot"></span><h2>Oversold / Basing</h2><span class="sub">weak or bottoming — divergences and accumulation candidates</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">GOOGL · Alphabet</span><span class="px">$354.30</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry A (timing) · Basing (status)</span><span class="tag">Hyperscaler</span><span class="tag">Divergence</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The trend-following screen still grades it A — above its 200-day, trend intact, and sitting right at its 50-day baseline (a textbook base entry). Structural strengths are real: preference data, Google Cloud distribution (+82% YoY), and a TPU cost edge others don't have. On timing alone, this is a prime-add level.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Here's the divergence worth reading: GOOGL flipped Leading→Basing (momentum −22) <em>on a day everything else bounced</em>. It was the one leader that didn't participate. Full-year 2026 capex was raised to $175–185B (roughly double last year), free cash flow turned negative, and antitrust overhang (AdX divestiture risk, EU fines) plus notable talent exits feed Jordi Visser's 'bureaucracy problem' diagnosis. Next-year consensus EPS is actually <em>down</em> ~28% as the capex hits the P&L.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~24, but the PEG screen is blank — next-year EPS is expected to fall, so the divide-by-growth test doesn't apply. Read that plainly: this isn't a cheap-for-growth bullseye, it's a judgment call on whether today's enormous capex earns its return. The model can't score that; you have to.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The whole debate is capex ROI. Bulls say the spend builds a durable compute/AI moat that pays off past 2026; Jordi's caution is that hyperscalers are structurally spending into negative FCF while the market prices the cloud like a utility — and that AI-native startups, not incumbents, capture the upside by 2030. Friday's tape (suppliers up, GOOGL down) is that rotation showing up in prices, not just commentary.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">Trading ~$354, right on its 50-day (~$356) and ~12% below its 52-week high (~$402). Sitting on the 50-day is what earns the grade-A timing tag — but the momentum roll-over is the caution. A decisive hold and turn up off ~$356 would resolve the divergence bullishly; a break below it says the Basing flip has legs.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Model: grade A on timing (at the 50-day) but status just flipped to Basing — the two lenses disagree, and that disagreement <em>is</em> the signal. Honest read: this is the one featured name where the trend screen and the momentum/mean-reversion screen point opposite ways, so it favours patience — let it prove it can hold and turn up off ~$356 before treating the grade-A entry as live. The setup is 'watch the 50-day react,' not 'buy the dip blindly.'</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The tell of the day: the one leader that fell while suppliers ripped. Grade-A on timing, but the momentum roll-over and the infra-over-hyperscaler rotation say wait for it to hold ~$356 first.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">MU · Micron</span><span class="px">$877.57</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">D-coiled · value accumulation</span><span class="tag">Memory & Storage</span><span class="tag">PEG 0.05</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The poster child for 'weak tape, strong future.' Back under $900 on a quiet Friday — the level Jordi Visser has flagged as his add zone (referenced from recent briefs; the thesis hasn't changed). The forward story is exceptional: HBM sold out for 2026, HBM4 for the Rubin platform ramping at ~2x the pace of HBM3E, $100B+ in binding long-term supply agreements, and an HBM TAM projected above $100B in 2027 versus current revenue near $41B.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">The tape is genuinely weak — Basing, heat 12, momentum 29, trading ~10% below its 50-day and ~28% below its 52-week high. Memory is cyclical, and if the HBM up-cycle timing slips or general DRAM softens, a cheap name can stay cheap. Grade D means there is <em>no momentum edge yet</em> — you'd be early, buying before the tape confirms.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~6, next-year EPS growth ~111%, forward PEG ~0.05 — about as extreme a cheap-for-growth reading as the screen produces. (Same bullseye noted in recent briefs; it persists because the price keeps basing while the forward estimates keep climbing.) The valuation isn't the risk here; the <em>timing</em> is.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">This is the value-accumulation case in its purest form: the HBM scarcity thesis alone underwrites multi-year earnings growth, and the market is pricing almost none of it at 6x forward. If HBM4 ramps as guided into 2027, today's price looks like an accumulation zone in hindsight — but you're paid to be early and patient, not to wait for momentum to confirm (by then the discount is gone).</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">Trading ~$878, about 10% below its 50-day (~$971) and ~28% below its 52-week high (~$1,214). It's basing under $900, not collapsing — flattening rather than making fresh lower lows, which is the difference between accumulating into weakness and catching a falling knife.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Model: grade D-coiled — no momentum edge, but cheap for exceptional forward growth, so this is an accumulation candidate, not a bench. Risk/reward favours scaling in on weakness toward the low-$800s while it holds a base, rather than waiting for a Leading flip that would erase the discount. The tell that you're wrong: a decisive break to fresh lower lows below the recent base (say the low-$800s failing) would mean the cycle timing is off — that's the falling-knife line to respect.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Weak tape, exceptional future — PEG 0.05 with HBM sold out. The value-accumulation bullseye; you're paid to be early and patient, with the low-$800s base as the line that must hold.</p></div>
+    </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>What the Smart Money Is Saying</h2></div>
+  <blockquote class="quote">“The speed crash is over — the bottom is in on probability. QQQ is up 10% in four days, the largest four-day rate-of-change in a year. But the rotation stays: infrastructure over hyperscalers.”<span class="src">— Jordi Visser, 9 Aug 2026 (‘The AI Crash Is Over’). Counterweight: InvestAnswers (5 Aug) — bottom held, but Aug/Sept stay choppy; Friday's two-way tape is that promised chop. Where they diverge: Visser is openly skeptical of hyperscaler valuations (Alphabet's divergence is exactly his thesis); Gavin Baker is repricing-bullish (‘the selloff doesn't match the data’).</span></blockquote>
+
+  <div class="sec plain"><span class="dot"></span><h2>Catalyst Calendar</h2><span class="sub">next ~2 weeks</span></div>
+  <div class="cal">
+    <div class="row key"><span class="d">Tue 12 Aug</span><span>US CPI (July) — the week's key inflation read for the rate path. Same day: Coherent (COHR) Q4 earnings after the close.</span></div>
+    <div class="row"><span class="d">Wed 13 Aug</span><span>US PPI.</span></div>
+    <div class="row"><span class="d">Thu 14 Aug</span><span>US retail sales.</span></div>
+    <div class="row"><span class="d">This week</span><span>Lumentum (LITE) Q4 earnings expected in the 11–14 Aug window.</span></div>
+    <div class="row"><span class="d">Tue 19 Aug</span><span>FOMC minutes (Jackson Hole preview).</span></div>
+    <div class="row"><span class="d">Mon 24 Aug</span><span>First Solar (FSLR) securities-suit lead-plaintiff deadline (overhang).</span></div>
+    <div class="row"><span class="d">Late Aug</span><span>Dell (DELL) Q2 FY27 — AI-server backlog detail (date unconfirmed).</span></div>
+    <div class="row key"><span class="d">Tue 26 Aug</span><span>Nvidia (NVDA) Q2 earnings after the close — the marquee event. Same day: US core PCE.</span></div>
+    <div class="row"><span class="d">27–29 Aug</span><span>Jackson Hole symposium — Fed policy-path tone.</span></div>
+    <div class="row"><span class="d">16–17 Sep</span><span>FOMC decision (rates 3.50–3.75%; hold expected).</span></div>
+  </div>
+
+  <footer class="foot"><b>Sources:</b> Signal model — local Yahoo export (50/50 names, 0 failed; Fri close, data 07:11 UTC 10 Aug). Fundamentals: Yahoo forward P/E, next-year EPS growth, forward PEG. Entry grades: <code>compute-entry-grades.js</code> (200-day / 50-200 cross / 12-month momentum / EMA pullback zone). Wiki: coherent-cohr, lumentum-lite, applied-optoelectronics-aaoi, optical-cpo-supply-chain, nvidia-nvda, alphabet-googl, memory-chips, ai-trade-rotation. Smart money: Jordi Visser (9 Aug), Gavin Baker (4 Aug), InvestAnswers (5 Aug). News/catalysts via web search (last ~2 weeks). Macro regime: <b>neutral</b> (VIX ~14.9, HY OAS 2.71%, credit not deteriorating, no gold/real-yield divergence). Not financial advice.<div class="nfa">Not financial advice — this surfaces signals to inform your own decisions.</div></footer>
+</div>
+</body>
+</html>
