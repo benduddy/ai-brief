@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Friday Signal Brief — 4 September 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4EC; --ink:#27241D; --muted:#6E6A5E; --faint:#928C7C;
+    --hair:#E4DDCD; --hair-strong:#D8CFB9;
+    --clay:#C9663F; --clay-soft:#E8C4AE; --clay-wash:#F3E5DA;
+    --leading:#5F7355; --leading-wash:#E7ECDF;
+    --hot:#B8862F; --hot-wash:#F1E7CF;
+    --basing:#8A8475; --basing-wash:#EAE5D7;
+    --serif:"Newsreader", Georgia, "Times New Roman", serif;
+    --sans:"Inter", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink)}
+  body{font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:700px;margin:0 auto;padding:56px 28px 72px}
+  .kicker,.sec h2,.sec .sub,.tag,.badge,.meta,.cal .d,.foot{font-family:var(--sans)}
+
+  .mast{display:flex;align-items:flex-start;gap:16px;margin-bottom:8px}
+  .spark{flex:0 0 auto;margin-top:8px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin:0 0 6px}
+  h1.title{font-family:var(--serif);font-weight:500;font-size:42px;line-height:1.05;letter-spacing:-.01em;margin:0 0 10px}
+  .meta{font-size:13px;color:var(--muted);margin:0}
+  .meta b{color:var(--ink);font-weight:600}
+  .rule{height:2px;background:var(--clay);border:0;margin:22px 0 0;width:64px;border-radius:2px}
+
+  .lede{font-size:22px;line-height:1.5;margin:30px 0 8px;font-weight:400}
+  .lede em{font-style:italic}
+  .tldr{margin:14px 0 0;padding:0;list-style:none}
+  .tldr li{position:relative;padding:7px 0 7px 22px;border-bottom:1px solid var(--hair)}
+  .tldr li:last-child{border-bottom:0}
+  .tldr li::before{content:"";position:absolute;left:2px;top:16px;width:6px;height:6px;border-radius:50%;background:var(--clay)}
+  .tldr b{font-weight:600}
+
+  .sec{display:flex;align-items:center;gap:10px;margin:72px 0 24px}
+  .sec .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .sec h2{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0;color:var(--ink)}
+  .sec .sub{font-size:12.5px;color:var(--faint);margin-left:auto;font-weight:500}
+  .sec.hot .dot{background:var(--hot)} .sec.lead .dot{background:var(--leading)}
+  .sec.base .dot{background:var(--basing)} .sec.entry .dot{background:var(--clay)}
+  .sec.plain .dot{background:var(--ink)}
+
+  .grades{display:flex;flex-direction:column;gap:15px;margin:0}
+  .grade-row{display:flex;gap:13px;align-items:baseline}
+  .badge{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:15px;color:#fff;margin-top:2px}
+  .badge.A{background:var(--clay)} .badge.B{background:var(--clay-soft);color:#7a3d22}
+  .badge.C{background:var(--hot-wash);color:#7a5c14;border:1px solid #d8bd7e}
+  .gl{font-size:16px}
+  .gl .lab{font-weight:600;color:var(--ink)} .gl .tk{font-weight:600;color:var(--clay)} .gl .muted{color:var(--muted)}
+
+  .name{padding:40px 0 8px;border-top:1px solid var(--hair)}
+  .name:first-of-type{border-top:0;padding-top:8px}
+  .name .ch{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+  .name .sdot{width:9px;height:9px;border-radius:50%;flex:0 0 auto;align-self:center}
+  .name.hot .sdot{background:var(--hot)} .name.lead .sdot{background:var(--leading)} .name.base .sdot{background:var(--basing)}
+  .name .nm{font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:-.01em}
+  .name .px{margin-left:auto;font-family:var(--serif);font-size:19px;color:var(--ink)}
+  .name .tags{display:flex;gap:6px;margin:14px 0 26px;flex-wrap:wrap}
+  .tag{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--clay-wash);color:#8a4a2c}
+  .tag.s-hot{background:var(--hot-wash);color:#7a5c14}
+  .tag.s-lead{background:var(--leading-wash);color:#445239}
+  .tag.s-base{background:var(--basing-wash);color:#5d584b}
+
+  .field{margin:0 0 24px}
+  .field .h{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:0;color:var(--ink);margin:0 0 6px}
+  .field .b{font-size:16.5px;line-height:1.6;color:var(--ink);margin:0}
+  .field.read{margin-top:28px}
+  .field.read .h{color:var(--clay)}
+  .field.read .b{font-style:italic;font-size:18px;line-height:1.55}
+
+  .quote{border-left:3px solid var(--clay);background:var(--clay-wash);padding:16px 20px;border-radius:0 10px 10px 0;margin:0;font-size:18px;line-height:1.5}
+  .quote .src{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:10px;font-style:normal;line-height:1.5}
+
+  .cal{margin:0}
+  .cal .row{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:13px 0;font-size:16px;border-top:1px solid var(--hair)}
+  .cal .row:first-child{border-top:0}
+  .cal .d{font-weight:600;color:var(--clay);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+
+  .foot{margin-top:50px;padding-top:18px;border-top:1px solid var(--hair-strong);font-size:12.5px;color:var(--faint);line-height:1.6}
+  .foot a{color:var(--clay);text-decoration:none}
+  .foot .nfa{font-style:italic;margin-top:10px;font-family:var(--serif)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <svg class="spark" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><g fill="#C9663F"><rect x="11" y="1" width="2" height="22" rx="1"/><rect x="1" y="11" width="22" height="2" rx="1"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(45 12 12)"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(-45 12 12)"/></g></svg>
+    <div>
+      <p class="kicker">AI-Trade · Daily Brief · Macro: debasement</p>
+      <h1 class="title">Friday Signal Brief</h1>
+      <p class="meta"><b>4 September 2026</b> · 58 names · benchmark <b>QQQ</b> · data 08:47 UTC</p>
+    </div>
+  </header>
+  <hr class="rule">
+
+  <p class="lede">The macro regime just flipped from neutral to <em>debasement</em> — gold rising while real yields also rise, with the dollar soft and credit still calm. On the tape it showed up as a broad risk-on rip through crypto, miners and neoclouds, while the core AI-compute leaders sat quiet. Read this as a "pay attention" flag, not a green light.</p>
+  <ul class="tldr">
+    <li>Balanced read — bull and bear side by side. Quick score key: <b>heat</b> 0 = washed-out/cheap-looking, 100 = red-hot/overextended; <b>momentum</b> = strength of the recent up-move; <b>status</b> bands are Leading (strong &amp; healthy), Overheated (strong but stretched), Basing (weak/bottoming), Neutral (no clear signal). The 'Setup' lines are opinions on risk/reward and timing to weigh yourself — the call is yours.</li>
+    <li><b>Macro regime flipped neutral → debasement.</b> Three things line up: gold is holding ~14% above its 200-day average <em>while</em> the real 10-year yield is also rising (now ~2.45%, up ~0.09 over 50 days) — normally the two move opposite, so gold climbing into rising real yields is the classic "currency-debasement" tell. The dollar is soft (just below its 200-day line) and credit is calm (high-yield spread 2.66%, not widening). Both the credit and rate reads come from the real FRED series, so this is a plain read, not a proxy guess. Per the rotation framework this is the <em>thesis-friendly</em> path (favours gold/BTC over cash) — but the framework's own backtest says a regime call is a "re-underwrite" flag, never an exit signal. Watch the reversals: real 10-year above ~+1%, or high-yield spread above ~3.5%, would point the other way.</li>
+    <li><b>Risk-on broadened into the high-beta names.</b> The day's biggest movers were crypto and power-hungry compute landlords: Circle (CRCL) +16.5%, Cipher (CIFR) +14.4%, CleanSpark (CLSK) +11%, MARA +10.8% (flipped Basing → Leading), Bloom Energy (BE) +8.4% (Basing → Leading), Tesla +5.4% (Basing → Leading) and IREN +5.2% (Basing → Leading). Broad market backdrop was risk-on too — S&amp;P +1.06%, Nasdaq +1.4% on the prior session, with Fed rate-cut pressure building.</li>
+    <li><b>Dell is now Overheated.</b> After Tuesday's blowout print (fiscal Q2 revenue $47B, +58%; a record $95B AI-server backlog) DELL added ~5% more and sits exactly at its 52-week high, heat 79. The business is the real thing; the entry is stretched — grade B, add-small-on-strength, not chase.</li>
+    <li><b>Weak tape, strong future — accumulation candidates.</b> Several beaten-down compute names screen cheap for strong forward growth (low momentum here is a feature — you're early, not late): AVGO (forward PEG 0.27, +68% next-year EPS growth), AMD (0.28, +104%), WDC (0.24, +58%), VRT (0.83, +36%, and it's the one actually holding a base). Pair each with its forward story before acting; most are still below their 50-day line without a clear base yet.</li>
+    <li><b>The smart money isn't chasing this crypto pop.</b> The followed commentators (IA, Jordi Visser, Raoul Pal/Bittel) have no fresh conviction call on today's liquidity rip. Their current focus stays on AI-infrastructure — memory as the binding constraint, energy, and Jordi's "infrastructure over hyperscalers" tilt. Today's move looks like liquidity beta, not a thesis they're actively backing.</li>
+    <li>The gap worth noting: the S&amp;P 500 sits within ~2% of its record high, while this 58-name AI universe is ~35% below its own 60-day highs, on average. (The universe now includes a lower-beta application-layer basket, so this isn't directly comparable to the −44% / −50% figures from the 2026-08-09 backtest.)</li>
+  </ul>
+
+  <div class="sec entry"><span class="dot"></span><h2>Entry Watchlist</h2><span class="sub">relative strength + entry timing</span></div>
+  <div class="grades">
+    <div class="grade-row"><span class="badge A">A</span><span class="gl"><span class="lab">Prime add — leading, trend intact, at an entry</span> &nbsp; <span class="tk">MU&nbsp; NVDA&nbsp; SNDK&nbsp; QCOM&nbsp; ALL&nbsp; CB&nbsp; TRV&nbsp; ANET</span></span></div>
+    <div class="grade-row"><span class="badge B">B</span><span class="gl"><span class="lab">Add small — leading, slightly extended</span> &nbsp; <span class="tk">DELL&nbsp; BE</span></span></div>
+    <div class="grade-row"><span class="badge C">C</span><span class="gl"><span class="lab">On the list, wait — strong trend, sub-21-day / hot entry</span> &nbsp; <span class="muted">LITE&nbsp; TSM&nbsp; MRVL&nbsp; ASML</span></span></div>
+  </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>How to read this</h2></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">Entry watchlist & overlays</span></div>
+      <div class="tags"></div>
+      <div class="field"><p class="h">Entry grades</p><p class="b">A grade names are leading, trend-intact and sitting at a buyable entry (at or near their 21-day average). B is the same but slightly extended. C is a strong trend at a hot or below-the-line entry — wait, don't chase. D means no momentum edge yet. Grades run on the real trend fields (200-day, 50/200-day cross, 12-month return, EMA-based pullback zone) — a timing lens, not a verdict on the business. Not financial advice.</p></div>
+      <div class="field"><p class="h">Strong &amp; still cheap-ish</p><p class="b">The pullback-hunter bullseye — leading, buyable on timing, and reasonably priced for growth (forward PEG ≤ ~1.5, positive growth): <b>SNDK</b> (PEG 0.25), <b>MU</b> (0.06), <b>NVDA</b> (0.22), <b>ANET</b> (1.46), <b>BE</b> (0.59). Forward PEG = price/earnings divided by expected growth; under ~1 means you pay little for a lot of growth, over ~2 the opposite.</p></div>
+      <div class="field"><p class="h">Leading but pricey</p><p class="b"><b>DELL</b> screens grade-B but with a forward PEG of ~3.0 — the move is in the trend, not the valuation, so a hot entry there carries extra risk.</p></div>
+      <div class="field"><p class="h">Weak tape, strong future</p><p class="b">Value-accumulation candidates (basing, but cheap for strong forward growth): <b>AVGO</b>, <b>AMD</b>, <b>WDC</b>, <b>VRT</b>. Low momentum is the point — you're early. Most are still below their 50-day without a firm base, so scale in, don't lump in.</p></div>
+    </div>
+  <div class="sec hot"><span class="dot"></span><h2>Run Too Hot</h2><span class="sub">strong, but stretched</span></div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">DELL · Dell Technologies</span><span class="px">$516</span></div>
+      <div class="tags"><span class="tag s-hot">Overheated</span><span class="tag">Entry B · add small</span><span class="tag">Data Center & Networking</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Tuesday's fiscal-Q2 print was a blowout: record revenue ~$47B (+58% YoY), EPS $6.34 (+273%), and a record <b>$60.9B of AI-server orders</b> in the quarter, leaving a $95B backlog. Full-year revenue guide raised to ~$192B, including ~$74B of AI servers. It's the clearest read that enterprise/AI hardware demand is still accelerating.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">The stock is up ~21% in a week and now sits exactly at its 52-week high with heat 79 and trading ~18% above its 50-day average — stretched far above its recent baseline, with little cushion if the tape turns. AI servers are also thin-margin, so revenue growth flatters the headline more than profit.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~18, next-year EPS growth ~6%, forward PEG ~3.0 — expensive relative to its <em>own</em> earnings growth. The value here is scale and mix-shift into AI, not a cheap multiple.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The $95B backlog and $74B AI-server run-rate point to a much larger, if lower-margin, business over the next 2–3 years; the open question the market will keep testing is whether AI-server gross margin can climb from the high-teens. If margins prove out, today's price isn't discounting the full earnings power; if they don't, the multiple is already full.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average ~$437 — the line the uptrend has ridden. At ~$516 it's right at the 52-week high, so there is no overhead resistance but also no support close by; the first real test on any pullback is that ~$437 area.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade B: leading and trend-intact, but ~18% above its 50-day right after a gap — this is add-small-on-strength, not a chase. Model + common sense favour waiting for a pullback toward the low-$400s (the 50-day) to add with a cushion. The business quality is not in doubt; the entry timing is.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Best-in-class AI-hardware winner, but you're being asked to pay the full 52-week-high price the day after the news. Great company, hot entry.</p></div>
+    </div>
+  <div class="sec lead"><span class="dot"></span><h2>Leading</h2><span class="sub">strong &amp; buyable — mind the entry</span></div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">CRCL · Circle Internet</span><span class="px">$103</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry D · recent IPO</span><span class="tag">Crypto & Miners</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The day's hottest name — up 16.5%, momentum pinned at 100. Rode the broad crypto/liquidity risk-on. Company-specific tailwinds: a Buy initiation from Bernstein (1 Sep), a string of late-August target raises (Goldman to $81, Wolfe to $65, Susquehanna to $92), and USDC still leads stablecoin <em>transaction volume</em> (~63% share) despite a smaller float.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Competitive pressure is real: US banks moved to launch a joint stablecoin (1 Sep), squeezing Circle's moat. The stock is still ~31% below its high and remains a volatile, sentiment-driven name — today's 16.5% pop is the flip side of the 20% drops it has also printed this year.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~65, next-year EPS growth ~31%, forward PEG ~2.1 — priced for a lot of future growth (over ~2 means expensive for the growth on offer). You're paying up for the stablecoin-rails story, not buying it cheap.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The bull case is that regulated stablecoin rails (GENIUS Act tailwind) become core payment infrastructure and USDC's volume lead converts into durable economics. The bank-consortium threat is the counter — if issuance fragments, Circle's take-rate story weakens. Wide range of outcomes; today's price already discounts a good one.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average ~$72, so at $103 it's trading ~44% above its recent baseline — very stretched. 52-week high ~$150. There's a lot of air between price and the ~$72 support.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D (below its 200-day, 12-month return still negative as a recent IPO) — the trend model has no edge here yet, and the entry is stretched. Favours waiting; if you want exposure, a pullback toward the 50-day (~$72) is a far better risk/reward than chasing a +16.5% day.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">A high-beta liquidity trade that ran hard today. Great tape, poor entry — not a place to chase.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">TSLA · Tesla</span><span class="px">$376</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Flip: Basing → Leading</span><span class="tag">Mega-cap</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Flipped Basing → Leading on a +5.4% day, capping an ~18% August. The catalyst is the invite-only <b>Cybercab launch event (3 Sep, Austin)</b>; robotaxi has scaled to seven US metros and Optimus lines are being installed. Q2 deliveries hit a record 480k.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">The core EV business is shrinking and margins are thin — Q2 operating margin ~1%, free cash flow negative as capex jumped ~142%. The whole bull case rests on robotaxi/FSD/Optimus <em>execution</em> that is still mostly ahead, not banked.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~174, next-year EPS growth ~22%, forward PEG ~8.0 — very expensive on any near-term earnings basis. The valuation is an option on the autonomy/robot story, not on today's carmaker.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">From the wiki, the under-tracked piece is <b>Tesla Energy</b>: Q2 energy gross margin ~20% (above automotive), Megablock shipping H2 2026, and data-centre battery deployments — though the largest confirmed buyer so far is a Musk-affiliated entity (SpaceX/xAI), so read that as optionality on an existing holding, not a clean new sale channel. Robotaxi/FSD are already priced in; energy is the overlooked upside.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average ~$358, so at $376 it's only ~5% above its baseline — a much less stretched entry than the crypto names. 52-week high ~$490, still ~23% away.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D — it just reclaimed the trend but the model's dual-momentum screen still flags it (below its 200-day, middling relative strength). The Cybercab event is a binary near-term catalyst: constructive above the ~$358 50-day, but the setup is event-driven, so size it as a catalyst bet, not a trend add.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Momentum and a hard catalyst have turned the tape; the fundamentals still ride on autonomy proof. Energy is the quiet upside the market under-weights.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">IREN · IREN</span><span class="px">$42</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Flip: Basing → Leading</span><span class="tag">Neoclouds</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Flipped Basing → Leading on +5.2%. Fresh, real catalysts: <b>Horizon 1 delivered to and accepted by Microsoft</b>, and IREN awarded NVIDIA "Exemplar Cloud" status on GB300 NVL72. Horizon 1 is the first of four 50MW liquid-cooled deployments under the ~$9.7B five-year Microsoft contract; IREN also signed a 5-year $3.4B AI-cloud deal with NVIDIA, reported $1B ARR (27 Aug), and says 2026 capacity is sold out.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Still ~46% below its high and high-beta to Bitcoin (~4.2x). It stacks two bets — BTC price and HPC execution — so it's less de-risked than Cipher's contracted cash flows. Balance-sheet detail on the GPU build-out is thin.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E is negative (mining earnings are lumpy), so the PEG screen doesn't apply here — judge it on ARR ramp and contract backlog, not a multiple.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The wiki frames IREN as the vertically integrated (power + GPU) neocloud, targeting ~480MW of AI-cloud capacity in 2026 and ~1.2GW in 2027. If the Microsoft/NVIDIA ramp lands on schedule, ARR compounds fast from the $1B base; the risk is the two stacked bets, so it's the high-octane, not the best-risk-adjusted, way to own the theme.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average ~$40, so at ~$42 it's only ~3% above baseline — a constructive, not stretched, entry. 52-week high ~$76.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D (still below its 200-day), so treat it as speculative, but the tape is firming right at the 50-day with genuine contract news behind it — a starter here has a defined risk line at the ~$40 50-day. IA has been "skeptical the fear is warranted." Cipher (below) is the more de-risked cousin if you want the same theme with contracted revenue.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Real Microsoft/NVIDIA milestones, momentum turning — the speculative, high-beta neocloud of the group.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">BE · Bloom Energy</span><span class="px">$236</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Flip: Basing → Leading</span><span class="tag">Entry B</span><span class="tag">Solar & Energy</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Flipped Basing → Leading on +8.4%. The story is fuel cells as fast-to-deploy power for grid-constrained AI data centres: an expanded Oracle agreement up to ~2.8GW, plus an AEP subsidiary deal for 100MW with an option (exercised) for up to 900MW more at a Wyoming site. Gross margin is expanding (GAAP ~33%, +~668bp YoY).</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Execution is the whole risk: the thesis depends on converting signed capacity into <em>shipped, earning</em> units on schedule, and Bloom has missed on demand timing before (Dec 2023). A short-seller (Hunterbrook) has also questioned scandium supply — unresolved. Still ~32% below its high.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~48, next-year EPS growth ~82%, forward PEG ~0.59 — <b>cheap for its growth</b> (under ~1 means you're paying little for a lot of expected growth). One of the better growth-adjusted valuations on today's board.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">If the Oracle/Brookfield/AEP pipeline converts on time, the earnings base steps up sharply over 2–3 years and the low PEG proves justified. That's the crux: the multiple is cheap-for-growth <em>only if</em> the backlog ships — so this is a "pay attention to execution proof-points" name, not a set-and-forget.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average ~$228, so at ~$236 it's only ~4% above baseline — a clean entry near the line. 52-week high ~$346.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade B and it clears the pullback-hunter screen (leading + PEG 0.59) — the most attractive risk/reward on today's leaders on paper. Constructive starter here near the 50-day (~$228), with the caveat that it's an execution story: a shipment/margin miss is the falsifier to watch, not a chart level.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Leading, and genuinely cheap for its growth — the standout on the pullback-hunter screen today, if you can carry the execution risk.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">MARA · MARA Holdings</span><span class="px">$12</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Flip: Basing → Leading</span><span class="tag">Crypto & Miners</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Flipped Basing → Leading on a +10.8% day (momentum jumped ~49 points) alongside the Bitcoin bounce. The company is expanding its power portfolio from ~1.9GW toward ~4.8GW and, like its peers, pitching a bitcoin-mining-plus-AI-compute story on cheap/underused energy.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">The fundamentals lag the tape: Q2 net loss ~$611M, revenue down 27% YoY, and it sold ~23,000 BTC in H1 for ~$1.6B, cutting its holdings ~29%. It pledged BTC to raise $600M of borrowing capacity. This is a leveraged proxy on the Bitcoin price more than a de-risked AI-compute play.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E is negative (the company is loss-making), so the PEG screen doesn't apply — this trades on Bitcoin beta and power build-out, not earnings.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The forward story is whether MARA can pivot spare power into contracted AI-compute the way Cipher and IREN have; so far that's aspiration, not signed revenue. Until a hosting/offtake deal appears, treat the 4.8GW target as optionality, not a base case.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average ~$11.50 — at $11.60 it's basically at its baseline. 52-week high ~$22.80, so it's ~49% below its high — plenty of room but no proven support close above.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D (below its 200-day, negative 12-month return) — the trend model gives no edge, and this is essentially a high-beta Bitcoin trade. If you want crypto-miner exposure with actual contracted cash flow, Cipher (below) is the cleaner vehicle; MARA is the higher-octane, less-underwritten one.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">A leveraged Bitcoin bounce dressed as an AI-compute name. Momentum flipped, fundamentals didn't.</p></div>
+    </div>
+  <div class="sec base"><span class="dot"></span><h2>Oversold / Basing</h2><span class="sub">weak tape — watch for the turn</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">CIFR · Cipher Mining (Cipher Digital)</span><span class="px">$17</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">+14.4% today</span><span class="tag">Accumulation candidate</span><span class="tag">Neoclouds</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Up 14.4% today (momentum +15) on the data-centre/Bitcoin rally, though there was no fresh company-specific news — this was theme beta. The underlying story is strong: Cipher exited mining and now carries ~$11B+ of contracted hyperscaler revenue (a 15-year ~$5.5B AWS deal, a 10-year ~$5.9B Google deal) plus the ~$3B/168MW Fluidstack hosting deal that Google backstopped ($1.4B) for a ~5.4% equity stake. Non-recourse project debt keeps risk at the site level, not the whole company.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Still Basing and ~40% below its high, and it burns cash while it builds (Q2: revenue ~$25M, net loss ~$268M, capex ~$410M). The value is all in contracts that mostly earn <em>later</em>, so it needs the build-out to stay on schedule.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~59, next-year EPS growth ~150%, forward PEG ~0.39 — <b>cheap for its growth</b> once the contracted revenue ramps. The low PEG is the whole bull case in one number, conditional on execution.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">Of the three neocloud/miner names here, the wiki ranks Cipher the best risk-adjusted: contracted, largely de-risked revenue with a Google anchor, versus IREN's stacked bets and MARA's pure BTC beta. If the AWS/Google/Fluidstack sites energise on plan, today's ~$17 looks early relative to the 2–3-year earnings base.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average ~$19.60 — at $17.37 it's ~11% <em>below</em> its baseline, i.e. still in a downtrend even after today's pop. 52-week high ~$29.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D and status Basing, but this is the value-accumulation bullseye: weak tape, strong forward story, PEG 0.39. The screen says scale in on weakness rather than chase the +14% candle; the timing check is a reclaim of the ~$19.60 50-day to confirm the turn. Best-risk-adjusted way to own the neocloud theme, per the wiki.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The cleanest contracted cash flow of the miners-turned-neoclouds — cheap for its growth, just not yet trending. Accumulate, don't chase.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">CLSK · CleanSpark</span><span class="px">$13</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">+11% today</span><span class="tag">Deal watch</span><span class="tag">Neoclouds</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Up 11% today (momentum +27) on the miner/data-centre rally. The anchor is July's 20-year triple-net Sandersville (Georgia) lease — ~$6.6B of contracted value (up to ~$11.6B with extensions) with a high-investment-grade global tech tenant, plus tenant exclusivity over CleanSpark's 885MW Texas portfolio. Cantor lifted its target to $26 on the data-centre shift.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b"><b>Deal-watch check (standing instruction):</b> the Sandersville tenant is <em>still not named</em>, the 885MW Texas portfolio is still an LOI (not a signed lease), and there's still no GPU-rental/offtake — CleanSpark remains a triple-net landlord, not a compute merchant. Revenue is back-end-loaded (deliveries start Q4 2027), and the mining P&amp;L still dominates today.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">No meaningful forward PEG — the mining loss dominates earnings and next-year EPS growth is negative, so the growth screen doesn't apply. Judge it on the contracted lease value versus enterprise value, not a P/E.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The lease moves CleanSpark from pure optionality toward a Cipher-like landlord model, but the revenue is years out and the biggest re-rating triggers (tenant named, Texas converted to a signed lease) haven't fired yet. Those are the two events that would pull the forward story forward.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average ~$13.10 — at $12.58 it's ~4% below baseline. 52-week high ~$23, so ~46% below its high.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D, Basing — a lease-catalyst follow-on rather than a trend. The setup favours patience: the re-rating is gated on the tenant being named and the Texas LOI converting. Watch those two events, not today's candle; a reclaim of the ~$13.10 50-day would be the first technical confirmation.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">A real landlord pivot, but the value is contracted for 2027+ and the two catalysts that would confirm it are still pending. Watch the deal, not the day.</p></div>
+    </div>
+  <div class="sec plain"><span class="dot"></span><h2>Market backdrop &amp; what the smart money is saying</h2></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">Backdrop</span></div>
+      <div class="tags"></div>
+      <div class="field"><p class="h">Tape</p><p class="b">A risk-on session: S&amp;P 500 +1.06% and Nasdaq +1.4% on the prior close, Dow +1.18%. Chips were mixed — NVIDIA and Intel +1.8% each, but Broadcom fell ~2.7% <em>despite</em> reporting 221% AI-semiconductor revenue growth (a "beat but guide-light" reaction). Fed rate-cut pressure is building: Governor Waller signalled no hike is warranted if inflation keeps slowing, and political pressure for cuts is loud. Soft dollar + rate-cut hopes + gold + crypto strength is a coherent debasement-flavoured mix.</p></div>
+      <div class="field"><p class="h">Macro regime</p><p class="b">The regime read flipped neutral → <b>debasement</b>. Gold is ~14% above its 200-day average while the real 10-year yield is <em>also</em> rising (~2.45%) — the two usually move opposite, so this divergence is the currency-debasement signature. Dollar soft (below its 200-day), high-yield credit spread calm at 2.66% (not deteriorating). Per the rotation framework this is the thesis-friendly path — it favours scarce assets (gold, BTC) over cash — but it is a "re-underwrite / pay attention" flag, not an exit or entry signal. The backtest behind the opposite (deflationary-stress) gate showed only a ~5-point edge, so treat regime calls as context, not triggers. The reversals to watch: real 10-year above ~+1%, or high-yield spread above ~3.5%, would flip the read toward the deflationary-bust path.</p></div>
+      <div class="field"><p class="h">Leadership (factual)</p><p class="b">Over the last ~50 sessions, financials have outrun semiconductors by ~19.7 points and materials by ~13.6 points, while the semis group is down ~10.7%; high-yield credit spreads remain tight. Software (IGV) sits at ~107, near the ~110 area David Hunter has named as a possible top — a level a source named, not one the model derived. (Stated as numbers only; no conclusion drawn.)</p></div>
+      <div class="field"><p class="h">Smart money (wiki)</p><p class="b">The followed commentators are <em>not</em> championing today's crypto/liquidity pop. Jordi Visser's most recent view (30 Aug) grounds an "infrastructure over hyperscalers" tilt in margin math — the compute layers with the highest revenue-per-megawatt win as capacity stays scarce. The cross-source convergence remains that <b>memory, not construction, is the binding constraint</b> (behind today's grade-A Micron and SanDisk screens). IA's tracked stance is that Bitcoin is high-beta risk, not a hedge. Net: today's high-beta rip is liquidity beta, not a conviction call from the sources.</p></div>
+      <div class="field"><p class="h">Flexible-load watch</p><p class="b">Developing, diffusion-direction item: PJM (the largest US grid) is advancing a large-load / co-located-data-centre tariff with explicit curtailment provisions — new large loads could connect sooner but face early curtailment if unbacked by new capacity, with a requested 12 Oct 2026 effective date. This is the FERC show-cause process (June 2026) maturing toward an actual non-ERCOT framework. Direction: <em>diffusion</em> (everyone can connect faster), which is mildly bearish the power-equipment names over time, not bullish a single operator. No named-site curtailable interconnection or on-site-BESS-for-speed hit this run.</p></div>
+    </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>What the Smart Money Is Saying</h2></div>
+  <blockquote class="quote">“Gold climbing while real yields also climb is the tell that this is about the currency, not the economy — the debasement path, not the deflation path.”<span class="src">— The rotation-framework read behind today's regime flip (Investing/wiki/capital-rotation-framework.md). A flag to re-underwrite the trade, not an exit signal.</span></blockquote>
+
+  <div class="sec plain"><span class="dot"></span><h2>Catalyst Calendar</h2><span class="sub">next ~2 weeks</span></div>
+  <div class="cal">
+    <div class="row key"><span class="d">Wed 3 Sep</span><span>Tesla Cybercab launch event (Austin) — the near-term binary catalyst behind TSLA's flip to Leading.</span></div>
+    <div class="row"><span class="d">Sep (ongoing)</span><span>Fed rate-cut debate — Waller dovish; watch the next CPI print and Fed communications into the September meeting.</span></div>
+    <div class="row"><span class="d">~1 Oct</span><span>Next monthly falsifier check (F1 GPU rental, F2 DRAM spot) and the standing AAOI/CLSK deal checks.</span></div>
+    <div class="row"><span class="d">12 Oct</span><span>Requested effective date for PJM's large-load / co-located data-centre tariff (flexible-interconnection watch).</span></div>
+    <div class="row"><span class="d">Ongoing</span><span>CLSK re-rating triggers: Sandersville tenant to be named; Texas 885MW LOI to convert to a signed lease.</span></div>
+    <div class="row"><span class="d">Ongoing</span><span>BE execution proof-points: Oracle / AEP capacity shipping on schedule and AI-server-style margin follow-through.</span></div>
+  </div>
+
+  <footer class="foot"><b>Sources:</b> Local Signal-Model files (signals-latest / signals-changes, 2026-09-04) for all prices, statuses, heat/momentum and derived levels; entry grades from compute-entry-grades.js. News/catalysts via web search (last ~2 weeks): CNBC, Bloomberg, Yahoo Finance, Motley Fool, TipRanks, 24/7 Wall St, Utility Dive / Akin (FERC-PJM). Wiki: capital-rotation-framework, melt-up-bust-david-hunter, ai-trade-rotation, neoclouds, and the featured names' pages. Regime/leadership reads from macro object (FRED-backed).<div class="nfa">Not financial advice — this surfaces signals to inform your own decisions.</div></footer>
+</div>
+</body>
+</html>
