@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tuesday Signal Brief — 8 September 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4EC; --ink:#27241D; --muted:#6E6A5E; --faint:#928C7C;
+    --hair:#E4DDCD; --hair-strong:#D8CFB9;
+    --clay:#C9663F; --clay-soft:#E8C4AE; --clay-wash:#F3E5DA;
+    --leading:#5F7355; --leading-wash:#E7ECDF;
+    --hot:#B8862F; --hot-wash:#F1E7CF;
+    --basing:#8A8475; --basing-wash:#EAE5D7;
+    --serif:"Newsreader", Georgia, "Times New Roman", serif;
+    --sans:"Inter", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink)}
+  body{font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:700px;margin:0 auto;padding:56px 28px 72px}
+  .kicker,.sec h2,.sec .sub,.tag,.badge,.meta,.cal .d,.foot{font-family:var(--sans)}
+
+  .mast{display:flex;align-items:flex-start;gap:16px;margin-bottom:8px}
+  .spark{flex:0 0 auto;margin-top:8px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin:0 0 6px}
+  h1.title{font-family:var(--serif);font-weight:500;font-size:42px;line-height:1.05;letter-spacing:-.01em;margin:0 0 10px}
+  .meta{font-size:13px;color:var(--muted);margin:0}
+  .meta b{color:var(--ink);font-weight:600}
+  .rule{height:2px;background:var(--clay);border:0;margin:22px 0 0;width:64px;border-radius:2px}
+
+  .lede{font-size:22px;line-height:1.5;margin:30px 0 8px;font-weight:400}
+  .lede em{font-style:italic}
+  .tldr{margin:14px 0 0;padding:0;list-style:none}
+  .tldr li{position:relative;padding:7px 0 7px 22px;border-bottom:1px solid var(--hair)}
+  .tldr li:last-child{border-bottom:0}
+  .tldr li::before{content:"";position:absolute;left:2px;top:16px;width:6px;height:6px;border-radius:50%;background:var(--clay)}
+  .tldr b{font-weight:600}
+
+  .sec{display:flex;align-items:center;gap:10px;margin:72px 0 24px}
+  .sec .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .sec h2{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0;color:var(--ink)}
+  .sec .sub{font-size:12.5px;color:var(--faint);margin-left:auto;font-weight:500}
+  .sec.hot .dot{background:var(--hot)} .sec.lead .dot{background:var(--leading)}
+  .sec.base .dot{background:var(--basing)} .sec.entry .dot{background:var(--clay)}
+  .sec.plain .dot{background:var(--ink)}
+
+  .grades{display:flex;flex-direction:column;gap:15px;margin:0}
+  .grade-row{display:flex;gap:13px;align-items:baseline}
+  .badge{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:15px;color:#fff;margin-top:2px}
+  .badge.A{background:var(--clay)} .badge.B{background:var(--clay-soft);color:#7a3d22}
+  .badge.C{background:var(--hot-wash);color:#7a5c14;border:1px solid #d8bd7e}
+  .gl{font-size:16px}
+  .gl .lab{font-weight:600;color:var(--ink)} .gl .tk{font-weight:600;color:var(--clay)} .gl .muted{color:var(--muted)}
+
+  .name{padding:40px 0 8px;border-top:1px solid var(--hair)}
+  .name:first-of-type{border-top:0;padding-top:8px}
+  .name .ch{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+  .name .sdot{width:9px;height:9px;border-radius:50%;flex:0 0 auto;align-self:center}
+  .name.hot .sdot{background:var(--hot)} .name.lead .sdot{background:var(--leading)} .name.base .sdot{background:var(--basing)}
+  .name .nm{font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:-.01em}
+  .name .px{margin-left:auto;font-family:var(--serif);font-size:19px;color:var(--ink)}
+  .name .tags{display:flex;gap:6px;margin:14px 0 26px;flex-wrap:wrap}
+  .tag{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--clay-wash);color:#8a4a2c}
+  .tag.s-hot{background:var(--hot-wash);color:#7a5c14}
+  .tag.s-lead{background:var(--leading-wash);color:#445239}
+  .tag.s-base{background:var(--basing-wash);color:#5d584b}
+
+  .field{margin:0 0 24px}
+  .field .h{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:0;color:var(--ink);margin:0 0 6px}
+  .field .b{font-size:16.5px;line-height:1.6;color:var(--ink);margin:0}
+  .field.read{margin-top:28px}
+  .field.read .h{color:var(--clay)}
+  .field.read .b{font-style:italic;font-size:18px;line-height:1.55}
+
+  .quote{border-left:3px solid var(--clay);background:var(--clay-wash);padding:16px 20px;border-radius:0 10px 10px 0;margin:0;font-size:18px;line-height:1.5}
+  .quote .src{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:10px;font-style:normal;line-height:1.5}
+
+  .cal{margin:0}
+  .cal .row{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:13px 0;font-size:16px;border-top:1px solid var(--hair)}
+  .cal .row:first-child{border-top:0}
+  .cal .d{font-weight:600;color:var(--clay);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+
+  .foot{margin-top:50px;padding-top:18px;border-top:1px solid var(--hair-strong);font-size:12.5px;color:var(--faint);line-height:1.6}
+  .foot a{color:var(--clay);text-decoration:none}
+  .foot .nfa{font-style:italic;margin-top:10px;font-family:var(--serif)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <svg class="spark" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><g fill="#C9663F"><rect x="11" y="1" width="2" height="22" rx="1"/><rect x="1" y="11" width="22" height="2" rx="1"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(45 12 12)"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(-45 12 12)"/></g></svg>
+    <div>
+      <p class="kicker">AI-Trade · Daily Brief · Macro: debasement</p>
+      <h1 class="title">Tuesday Signal Brief</h1>
+      <p class="meta"><b>8 September 2026</b> · 58 names · benchmark <b>QQQ</b> · data 10:19 UTC</p>
+    </div>
+  </header>
+  <hr class="rule">
+
+  <p class="lede">US markets were shut Monday for Labor Day and Tuesday has not opened yet — so the stock tape is <em>frozen</em> on Friday's close. Today's only genuinely new price action is in the 24/7 names, and that is where crypto is doing the moving.</p>
+  <ul class="tldr">
+    <li><b>Regime still reads debasement — day five, and still the soft version.</b> Gold sits ~1.9% <em>below</em> its 200-day average even as the real (inflation-adjusted) 10-year yield has risen, so the read rests on the gold-vs-real-yield divergence plus a soft dollar — on the real FRED series, credit calm (high-yield spreads ~2.65%). This is a "conditions still rhyme with debasement" flag, not a signal to act, and it is not new this week.</li>
+    <li><b>The equity tape is frozen.</b> With the US shut Monday and pre-open Tuesday, the signal snapshot still shows Friday 4 Sep's exact close — NVDA $230.36, MU $1,016.59, SNDK $1,740, unchanged to the cent across three days. The entry watchlist below is <em>carried</em> from Friday, not re-run; the equity leaders were covered in Friday's brief.</li>
+    <li><b>Crypto is the live sleeve.</b> <b>Bitcoin ~$79K</b> and <b>Solana ~$104</b> are both <em>Leading</em> with the strongest momentum in the book, and the Crypto &amp; Miners basket is one of only two corners of the AI universe near its highs (~10% off, vs 35% for semis/memory and 53% for power). Solana printed a 7-month high in late August on a validator vote to cut new SOL supply.</li>
+    <li><b>Smart money turned constructive on Bitcoin (new).</b> Jordi Visser: BTC's 200-day average has turned up after 100+ days falling — his bear-market rule has flipped, and he treats a move back <em>below</em> the 200-day as his exit. Probabilistic floor ~$58K (four past up-slopes never re-tested prior lows over 1–2 years).</li>
+    <li><b>Index vs portfolio (numbers only):</b> the S&amp;P 500 is at record highs — its 25th of 2026 — but that is the mega-caps (NVDA, MU) holding the index up; the 58-name equal-weight AI universe sits ~31% below its own 60-day highs, on average.</li>
+  </ul>
+
+  <div class="sec entry"><span class="dot"></span><h2>Entry Watchlist</h2><span class="sub">relative strength + entry timing</span></div>
+  <div class="grades">
+    <div class="grade-row"><span class="badge A">A</span><span class="gl"><span class="lab">Prime add — leading, trend intact, at an entry (carried from Fri 4 Sep — US tape frozen)</span> &nbsp; <span class="tk">NBIS&nbsp; MRVL&nbsp; QCOM&nbsp; LITE&nbsp; TSM&nbsp; VRT&nbsp; ANET&nbsp; STX</span></span></div>
+    <div class="grade-row"><span class="badge B">B</span><span class="gl"><span class="lab">Add small — leading, slightly extended (carried)</span> &nbsp; <span class="tk">SNDK&nbsp; DELL&nbsp; MU&nbsp; BE&nbsp; NVDA</span></span></div>
+    <div class="grade-row"><span class="badge C">C</span><span class="gl"><span class="lab">On the list, wait — strong trend, below-the-line entry (carried)</span> &nbsp; <span class="muted">WDC&nbsp; ASML</span></span></div>
+  </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>How to read this</h2></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">How to read this</span></div>
+      <div class="tags"></div>
+      <div class="field"><p class="h">The read</p><p class="b">Neutral and balanced — bull and bear side by side. The <b>Setup</b> lines are opinions on risk/reward and timing to weigh for yourself, not directives; the call is yours. One standing disclaimer here does for the whole brief.</p></div>
+      <div class="field"><p class="h">Today</p><p class="b">A <b>partly-frozen</b> day: the US equity snapshot is Friday 4 Sep's close (Labor Day + pre-open), so the equity watchlist is carried, not re-run. The brief leads on what is genuinely new — the 24/7 crypto names and this week's smart-money view — and references the frozen equity theses rather than re-printing them.</p></div>
+      <div class="field"><p class="h">Scores</p><p class="b"><b>Heat</b> 0 = washed-out/cheap-looking, 100 = red-hot/overextended. <b>Momentum</b> = strength of the recent up-move. <b>Status</b>: Leading = strong &amp; healthy, Overheated = strong but stretched, Basing = weak/bottoming, Neutral = no clear signal.</p></div>
+      <div class="field"><p class="h">Entry grades</p><p class="b">A = leading, trend-intact and sitting at a buyable entry (at or near its 21-day average). B = the same but slightly extended. C = a strong trend at a hot or below-the-line entry — wait, don't chase. D = no momentum edge yet. Grades run on the real trend fields (200-day, 50/200-day cross, 12-month return, EMA-based pullback zone) — a timing lens, not a verdict on the business. Not financial advice.</p></div>
+      <div class="field"><p class="h">Strong &amp; still cheap-ish</p><p class="b">The pullback-hunter bullseye — leading, buyable on timing, and reasonably priced for growth (forward PEG ≤ ~1.5, positive growth): <b>MU</b> (PEG 0.06), <b>NVDA</b> (0.22), <b>STX</b> (0.28), <b>SNDK</b> (0.28), <b>LITE</b> (0.49), <b>MRVL</b> (0.55), <b>BE</b> (0.63), <b>TSM</b> (0.67), <b>VRT</b> (0.87), <b>ANET</b> (1.47). Forward PEG = price/earnings divided by expected growth; under ~1 means you pay little for a lot of growth, over ~2 the opposite. (Carried from Friday's data — grades unchanged on the frozen tape.)</p></div>
+      <div class="field"><p class="h">Weak tape, strong future</p><p class="b">Value-accumulation candidates (basing now, but cheap for strong forward growth): <b>AVGO</b> (PEG 0.28, ~66% growth), <b>AMD</b> (0.30), <b>COHR</b> (0.42), <b>GEV</b> (0.56), <b>ALAB</b> (0.83), <b>GLW</b> (1.11). Low momentum is the point — you're early, not late. Most are still below their 50-day, so scale in, don't lump in. (Carried; unchanged on frozen data.)</p></div>
+    </div>
+  <div class="sec lead"><span class="dot"></span><h2>The live sleeve — crypto is where the tape actually moved</h2><span class="sub">24/7 names; the only genuinely new price action today</span></div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">BTC-USD · Bitcoin</span><span class="px">$78,955</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry D · strong bounce, trend not yet repaired</span><span class="tag">Crypto</span><span class="tag">Live sleeve</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Momentum is nearly maxed (97 of 100) and status is Leading; BTC trades ~13% above its average price of the last 50 days. The bigger tell is longer-term: Jordi Visser's bear-market rule has flipped — Bitcoin's 200-day average has turned up after more than 100 days of falling, its first up-slope in over three months. The rally also has a macro tailwind: looser Treasury-market conditions and supportive signals from Washington.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">The 12-month return is still negative (~−11%), and BTC sits below its 21-day average — so this is a strong bounce <em>inside</em> a yearly downtrend that is not yet repaired, not a fresh uptrend. It remains ~18% below its 52-week high (~$96,900), and late-August readings flagged the move as overbought; by the news flow the rally "needs fresh participation" to keep going.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The debasement thesis is the forward case: if the US keeps suppressing yields while debt compounds, a hard-capped asset like Bitcoin is the intended hedge. Jordi's probabilistic floor is ~$58K — his four past instances of this 200-day up-slope never re-tested the prior lows over the following 1–2 years. That is a base rate, not a promise; conditional on the 200-day holding.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">From Friday's model data: 50-day average ~$70,000; 52-week high ~$96,900. The line that matters most is the 200-day average — the one Jordi names as his exit. Over the long weekend BTC ranged ~$77.9K–$80.8K and now sits ~$79K, about 1% below Friday's close.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Model: strong momentum but no trend cushion until the ~$70K 50-day, and the 12-month trend is still negative, so the trend screen grades entry <b>D</b> — a momentum bounce, not a repaired uptrend. Jordi: constructive while price holds above the rising 200-day; his tell to step aside is a close back under it. Net, the risk/reward favours holding a core and adding on weakness toward the 50-day rather than chasing +13% extension right here.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">A real momentum bounce with a newly-rising 200-day behind it — bullish tape, but the annual trend is repairing, not yet repaired. Let it come to you.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">SOL-USD · Solana</span><span class="px">$104</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry D · hottest momentum, trend not yet repaired</span><span class="tag">Crypto</span><span class="tag">Biggest live mover</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Momentum is pinned at the maximum (100) while heat is only moderate (51 of 100) — strong without looking blown-off. A validator vote is underway to cut new SOL supply: one proposal slows issuance, another raises daily token burns, both a direct reduction in future supply. Solana also leads in real-world-asset (tokenised) and ETF inflows, and printed a 7-month high in late August.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Like Bitcoin, the 12-month return is negative (~−17%) and SOL trades below its 21-day average — a strong bounce, not a repaired uptrend. It is ~29% below its 52-week high (~$147), and short-term momentum was cooling into early September (a negative MACD read), with overbought warnings late August.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The same debasement/liquidity tailwind as Bitcoin, plus a coin-specific supply cut and the RWA-leadership story: if issuance falls while ETF and tokenised-asset demand rises, the supply-demand balance improves. Conditional on the validator vote actually passing and the flows holding.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average ~$85; 52-week high ~$147. SOL trades ~22% above its 50-day, so there is a long way down to that support before the trend gets a cushion.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Model: the hottest momentum in the universe, but stretched ~22% above the 50-day with no trend cushion and a negative 12-month trend, so entry grades <b>D</b> — a wait-for-a-pullback, not a chase. Risk/reward improves on a pullback toward the mid-$80s 50-day; the supply vote is the near-term catalyst to watch.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The strongest momentum in the book and a genuine supply catalyst — but priced far above support inside a still-negative yearly trend. Attractive on a pullback, rich right here.</p></div>
+    </div>
+  <div class="sec base"><span class="dot"></span><h2>The equity tape is frozen — carried from Friday</h2><span class="sub">why the AI-compute leaders are referenced, not re-featured, today</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">Frozen equity tape</span></div>
+      <div class="tags"></div>
+      <div class="field"><p class="h">What's frozen</p><p class="b">The US equity snapshot is Friday 4 Sep's close, unchanged to the cent across three days (NVDA $230.36, MU $1,016.59, SNDK $1,740, AVGO $357.90). Monday was Labor Day; Tuesday has not opened. So re-featuring the equity leaders would just re-print Friday's brief.</p></div>
+      <div class="field"><p class="h">Where they stood Friday</p><p class="b">Friday was a broad breakout into the AI-compute core — memory (SNDK +12%, WDC/STX/MU), custom silicon (MRVL) and neoclouds (NBIS) all flipped to <em>Leading</em>, with DELL the lone Overheated name at a 52-week high on its ~$95B AI-server backlog, and Tesla having slipped Leading→Basing after a flat Cybercab event. That full read stands — see the <b>4 Sep brief</b>.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Nothing in the equity signals has changed since Friday because the tape has not traded. Treat the carried watchlist as Friday's picture; the next real equity read comes after Tuesday's US close.</p></div>
+    </div>
+  <div class="sec plain"><span class="dot"></span><h2>Market backdrop &amp; what the smart money is saying</h2></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">Backdrop</span></div>
+      <div class="tags"></div>
+      <div class="field"><p class="h">Tape</p><p class="b">With the US shut Monday and pre-open Tuesday, the only genuinely new price action is in the 24/7 names. Bitcoin dipped ~1% from Friday (ranging ~$77.9K–$80.8K over the long weekend) and Solana held near $104; the crypto rally is tied to looser Treasury-market conditions and supportive signals from Washington — the same liquidity story the followed macro sources have been tracking.</p></div>
+      <div class="field"><p class="h">Macro regime</p><p class="b">The regime still reads <b>debasement</b>, ~day five, and still the soft version: gold sits ~1.9% <em>below</em> its 200-day average even as the real 10-year yield has risen, so the signature rests on the gold-vs-real-yield divergence (on the real FRED series) plus a soft dollar. Credit is calm (high-yield spreads ~2.65%, tightening slightly), the 2s10s curve is +0.41 so the liquidity "gate" stays shut (well below the ~0.45 trigger), and volatility is low (VIX ~15.6). Read it as "conditions still rhyme with debasement," not a signal to act. Note the 10-year is 4.78% — drifting toward, but well below, the 5.5% level Jordi Visser calls the falsifier for the yield-suppression bet.</p></div>
+      <div class="field"><p class="h">Portfolio vs index</p><p class="b">The S&amp;P 500 is at record highs — its 25th of 2026 — but that is the mega-caps (NVDA, MU) holding the index up. The 58-name equal-weight AI universe is ~31% below its own 60-day highs on average; only the Crypto &amp; Miners (~10% off) and Mega-cap (~10% off) baskets are near their highs, versus semis and memory ~35% and Power &amp; Grid ~53% below. (Numbers, no conclusion — the aggregate now sweeps lower-beta Application-Layer names, so it is not directly comparable to the −44% backtest figure.)</p></div>
+      <div class="field"><p class="h">Leadership</p><p class="b">Over the last 50 sessions financials have beaten semiconductors by ~20 points and materials by ~12, while semis themselves are down ~11%; high-yield credit spreads remain tight. (Numbers only — value leading with credit still tight is an ordinary sector rotation so far, not a late-cycle signature.)</p></div>
+      <div class="field"><p class="h">Smart money — from the wiki</p><p class="b">Jordi Visser turned constructive on Bitcoin: its 200-day average has turned up after 100+ days falling, and he treats a move back below it as his exit (probabilistic floor ~$58K). On equities the followed commentators still favour <b>infrastructure over hyperscalers</b>, now grounded in a "compute-centralisation" argument (Dylan Patel / SemiAnalysis, relayed by Jordi): the labs with the highest revenue-per-megawatt corner scarce compute, and GPU-rental prices staying firm say that scarcity is intact (falsifier F1 still intact on the health dashboard).</p></div>
+      <div class="field"><p class="h">Standing checks</p><p class="b">Liquidity gate G1 stays shut (2s10s +0.41, flat) — silent. The monthly falsifier check (F1 GPU rental, F2 DRAM spot) and the AAOI/CLSK deal checks are next due ~1 Oct; a spot look confirms no change (CleanSpark's Sandersville tenant is still unnamed, its Texas 885MW is still an LOI not a signed lease, no GPU-offtake deal). Non-ERCOT flexible-load tariffs (PJM RBP, SPP CHILLS, CAISO straw) continue to diffuse but nothing new since the 2 Sep check.</p></div>
+      <div class="field"><p class="h">Accumulation watch</p><p class="b">Carried — the "weak tape, strong future" screen still flags <b>AVGO</b>, <b>AMD</b>, <b>COHR</b>, <b>GEV</b>, <b>ALAB</b>, <b>GLW</b> (basing now, cheap for strong forward growth). Unchanged on the frozen data; low momentum is the point — early, not late.</p></div>
+    </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>What the Smart Money Is Saying</h2></div>
+  <blockquote class="quote">“Until Bitcoin goes back under the 200-day moving average, that'll be the point that I bail out and say I'm not talking about it anymore.”<span class="src">— Jordi Visser (23 Aug 2026), on the level-based rule behind his Bitcoin call. See Investing/wiki/bitcoin.md.</span></blockquote>
+
+  <div class="sec plain"><span class="dot"></span><h2>Catalyst Calendar</h2><span class="sub">next ~2 weeks</span></div>
+  <div class="cal">
+    <div class="row key"><span class="d">Tue 8 Sep</span><span>US markets reopen after Labor Day — the first real equity read since Friday comes after today's close.</span></div>
+    <div class="row key"><span class="d">Tue–Wed 16–17 Sep</span><span>FOMC decision. Target range 3.5–3.75%; the market is split on a cut, and August's firm jobs report trimmed the odds.</span></div>
+    <div class="row"><span class="d">Ongoing</span><span>Solana validator vote on cutting new SOL supply (slower issuance + higher burns) — the near-term SOL catalyst.</span></div>
+    <div class="row"><span class="d">~late Sep</span><span>Micron (MU) fiscal Q4 earnings window (typical timing) — the memory bellwether print.</span></div>
+    <div class="row"><span class="d">~1 Oct</span><span>Next monthly falsifier check (F1 GPU rental, F2 DRAM spot) and the standing AAOI / CLSK deal checks.</span></div>
+    <div class="row"><span class="d">~late Oct</span><span>Next quarterly reports for DELL, NVDA, TSLA and AVGO.</span></div>
+  </div>
+
+  <footer class="foot"><b>Sources:</b> Local Signal-Model files (signals-latest / signals-changes, data as of 2026-09-08 10:19 UTC — capturing Friday 4 Sep's frozen equity close plus live 24/7 crypto) for all prices, statuses, heat/momentum and derived levels; entry grades from compute-entry-grades.js. News/catalysts via web search (last ~2 weeks): CoinDesk, Cryptonomist, CryptoPotato, CNBC, Yahoo Finance. Smart-money views from Investing/wiki (ai-trade-rotation, ai-midcycle-slowdown-jordi-visser, bitcoin, solana-sol). Not financial advice.<div class="nfa">Not financial advice — this surfaces signals to inform your own decisions.</div></footer>
+</div>
+</body>
+</html>
