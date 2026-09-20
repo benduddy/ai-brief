@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekend Signal Brief — 20 September 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4EC; --ink:#27241D; --muted:#6E6A5E; --faint:#928C7C;
+    --hair:#E4DDCD; --hair-strong:#D8CFB9;
+    --clay:#C9663F; --clay-soft:#E8C4AE; --clay-wash:#F3E5DA;
+    --leading:#5F7355; --leading-wash:#E7ECDF;
+    --hot:#B8862F; --hot-wash:#F1E7CF;
+    --basing:#8A8475; --basing-wash:#EAE5D7;
+    --serif:"Newsreader", Georgia, "Times New Roman", serif;
+    --sans:"Inter", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink)}
+  body{font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:700px;margin:0 auto;padding:56px 28px 72px}
+  .kicker,.sec h2,.sec .sub,.tag,.badge,.meta,.cal .d,.foot{font-family:var(--sans)}
+
+  .mast{display:flex;align-items:flex-start;gap:16px;margin-bottom:8px}
+  .spark{flex:0 0 auto;margin-top:8px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin:0 0 6px}
+  h1.title{font-family:var(--serif);font-weight:500;font-size:42px;line-height:1.05;letter-spacing:-.01em;margin:0 0 10px}
+  .meta{font-size:13px;color:var(--muted);margin:0}
+  .meta b{color:var(--ink);font-weight:600}
+  .rule{height:2px;background:var(--clay);border:0;margin:22px 0 0;width:64px;border-radius:2px}
+
+  .lede{font-size:22px;line-height:1.5;margin:30px 0 8px;font-weight:400}
+  .lede em{font-style:italic}
+  .tldr{margin:14px 0 0;padding:0;list-style:none}
+  .tldr li{position:relative;padding:7px 0 7px 22px;border-bottom:1px solid var(--hair)}
+  .tldr li:last-child{border-bottom:0}
+  .tldr li::before{content:"";position:absolute;left:2px;top:16px;width:6px;height:6px;border-radius:50%;background:var(--clay)}
+  .tldr b{font-weight:600}
+
+  .sec{display:flex;align-items:center;gap:10px;margin:72px 0 24px}
+  .sec .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .sec h2{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0;color:var(--ink)}
+  .sec .sub{font-size:12.5px;color:var(--faint);margin-left:auto;font-weight:500}
+  .sec.hot .dot{background:var(--hot)} .sec.lead .dot{background:var(--leading)}
+  .sec.base .dot{background:var(--basing)} .sec.entry .dot{background:var(--clay)}
+  .sec.plain .dot{background:var(--ink)}
+
+  .grades{display:flex;flex-direction:column;gap:15px;margin:0}
+  .grade-row{display:flex;gap:13px;align-items:baseline}
+  .badge{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:15px;color:#fff;margin-top:2px}
+  .badge.A{background:var(--clay)} .badge.B{background:var(--clay-soft);color:#7a3d22}
+  .badge.C{background:var(--hot-wash);color:#7a5c14;border:1px solid #d8bd7e}
+  .gl{font-size:16px}
+  .gl .lab{font-weight:600;color:var(--ink)} .gl .tk{font-weight:600;color:var(--clay)} .gl .muted{color:var(--muted)}
+
+  .name{padding:40px 0 8px;border-top:1px solid var(--hair)}
+  .name:first-of-type{border-top:0;padding-top:8px}
+  .name .ch{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+  .name .sdot{width:9px;height:9px;border-radius:50%;flex:0 0 auto;align-self:center}
+  .name.hot .sdot{background:var(--hot)} .name.lead .sdot{background:var(--leading)} .name.base .sdot{background:var(--basing)}
+  .name .nm{font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:-.01em}
+  .name .px{margin-left:auto;font-family:var(--serif);font-size:19px;color:var(--ink)}
+  .name .tags{display:flex;gap:6px;margin:14px 0 26px;flex-wrap:wrap}
+  .tag{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--clay-wash);color:#8a4a2c}
+  .tag.s-hot{background:var(--hot-wash);color:#7a5c14}
+  .tag.s-lead{background:var(--leading-wash);color:#445239}
+  .tag.s-base{background:var(--basing-wash);color:#5d584b}
+
+  .field{margin:0 0 24px}
+  .field .h{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:0;color:var(--ink);margin:0 0 6px}
+  .field .b{font-size:16.5px;line-height:1.6;color:var(--ink);margin:0}
+  .field.read{margin-top:28px}
+  .field.read .h{color:var(--clay)}
+  .field.read .b{font-style:italic;font-size:18px;line-height:1.55}
+
+  .quote{border-left:3px solid var(--clay);background:var(--clay-wash);padding:16px 20px;border-radius:0 10px 10px 0;margin:0;font-size:18px;line-height:1.5}
+  .quote .src{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:10px;font-style:normal;line-height:1.5}
+
+  .cal{margin:0}
+  .cal .row{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:13px 0;font-size:16px;border-top:1px solid var(--hair)}
+  .cal .row:first-child{border-top:0}
+  .cal .d{font-weight:600;color:var(--clay);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+
+  .foot{margin-top:50px;padding-top:18px;border-top:1px solid var(--hair-strong);font-size:12.5px;color:var(--faint);line-height:1.6}
+  .foot a{color:var(--clay);text-decoration:none}
+  .foot .nfa{font-style:italic;margin-top:10px;font-family:var(--serif)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <svg class="spark" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><g fill="#C9663F"><rect x="11" y="1" width="2" height="22" rx="1"/><rect x="1" y="11" width="22" height="2" rx="1"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(45 12 12)"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(-45 12 12)"/></g></svg>
+    <div>
+      <p class="kicker">AI-Trade · Daily Brief · Macro: neutral</p>
+      <h1 class="title">Weekend Signal Brief</h1>
+      <p class="meta"><b>20 September 2026</b> · 58 names · benchmark <b>QQQ</b> · data 19 Sep, 10:48 UTC</p>
+    </div>
+  </header>
+  <hr class="rule">
+
+  <p class="lede">Friday's tape split the AI trade cleanly in two: the things that <em>store and mine</em> ran hard, and the things that <em>generate and move power</em> were sold. Thirty-five of fifty-eight names closed up, yet only one name in the book is flagged Overheated — a broad rally that has not, yet, become a stretched one. <em>Neutral, balanced read — bull and bear side by side. The <b>Setup</b> lines are opinions on risk/reward and timing to weigh for yourself, not directives; the call is yours. Scores, glossed once:</em> <b>heat</b> <em>0 = far below its highs and its 50-day (damaged — these historically fell further), 100 = a strong run near its highs;</em> <b>momentum</b> <em>= strength of the recent up-move;</em> <b>status</b> <em>— Leading = strong and healthy, Overheated = strong but stretched (not a pullback signal), Basing = weak and not yet a bottom, Neutral = no clear signal;</em> <b>ATR</b> <em>= the name's normal daily swing.</em></p>
+  <ul class="tldr">
+    <li><b>Memory and miners led, power equipment lagged.</b> MARA +13.8%, SNDK +11.0%, CLSK +8.4%, CIFR +8.3%, IREN +7.4% against BE −5.4%, FLNC −4.4%, NXT −3.5%, ENPH −3.8%. 35 of 58 names up.</li>
+    <li><b>A rally without overheating.</b> Four names flipped into Leading (STX, ENTG, ETN, COHR) and one out of it (STLD), but <b>no</b> name became newly Overheated. DELL is the only Overheated name in the book and it <em>fell</em> 3.5% on the day.</li>
+    <li><b>The cold list is now a sector, not a scatter.</b> 16 of 58 names sit in the damaged <em>cold</em> band and they cluster almost entirely in power, solar and materials — FLNC (heat 0), UUUU (2), CC (4), MP (4), ENR.DE (6), NXT (7), FSLR (7), SOLS (7). The picks-and-shovels power trade is where the drawdown lives.</li>
+    <li><b>Memory is the cheapest leadership in the book.</b> MU forward PEG 0.06, STX 0.28, SNDK 0.29, WDC 0.24 — all four cycle-sensitive, so that cheapness is a bet on the structural-demand view, not a free lunch. <b>Micron reports 30 September.</b></li>
+    <li><b>Macro is the quiet headwind.</b> The Fed raised 25bps on 16 September and signalled more; August core CPI ran +0.3% m/m, the fastest since April. Credit is still calm (high-yield spread 2.70, not widening) and the model's regime read stays <b>neutral</b>.</li>
+    <li><b>Mind the gap:</b> the S&P 500 is ~1.9% off its high while this 58-name AI universe sits ~26.1% below its own, on average.</li>
+  </ul>
+
+  <div class="sec entry"><span class="dot"></span><h2>Entry Watchlist</h2><span class="sub">relative strength + entry timing</span></div>
+  <div class="grades">
+    <div class="grade-row"><span class="badge A">A</span><span class="gl"><span class="lab">Prime add — leading, trend intact, sitting on an entry</span> &nbsp; <span class="tk">STX&nbsp; LITE&nbsp; QCOM&nbsp; TSM&nbsp; ALAB&nbsp; ANET&nbsp; NVDA&nbsp; GOOGL&nbsp; TRV</span></span></div>
+    <div class="grade-row"><span class="badge B">B</span><span class="gl"><span class="lab">Add small / on strength — leading, slightly extended</span> &nbsp; <span class="tk">MU&nbsp; SNDK&nbsp; COHR&nbsp; AMD&nbsp; MRVL&nbsp; BE&nbsp; CLSK&nbsp; INTC&nbsp; DELL&nbsp; ARM</span></span></div>
+    <div class="grade-row"><span class="badge C">C</span><span class="gl"><span class="lab">On the list, wait — strong trend, wrong price right now</span> &nbsp; <span class="muted">STLD&nbsp; CB</span></span></div>
+  </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>Market backdrop</h2></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">Tape · Week ending 18 September</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span><span class="tag">Macro: neutral</span><span class="tag">Regime unchanged</span></div>
+      <div class="field"><p class="h">What happened</p><p class="b">The Fed raised rates 25bps on 16 September and signalled that further hikes are likely. August CPI, released 11 September, held at 3.4% year-on-year but core rose +0.3% on the month — the fastest since April. Semis wobbled early in the week on AI-safety headlines, then recovered. Against that, Friday's move in this universe was risk-<em>on</em> in a narrow way: storage and miners, not the broad complex.</p></div>
+      <div class="field"><p class="h">Why memory moved</p><p class="b">No single company event explains it. Sandisk's move lines up with index-inclusion flows around the 21 September rebalance, and the group has been running on AI-driven storage demand all year. Treat Friday as momentum and flow rather than news — and note that Bloom Energy, which also carries an index add, <em>fell</em> 5.4%, so the flow story is not a clean rule.</p></div>
+      <div class="field"><p class="h">Why miners moved</p><p class="b">Bitcoin network difficulty eased, and miner equities outran bitcoin itself (BTC roughly +1.4%). JPMorgan re-rated the group toward AI/HPC infrastructure — upgrading CIFR and CLSK while trimming MARA and RIOT targets. The move is a re-rating of what these companies are becoming, not of what they currently earn: both MARA and CLSK posted double-digit revenue <em>declines</em> year-on-year at their last prints.</p></div>
+      <div class="field"><p class="h">Macro regime</p><p class="b">Neutral, and unchanged. High-yield spreads sit at 2.70 and are not widening, the 10-year real rate is 2.61%, VIX 14.8. The 2s10s curve is +0.25, flatter by ~0.16 over 50 sessions — consistent with a hiking Fed. Credit and rates both read from the real FRED series today, so this call does not rest on a proxy. Neutral is the expected output most days; it is not an all-clear.</p></div>
+      <div class="field"><p class="h">The index gap</p><p class="b">Worth stating plainly and drawing no conclusion from: the S&P 500 is about 1.9% below its record high, while the 58-name AI universe sits about 26.1% below its own 60-day high, on average. Index-level reassurance does not transfer to this book.</p></div>
+      <div class="field"><p class="h">What the smart money is saying (from the wiki)</p><p class="b"><b>IA</b> (9 Sep) took profits into CleanSpark's run from ~$10.80 toward ~$14 — the level the stock closed at on Friday — while still arguing the structural point that miners holding bitcoin on the balance sheet no longer have to sell it to pay bills. <b>Jordi Visser</b> (10 Sep) says the AI trade has resumed but expects nothing like the earlier slope, with Micron the memory anchor. The tension worth holding: the signal model has CLSK Leading and buyable-on-strength, while the source Ben follows was selling into exactly this price.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">A narrow, flow-driven rally inside a book that is still a quarter below its highs, with a tightening Fed in the background. Leadership rotated toward storage and miners; the power complex is where the damage sits.</p></div>
+    </div>
+  <div class="sec hot"><span class="dot"></span><h2>Run Too Hot</h2><span class="sub">strong, but stretched</span></div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">DELL · Dell Technologies</span><span class="px">$568.06</span></div>
+      <div class="tags"><span class="tag s-hot">Overheated</span><span class="tag">Entry B · add small</span><span class="tag">Data Center & Networking</span><span class="tag">heat 79 — the only hot name</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Best AI-server momentum in the book — momentum score pinned at 100, and the trend is enormous: the price sits ~110% above its 200-day average. Nothing in the tape says this trend is broken.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">It is the single most stretched name Ben tracks — heat 79 against a book where the next-hottest is 46 — and it was <em>down</em> 3.5% on a day when 35 of 58 names rose. Its daily swing is also widening: it is moving about 1.25× its own normal range. When the only overheated name sells off on a strong day, that is the crowd trimming.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">No valuation read available — forward P/E, growth and PEG all come back null in this refresh, so the PEG screen does not apply here. Forward PEG, glossed once for the brief: price/earnings divided by expected growth. Under ~1 means you pay little for a lot of growth; over ~2 means the opposite.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The forward story is the AI-server order book, which has been the strongest in the book all year. The open question has never been demand — it is whether Dell earns an acceptable margin on that revenue. That makes the next margin print, not the next order headline, the number that matters. Today's price already discounts a lot of the order book.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average $462.64; 21-day $515.44; 52-week high $588.40 — it closed within ~3.5% of that high. Normal daily swing ≈ $33.23 (5.85%), running about 1.25× its usual, so it is swinging more than normal for it. Two normal days of noise reach down to roughly $501.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade B — leading and only slightly extended on the trend screen, but heat 79 makes it the most stretched name Ben holds a view on, and the model's own backtest says <em>hot</em> names carry no extra pullback risk. So the caution here is position-level, not signal-level. The 21-day at ~$515 is under two normal days away and is the first real test; the 50-day at ~$463 is a long way down. Favours waiting for it to come back toward $515 rather than adding at $568 — the risk/reward of a fresh add three-and-a-half percent from the high is poor even in a good trend.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The strongest trend in the book, sold on a strong day — a name to accumulate on weakness, not here.</p></div>
+    </div>
+  <div class="sec lead"><span class="dot"></span><h2>Leading</h2><span class="sub">strong and healthy</span></div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">SNDK · Sandisk</span><span class="px">$1,791.82</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry B · add small</span><span class="tag">Memory & Storage</span><span class="tag">+11.0% on the day</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The day's second-biggest move, +11.0%, on index-inclusion flows around the 21 September rebalance. The NAND demand story is intact — management has framed the market at roughly $300B in 2026 growing toward $500B in 2027 — and the sell-side spread is wide to the upside: a mean target near $2,125 and JPMorgan at $2,250 against Friday's $1,791.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">The view is genuinely two-sided: Wells Fargo cut its target to $1,400 on 4 September, below where the stock now trades. China's CXMT is preparing a NAND entry aimed at AI customers. And NAND is historically the <em>laggard</em> of the memory complex — if NAND pricing rolls while DRAM holds, this is the name that breaks first.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~6.8, next-year EPS growth ~+24%, forward PEG ~0.29 — cheap for its growth on the screen. But the flag matters: this is a cycle-sensitive name, so a low P/E here is either real value, if AI demand stops the memory cycle turning, or near-peak earnings if it turns. The DRAM-spot falsifier (F2) is still intact, so the structural side of that bet is currently holding.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">If the long-term-agreement discipline holds, the next two to three years are a higher-margin contracted cycle rather than a classic spot-price boom — that is what a PEG of 0.29 on 24% growth is implicitly arguing the market has <em>not</em> priced. The risk is symmetric and real: NAND is the part of memory where supply discipline has historically failed first. After a ~574% year, a lot of the easy re-rating is behind it.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average $1,504; 21-day $1,597; 52-week high $2,335 — still ~23% below that high despite the run. Normal daily swing ≈ $116.57 (6.51%), currently running slightly <em>below</em> normal at 0.84×. Friday's move was about 1.6 normal days, so it was a genuine event, not noise.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade B — leading, trend intact, but the entry is now extended. A +11% day on index flow is the definition of a hot entry, and the model said the same thing on 5 September after a +12% day. The 21-day at ~$1,597 is about 1.7 normal days below here; the 50-day at ~$1,504 is about 2.5. Model: favours letting it settle toward $1,600 rather than chasing the spike. IA's stated preference in the wiki is Micron over Sandisk on the 'buy the winner' principle — worth weighing if you only want one memory name.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Cheap for its growth and genuinely leading, but buying an index-flow spike is paying the worst price of the week.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">STX · Seagate</span><span class="px">$858.79</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry A · prime add</span><span class="tag">Memory & Storage</span><span class="tag">flipped Basing → Leading</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Flipped from Basing to Leading on a +6.9% day with momentum up 34 points — the cleanest status change in the book. The AI nearline-storage story is doing real work: FQ1 FY2027 guided to ~$4.1B, around 56% year-on-year growth, with HAMR drives now about 40% of exabytes shipped. Hard drives are a two-player business with a data-centre backlog extending into 2027.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">The whole thesis rests on flash cost-per-terabyte <em>not</em> crossing below disk — an aggressive NAND capacity expansion would undo it. Heat is only 18, so despite the flip this is still a name a long way below its highs rather than a confirmed runaway. Insider selling has been heavy: roughly $558M over twelve months with no offsetting buying.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~15.5, next-year EPS growth ~+55%, forward PEG ~0.28 — cheap for its growth, and the cheapest growth-adjusted price among the A-grade names. Same cycle-sensitive caveat as the rest of memory: that 0.28 is the size of the bet that AI demand keeps this cycle from turning. F2 (DRAM spot) still intact.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The two-to-three-year case is the HAMR mix moving toward ~50% by end-2026 and staying ahead of the NAND density curve, with nearline exabyte growth in the mid-twenties. Sell-side targets around $1,125 assume exactly that. This is the name in the memory complex where the forward story is strong and the tape has <em>only just</em> turned — the market has not yet paid up for it the way it has for Micron and Sandisk.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average $843.33 — it closed just $15 above it, well inside one normal day. 21-day $833.55; 200-day $618.77; 52-week high $1,093. Normal daily swing ≈ $52.05 (6.06%), running exactly at its usual rate. Two normal days of noise reach down to ~$755.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade A — prime add: it clears both the absolute trend test and the relative-strength test, and it is sitting right on an entry rather than extended away from one. That is the rarest combination in this book. The caution: it is still making lower lows on the longer view, so the base is young. The 50-day at ~$843 is the line that defines this — it is under one normal day below, so the risk is unusually well-defined here. Favours a starter position at this level, with the thesis in question on a daily close back below ~$843.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The cleanest setup in the book — leading, cheap for its growth, and priced at its entry rather than away from it.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">MU · Micron</span><span class="px">$1,015.80</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry B · add small</span><span class="tag">Memory & Storage</span><span class="tag">earnings 30 Sep</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The memory anchor, and the earnings catalyst is now ten days out. Momentum 84 and the trend is intact well above both averages. The HBM scarcity argument the wiki has tracked all summer has not been contradicted.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">The print on 30 September is a genuine two-way event: the Street's range is unusually wide, roughly $28–$37 EPS on revenue estimates spanning $47B to $60B. A range that wide means the market does not actually know. The stock has already run an extraordinary distance off its cycle lows, so a good-but-not-great number is enough to hurt it.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~6.5, next-year EPS growth ~+113%, forward PEG ~0.06 — arithmetically the cheapest in the book. Read that as the size of the bet on the structural view rather than as a bargain: this is a cycle-sensitive name, so a PEG of 0.06 is cheap <em>only if</em> AI demand stops the memory cycle turning. F2 (DRAM spot) remains intact, which is the leg holding that view up.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The targets the wiki carries from IA ($1,500–1,600) and Visser ($1,300+) were set out in earlier briefs and nothing has changed to refresh them — see the 18 September brief rather than re-reading them here. What is new is only that the print is now imminent: 30 September decides whether the shortage narrative extends through 2027 or begins to roll.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average $927.26; 21-day $959.21; 200-day $640.02; 52-week high $1,213. Normal daily swing ≈ $49.26 (4.85%), running slightly below normal at 0.83×. The $927–$959 band is under two normal days below here and is the zone that matters.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade B, down from A on Friday's brief — not because anything deteriorated, but because the price moved up and away from its entry. That is the honest read: the setup got worse as the stock got better. Sizing into a binary print ten days out is the real decision here, and it is a position-sizing question more than a signal question. Favours either a partial position now with room to add into the $927–$959 band, or waiting for the print — but not a full-size entry the week before earnings.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The best fundamental story in memory, now priced above its entry and ten days from the print that settles the argument.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">COHR · Coherent</span><span class="px">$317.36</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry B · add small</span><span class="tag">Data Center & Networking</span><span class="tag">flipped Basing → Leading</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Flipped Basing → Leading on +7.2% with momentum up 34 points, reclaiming its 50-day. The structural point the wiki makes is the good one: Coherent sells effectively the same bill of materials into both co-packaged optics and near-packaged optics, so it does not need to pick the winning architecture. Order book reaches into CY2028, with Nvidia a $2B investor and a named supply partner.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">It is still ~26% below its 52-week high, and heat is only 27 — this is a recovery off a low, not a name at its highs. It buys indium-phosphide substrate like Lumentum and AAOI do, so the vertical-integration advantage claimed for it earlier was overstated. Datacom is only about three-quarters of revenue, which cuts both ways: less downside to a datacom air pocket, but less leverage to the upside too.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~22.7, next-year EPS growth ~+48%, forward PEG ~0.47 — cheap for its growth, and not cycle-flagged, which makes it a cleaner read than the memory names carry.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">Capacity is set to double by Q4 2026 and more than double again by end-2027, against an order book already extending to 2028 — that is unusually long visibility for this sector. If co-packaged and near-packaged optics together become a $100B+ market and Coherent holds a mid-teens share, the revenue line is multiples of today's. The market has not obviously priced that: the stock sits a quarter below its high while the backlog extends.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average $296.77 — reclaimed on Friday; 21-day $292.97; 200-day $282.97; 52-week high $426.89. Normal daily swing ≈ $23.01 (7.25%), running at its usual rate. Note how close the three averages sit — $283 to $297 — which makes that band a single well-defined line rather than three.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade B, up from D on 17 September — the relative-strength leg that was failing has now cleared, which is what the flip to Leading represents. The $283–$297 cluster is roughly one normal day below and is where this trade is either right or wrong. Favours a starter here with the thesis in question on a daily close back under ~$283. Worth noting this reverses the model's own read from three days ago, when it preferred LITE for optics exposure — LITE is still the grade-A name in the pair, so COHR is the recovery play and LITE the cleaner entry.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Architecture-agnostic optics with visibility into 2028, reclaiming its trend — the turn is real but young.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">CLSK · CleanSpark</span><span class="px">$14.47</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry B · add small</span><span class="tag">Neoclouds</span><span class="tag">+8.4% on the day</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Up 8.4% with heat up 15 points, and JPMorgan re-rated the name as part of the shift from mining toward AI/HPC infrastructure. The Sandersville tenant naming and the note issuance were covered in Friday's brief and have not changed — the standing deal check found nothing new this weekend, so treat the move as the market continuing to digest news it already has.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">The last print showed revenue down ~30.5% year-on-year with heavy operating losses — this is a re-rating on what the company is becoming, not on what it earns. The Texas site remains a letter of intent, not a signed lease, and no GPU rental or offtake deal has appeared. The balance sheet now carries substantial debt against a single flagship project, and the whole model still moves with the bitcoin price.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E is negative and forward PEG is null, so the PEG screen does not apply — there are no positive earnings to value it against. The case here is asset and optionality, not multiple.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The two-to-three-year case is that Sandersville completes on schedule and the landlord model produces contracted, non-bitcoin-correlated revenue at a decent margin. Nothing about that is proven yet, and the next earnings checkpoint is not until 24 November — an unusually long gap with no hard number to mark progress against.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average $12.98; 21-day $12.90; 200-day $12.59; 52-week high $23.20. Normal daily swing ≈ $1.008 (6.96%), running below normal at 0.77×. The $12.59–$12.98 cluster is about 1.5 normal days below — again, three averages stacked into one band.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade B, down from A on Friday — the stock ran away from its entry rather than the setup degrading. The honest tension to sit with: the model reads this as leading and buyable on strength, while <b>IA — the source Ben follows on this name — was taking profits into this exact move, from ~$10.80 toward ~$14</b>. Both can be true; they are different time horizons. Favours waiting for the $12.90–$13.00 band rather than adding at $14.47, which is where the model and the source actually agree.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The thesis is intact and unchanged since Friday — but the price now sits where the source Ben follows chose to sell.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">MARA · MARA Holdings</span><span class="px">$13.24</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry D · no momentum edge</span><span class="tag">Crypto & Miners</span><span class="tag">+13.8% — biggest mover</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The single biggest move in the book, +13.8%, with momentum pinned at 100 and heat up 25 points. It returned to accumulating bitcoin — about 1,292 BTC for ~$98.6M on 15 September — and announced a ~$1.5B power-campus acquisition that pushes it toward the same AI/HPC landlord model CLSK is pursuing. It is the second-largest corporate bitcoin holder.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">JPMorgan <em>trimmed</em> its target here while upgrading CIFR and CLSK — the sell-side is explicitly picking other names in this rotation. Revenue was down ~27% year-on-year at the last print. The AI pivot is announced, not delivered, with no disclosed margins or return timeline. And a +13.8% day on a +1.4% bitcoin day is the kind of move that unwinds as fast as it came.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E is negative and there is no positive growth estimate, so the PEG screen does not apply. No valuation support underneath this move.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The optionality is real — a large power footprint is genuinely scarce and genuinely wanted — but this is the least-proven version of the miner-to-infrastructure story among the names tracked here. It is being paid for as though the pivot is done.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day average $11.19; 21-day $11.42; 200-day $10.95; 52-week high $22.84 — still ~42% below that high. Normal daily swing ≈ $0.9376 (7.08%). Friday's move was about 1.8 normal days, the largest such move in the book.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D — and here D means what it says: twelve-month momentum is still negative, so it fails the absolute leg of the trend screen outright. A one-day flip to Leading does not repair a year of underperformance. There is also no wiki page and no followed-source view on this name, so there is nothing to weigh the signal against. Favours leaving this one alone until either the twelve-month trend repairs or the Long Ridge economics are actually disclosed — the move is real but there is nothing underneath it to hold onto.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The biggest move in the book and the thinnest case behind it — momentum without a foundation.</p></div>
+    </div>
+  <div class="sec base"><span class="dot"></span><h2>Oversold / Basing</h2><span class="sub">weak — not yet a bottom</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">AAOI · Applied Optoelectronics</span><span class="px">$105.17</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D · falling knife</span><span class="tag">Data Center & Networking</span><span class="tag">state: cold</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Up 7.25% with momentum up 26 points, and it makes its own laser chips rather than assembling other people's — which is the reason it qualified as a fourth 1.6T supplier and why a multi-sourcing window is open to it. It announced a long-term China manufacturing lease expansion on 15 September to support a high-volume module ramp.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Customer concentration is extreme: the top ten customers are ~99% of revenue, and a 42% slice is legacy cable television, not AI at all. The binding constraint has moved from lasers — which it makes — to 3nm DSPs and 200G drivers, which it does not. The Amazon warrant, roughly 7.95M shares struck at $23.70 against a $105 price, is material dilution sitting in plain sight. And unlike Lumentum, Coherent and Marvell, it has no Nvidia relationship. The standing deal check ran this weekend and found no new design win and no customer loss.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~22.9 with next-year EPS growth printing at +577%, which drives forward PEG to 0.04. That number is not meaningful: growth is measured off a very small earnings base, so PEG collapses toward zero by arithmetic. Do not read this name as cheap on PEG.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The bull case tops out at roughly $471M/month of transceiver revenue by mid-2027 — and the analyst who published that framing treats it as a <em>ceiling</em> requiring several consecutive flawless quarters, not a base case. So the forward story is real but capped, and the path to it is narrow.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">It closed at $105.17 against a 200-day average of $105.08 — essentially exactly on it. 50-day $112.65; 21-day $106.91; 52-week high $223.10, so it is down ~53% from that high. Normal daily swing ≈ $9.195 (8.74%) — the widest swing of any name featured here, so an 8% day is an ordinary day for this stock, not a signal.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D and state <em>cold</em> — heat 11. Both matter: the model's own backtest found cold names historically fell <em>further</em> more often, so cold is damaged, not cheap. It is below its 50-day and still making lower lows, which is a falling knife without a base. It is sitting precisely on its 200-day, so that line is the whole argument — hold it and there is a base to build on, lose it and there is nothing until much lower. Favours waiting for it to hold the 200-day for several sessions rather than buying the bounce; Jordi Visser's position here was explicitly sized as a small technical trade, not a core holding, and the wiki's own caution is to treat it as a high-beta optics bet rather than a safe haven.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Real 1.6T order momentum against ~99% customer concentration, sitting exactly on the line that decides it — a trade, not an investment.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">STLD · Steel Dynamics</span><span class="px">$235.26</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry C · wait</span><span class="tag">Materials & Rare Earth</span><span class="tag">flipped Leading → Basing</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The genuinely odd data point of the day: it raised Q3 guidance to $5.34–$5.38 per share on 17 September — against $3.69 in Q2, a 45%+ sequential jump — and then fell 4.1%. Management has named data-centre construction as a demand driver, and the order backlog is ~40% higher year-on-year, extending into 2027. This is the most direct earnings leverage to physical AI buildout in the book.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Falling 4.1% into raised guidance is the market telling you something: after a ~71% twelve-month run, this looks like profit-taking and a rotation out of cyclicals rather than a reaction to the business. It is the only name in the book that flipped <em>out</em> of Leading on Friday. Its daily swing is widening — 1.2× normal — which usually accompanies a change in character.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~12.0, next-year EPS growth ~+12%, forward PEG ~0.98 — right at the line between cheap and fairly priced for its growth. Cycle-sensitive, and here the cyclicality is the actual business rather than a memory-cycle debate: realised steel prices are the swing factor, and the 12% growth estimate assumes they stay roughly flat.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">Two to three years out this is a picks-and-shovels play on data-centre, infrastructure and onshoring capex — real exposure, but diluted by autos, agriculture and construction. Unlike the memory names, there is no multiple expansion embedded in the forward case: at ~12× earnings growing ~12%, you are paid the growth and not much more. If steel prices rise, the estimates are too low; if they fall, the downside is material.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">It closed below both its 50-day ($243.80) and its 21-day ($240.16) — that is what the flip out of Leading represents. 200-day $213.22; 52-week high $282.12. Normal daily swing ≈ $8.791 (3.74%), the tightest of the featured names, running 1.2× wider than usual. Friday's fall was about 1.2 normal days.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade C — it still clears both trend legs, so this is 'right company, wrong price right now' rather than a broken name. The specific condition: it has dipped below its 21-day and needs to reclaim it. Reclaiming ~$240 on a daily close would put the flip out of Leading back in question; failing there points to the 200-day at ~$213 as the next real support, about 2.5 normal days lower. Favours waiting for the reclaim — buying a name that just sold off on <em>good</em> news means fighting whoever is doing the selling.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Raised guidance and sold anyway — when good news cannot lift a stock, respect the tape and wait for the 21-day reclaim.</p></div>
+    </div>
+  <div class="sec plain"><span class="dot"></span><h2>What changed today</h2></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">Flips · Status changes and the benched list</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span><span class="tag">5 status flips</span><span class="tag">35 of 58 up</span></div>
+      <div class="field"><p class="h">Into Leading</p><p class="b"><b>STX</b> (Basing → Leading, +6.9%, momentum +34) · <b>COHR</b> (Basing → Leading, +7.2%, momentum +34) · <b>ENTG</b> (Basing → Leading, +5.6%, momentum +29) · <b>ETN</b> (Basing → Leading, momentum +25).</p></div>
+      <div class="field"><p class="h">Out of Leading</p><p class="b"><b>STLD</b> (Leading → Basing, −4.1%) — the only downgrade, and it came on raised guidance.</p></div>
+      <div class="field"><p class="h">Overheated</p><p class="b">No name became newly Overheated and none left the band. DELL remains the only Overheated name in the book.</p></div>
+      <div class="field"><p class="h">Biggest moves</p><p class="b">Up: MARA +13.8%, SNDK +11.0%, CLSK +8.4%, CIFR +8.3%, CRCL +7.9%, WOLF +7.8%, IREN +7.4%, AAOI +7.3%, COHR +7.2%, STX +6.9%. Down: QCOM −5.8%, BE −5.4%, FLNC −4.4%, MP −4.3%, STLD −4.1%, ENPH −3.8%, NXT −3.5%, DELL −3.5%.</p></div>
+      <div class="field"><p class="h">Accumulation candidates</p><p class="b">Nineteen names screen as weak-tape-but-cheap-for-growth. The ones where the growth is clean rather than flagged: <b>AVGO</b> (PEG 0.28, state cold), <b>FSLR</b> (0.26, cold), <b>GEV</b> (0.56), <b>ENR.DE</b> (0.58), <b>FLNC</b> (0.59), <b>NXT</b> (0.60), <b>CIFR</b> (0.63), <b>VRT</b> (0.77), <b>ASML</b> (0.81), <b>POWL</b> (0.88). Note how many are power and solar names — the same cluster that sold off on Friday. Several are also flagged <em>cold</em>, and cold names historically fell further, so the forward story has to carry the whole case.</p></div>
+      <div class="field"><p class="h">Quiet today</p><p class="b">ALAB, AMD, ANET, ARM, ASML, AVGO, BE, BTC-USD, CB, CC, CIFR, CRCL, ENR.DE, ENTG, ETN, FLNC, FSLR, GEV, GLW, GOOGL, INTC, IREN, LITE, MP, MRVL, NBIS, NVDA, NXT, POWL, QCOM, SOL-USD, SOLS, TRV, TSM, UUUU, VRT, WDC, WOLF.</p></div>
+    </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>What the Smart Money Is Saying</h2></div>
+  <blockquote class="quote">“Miners holding bitcoin on the balance sheet no longer have to sell it to pay the bills — that is the structural change.”<span class="src">— IA, 9 September 2026, on CleanSpark · and yet the same note took profits into the run from ~$10.80 toward ~$14, which is where the stock closed on Friday.</span></blockquote>
+
+  <div class="sec plain"><span class="dot"></span><h2>Catalyst Calendar</h2><span class="sub">next ~2 weeks</span></div>
+  <div class="cal">
+    <div class="row"><span class="d">Mon 21 Sep</span><span>Index rebalance effective — Sandisk into the S&P 100, Bloom Energy into the S&P 500. Flow, not fundamentals.</span></div>
+    <div class="row"><span class="d">Fri 25 Sep</span><span>Durable goods orders, final Q2 GDP, existing home sales, wholesale inventories.</span></div>
+    <div class="row"><span class="d">Sat 26 Sep</span><span>Core and headline PCE — the Fed's preferred inflation gauge, read against the hot August core CPI print.</span></div>
+    <div class="row key"><span class="d">Wed 30 Sep</span><span><b>Micron Q4 FY26, after the close.</b> The marquee event: Street range is unusually wide at roughly $28–$37 EPS on $47B–$60B revenue. This is the print that decides whether the memory shortage story extends through 2027.</span></div>
+    <div class="row"><span class="d">Thu 1 Oct</span><span>Monthly falsifier check falls due — GPU rental direction (F1) and DRAM spot direction (F2).</span></div>
+    <div class="row"><span class="d">Early Oct</span><span>Q3 earnings season begins. STLD expected early November; CLSK 24 November.</span></div>
+  </div>
+
+  <footer class="foot"><b>Sources:</b> Signal model — local snapshot published 19 Sep 2026, 10:48 UTC, covering the completed session of Friday 18 September (58 names, benchmark QQQ). Macro series from FRED (high-yield OAS, 10-year real rate, 2s10s curve, NFCI, M2). Fundamentals via Yahoo quoteSummary. News and catalysts from web search, 20 September 2026. Commentator views from <code>Investing/wiki/</code> — memory-chips.md, ai-trade-rotation.md, applied-optoelectronics-aaoi.md, cleanspark-clsk.md, seagate-stx.md, sandisk-sndk.md, coherent-cohr.md, steel-dynamics-stld.md. Entry grades run on exported trend fields (200-day, 50/200 cross, 12-month momentum, EMA pullback zone) — a timing lens, not a verdict on the business, and no read on valuation by themselves. Standing checks this run: §4f deal checks (AAOI, CLSK) — no hit; §4h flexible-interconnection watch — no hit; §4e falsifier gate G1 — unchanged and shut; §4g leadership discriminator — below write cadence, silent.<div class="nfa">Not financial advice — this surfaces signals to inform your own decisions.</div></footer>
+</div>
+</body>
+</html>
