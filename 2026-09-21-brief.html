@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monday Signal Brief — 21 September 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4EC; --ink:#27241D; --muted:#6E6A5E; --faint:#928C7C;
+    --hair:#E4DDCD; --hair-strong:#D8CFB9;
+    --clay:#C9663F; --clay-soft:#E8C4AE; --clay-wash:#F3E5DA;
+    --leading:#5F7355; --leading-wash:#E7ECDF;
+    --hot:#B8862F; --hot-wash:#F1E7CF;
+    --basing:#8A8475; --basing-wash:#EAE5D7;
+    --serif:"Newsreader", Georgia, "Times New Roman", serif;
+    --sans:"Inter", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink)}
+  body{font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:700px;margin:0 auto;padding:56px 28px 72px}
+  .kicker,.sec h2,.sec .sub,.tag,.badge,.meta,.cal .d,.foot{font-family:var(--sans)}
+
+  .mast{display:flex;align-items:flex-start;gap:16px;margin-bottom:8px}
+  .spark{flex:0 0 auto;margin-top:8px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin:0 0 6px}
+  h1.title{font-family:var(--serif);font-weight:500;font-size:42px;line-height:1.05;letter-spacing:-.01em;margin:0 0 10px}
+  .meta{font-size:13px;color:var(--muted);margin:0}
+  .meta b{color:var(--ink);font-weight:600}
+  .rule{height:2px;background:var(--clay);border:0;margin:22px 0 0;width:64px;border-radius:2px}
+
+  .lede{font-size:22px;line-height:1.5;margin:30px 0 8px;font-weight:400}
+  .lede em{font-style:italic}
+  .tldr{margin:14px 0 0;padding:0;list-style:none}
+  .tldr li{position:relative;padding:7px 0 7px 22px;border-bottom:1px solid var(--hair)}
+  .tldr li:last-child{border-bottom:0}
+  .tldr li::before{content:"";position:absolute;left:2px;top:16px;width:6px;height:6px;border-radius:50%;background:var(--clay)}
+  .tldr b{font-weight:600}
+
+  .sec{display:flex;align-items:center;gap:10px;margin:72px 0 24px}
+  .sec .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .sec h2{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0;color:var(--ink)}
+  .sec .sub{font-size:12.5px;color:var(--faint);margin-left:auto;font-weight:500}
+  .sec.hot .dot{background:var(--hot)} .sec.lead .dot{background:var(--leading)}
+  .sec.base .dot{background:var(--basing)} .sec.entry .dot{background:var(--clay)}
+  .sec.plain .dot{background:var(--ink)}
+
+  .grades{display:flex;flex-direction:column;gap:15px;margin:0}
+  .grade-row{display:flex;gap:13px;align-items:baseline}
+  .badge{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:15px;color:#fff;margin-top:2px}
+  .badge.A{background:var(--clay)} .badge.B{background:var(--clay-soft);color:#7a3d22}
+  .badge.C{background:var(--hot-wash);color:#7a5c14;border:1px solid #d8bd7e}
+  .gl{font-size:16px}
+  .gl .lab{font-weight:600;color:var(--ink)} .gl .tk{font-weight:600;color:var(--clay)} .gl .muted{color:var(--muted)}
+
+  .name{padding:40px 0 8px;border-top:1px solid var(--hair)}
+  .name:first-of-type{border-top:0;padding-top:8px}
+  .name .ch{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+  .name .sdot{width:9px;height:9px;border-radius:50%;flex:0 0 auto;align-self:center}
+  .name.hot .sdot{background:var(--hot)} .name.lead .sdot{background:var(--leading)} .name.base .sdot{background:var(--basing)}
+  .name .nm{font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:-.01em}
+  .name .px{margin-left:auto;font-family:var(--serif);font-size:19px;color:var(--ink)}
+  .name .tags{display:flex;gap:6px;margin:14px 0 26px;flex-wrap:wrap}
+  .tag{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--clay-wash);color:#8a4a2c}
+  .tag.s-hot{background:var(--hot-wash);color:#7a5c14}
+  .tag.s-lead{background:var(--leading-wash);color:#445239}
+  .tag.s-base{background:var(--basing-wash);color:#5d584b}
+
+  .field{margin:0 0 24px}
+  .field .h{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:0;color:var(--ink);margin:0 0 6px}
+  .field .b{font-size:16.5px;line-height:1.6;color:var(--ink);margin:0}
+  .field.read{margin-top:28px}
+  .field.read .h{color:var(--clay)}
+  .field.read .b{font-style:italic;font-size:18px;line-height:1.55}
+
+  .quote{border-left:3px solid var(--clay);background:var(--clay-wash);padding:16px 20px;border-radius:0 10px 10px 0;margin:0;font-size:18px;line-height:1.5}
+  .quote .src{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:10px;font-style:normal;line-height:1.5}
+
+  .cal{margin:0}
+  .cal .row{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:13px 0;font-size:16px;border-top:1px solid var(--hair)}
+  .cal .row:first-child{border-top:0}
+  .cal .d{font-weight:600;color:var(--clay);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+
+  .foot{margin-top:50px;padding-top:18px;border-top:1px solid var(--hair-strong);font-size:12.5px;color:var(--faint);line-height:1.6}
+  .foot a{color:var(--clay);text-decoration:none}
+  .foot .nfa{font-style:italic;margin-top:10px;font-family:var(--serif)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <svg class="spark" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><g fill="#C9663F"><rect x="11" y="1" width="2" height="22" rx="1"/><rect x="1" y="11" width="22" height="2" rx="1"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(45 12 12)"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(-45 12 12)"/></g></svg>
+    <div>
+      <p class="kicker">AI-Trade · Daily Brief · Macro: neutral</p>
+      <h1 class="title">Monday Signal Brief</h1>
+      <p class="meta"><b>21 September 2026</b> · 65 names · benchmark <b>QQQ</b> · data 21 Sep, 10:33 UTC</p>
+    </div>
+  </header>
+  <hr class="rule">
+
+  <p class="lede">A thin Monday: the US market has not traded since Friday, so almost everything new this morning is crypto — plus a +4% Siemens Energy in Frankfurt. The bigger change is to the book itself: seven names joined the universe, five of them arrive already Overheated, and that alone reshuffled the relative-strength grades. <em>Neutral, balanced read — bull and bear side by side. The <b>Setup</b> lines are opinions on risk/reward and timing to weigh for yourself, not directives; the call is yours. Scores, glossed once:</em> <b>heat</b> <em>0 = far below its highs and its 50-day (damaged — these historically fell further), 100 = a strong run near its highs (historically no extra pullback risk);</em> <b>momentum</b> <em>= strength of the recent up-move;</em> <b>status</b> <em>— Leading = strong and healthy, Overheated = strong but stretched (not a pullback signal), Basing = weak and not yet a bottom, Neutral = no clear signal;</em> <b>ATR</b> <em>= the name's normal daily swing.</em></p>
+  <ul class="tldr">
+    <li><b>A partly frozen day.</b> 55 of 65 names still show Friday's US close, which yesterday's brief covered. Genuinely new: BTC +3.9%, SOL +3.4% over the weekend, and ENR.DE +4.0% in Monday's Frankfurt session (intraday, not a completed session). No status flips.</li>
+    <li><b>The universe grew from 58 to 65.</b> New: AR, NEAR, UNI, ZEC, HYPE, TAO (the tokens matched to Jordi Visser's 46-name index on 20 Sep) and HOOD. Five arrive <em>Overheated</em> — NEAR heat 100, UNI 98, AR 97, HYPE 93, ZEC 89 — so DELL is no longer the only hot name. This is a first snapshot, not a move.</li>
+    <li><b>Grade changes today are mostly a ranking artifact.</b> Relative strength is a rank against the whole universe; seven high-momentum tokens joined it. NVDA drops from A to D ("middling relative strength") and STLD/CB leave the C list with no new price data. Read today's grade moves as a re-ruler, not a change in the stocks.</li>
+    <li><b>Bitcoin cleared the level both followed sources named.</b> $84,380, through the ~$82K volume zone Visser flagged and the $80–82K resistance InvestAnswers flagged; heat 44 → 58. The wiki's own caution stands: the buyer so far is retail, not ETFs.</li>
+    <li><b>Siemens Energy +4.0% on no company news</b> — still cold (heat 11) and below both its 50- and 200-day averages. The wiki page now carries the Q3 print: record €17.9B orders, €162B backlog. Orders are not the risk; the peak-cycle multiple is.</li>
+    <li><b>The gap between the index and this book is wide.</b> The S&P 500 is ~1.9% below its high; the 65-name universe sits ~23% below its own 60-day highs on average.</li>
+  </ul>
+
+  <div class="sec entry"><span class="dot"></span><h2>Entry Watchlist</h2><span class="sub">relative strength + entry timing</span></div>
+  <div class="grades">
+    <div class="grade-row"><span class="badge A">A</span><span class="gl"><span class="lab">Prime add — leading, trend intact, sitting on an entry</span> &nbsp; <span class="tk">LITE&nbsp; STX&nbsp; TSM&nbsp; ALAB&nbsp; ANET&nbsp; QCOM&nbsp; TRV</span></span></div>
+    <div class="grade-row"><span class="badge B">B</span><span class="gl"><span class="lab">Add small / on strength — leading, slightly extended</span> &nbsp; <span class="tk">MU&nbsp; SNDK&nbsp; COHR&nbsp; AMD&nbsp; MRVL&nbsp; BE&nbsp; HOOD&nbsp; INTC&nbsp; CLSK&nbsp; DELL&nbsp; ARM&nbsp; HYPE</span></span></div>
+    <div class="grade-row"><span class="badge C">C</span><span class="gl"><span class="lab">On the list, wait — strong trend, parabolic entry</span> &nbsp; <span class="muted">NEAR&nbsp; UNI&nbsp; AR&nbsp; ZEC</span></span></div>
+  </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>Market backdrop</h2></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">Tape · Weekend and Monday morning</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span><span class="tag">Macro: neutral</span><span class="tag">Regime unchanged</span><span class="tag">Universe 58 → 65</span></div>
+      <div class="field"><p class="h">What happened</p><p class="b">Nothing new in US equities — the prices are Friday's close. Last week's frame still holds: the Fed raised rates 25bps on 16 September and signalled more may come; AI-safety headlines hit semis early in the week and faded. Hyperscaler capex plans for 2026 sit around $725B across Microsoft, Alphabet, Amazon and Meta (analyst tally) — the demand side of the AI trade has not changed. Over the weekend crypto kept going: BTC +3.9%, SOL +3.4%.</p></div>
+      <div class="field"><p class="h">Entry watchlist, overlays</p><p class="b"><b>Strong &amp; still cheap-ish</b> (grade A/B and forward PEG ≤ ~1.5 — PEG is price/earnings divided by expected growth; under ~1 means you pay little for a lot of growth, over ~2 the opposite): LITE 0.28, STX 0.28, SNDK 0.29, AMD 0.34, COHR 0.47, MRVL 0.60, BE 0.66, TSM 0.67, ALAB 0.81, HOOD 1.06, INTC 1.48 — and MU at 0.06. STX, SNDK and MU carry the memory-cycle flag, so their low PEG is the size of the bet on the structural view (F2, DRAM spot, still intact). <b>Leading but pricey:</b> none above 2.5; ARM is closest at 2.41. <b>Weak tape, strong future</b> (grade D, cheap for strong growth): NVDA (0.21 — graded D only by the ranking artifact, not cold, no lower lows), CIFR (0.63, basing), AVGO (0.28, cold, lower lows), GEV (0.56, cold), ENR.DE (0.59, cold), VRT (0.77, cold), ASML (0.81), POWL (0.88, cold, basing), FSLR (0.26, cold), NXT (0.60, cold). Cold names historically fell further, so for those the forward story must carry the whole case. Grades are a timing lens on trend fields, not a verdict on the business.</p></div>
+      <div class="field"><p class="h">What the smart money is saying (from the wiki)</p><p class="b"><b>Jordi Visser (20 Sep):</b> the AI trade is now only ~20% of his book, down from ~80% in June; he is adding only to crypto, via his 46-name index — see yesterday's brief. His AI holdings still include Fluence and AAOI, which puts him directly against the model on FLNC (heat 0). <b>InvestAnswers (18 Sep):</b> "Clarity dies, Bitcoin flies" — the rally survived the stalled crypto bill. What is new since then: BTC has now closed through the $80–82K band both of them named. <b>Where I land:</b> the wiki's 20-Sep read still applies — retail is buying and ETFs have been net sellers, which historically is the least durable kind of rally. Medium conviction on the level holding; low on anything much above it.</p></div>
+      <div class="field"><p class="h">Macro regime</p><p class="b">Neutral and unchanged — kicker only. For the record: high-yield spreads 2.70% and not widening, 10-year real rate 2.61%, VIX 14.9, 2s10s curve +0.25 (flatter over 50 sessions, consistent with a hiking Fed). All read from the real FRED series.</p></div>
+      <div class="field"><p class="h">Index gap</p><p class="b">The S&P 500 is ~1.9% below its record while the 65-name AI universe sits ~23% below its own 60-day highs, on average. (The universe changed today, so this figure is not directly comparable with earlier briefs.)</p></div>
+    </div>
+  <div class="sec hot"><span class="dot"></span><h2>Run Too Hot</h2><span class="sub">strong, but stretched — all three are new to the universe today</span></div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">NEAR · NEAR Protocol</span><span class="px">$4.30</span></div>
+      <div class="tags"><span class="tag s-hot">Overheated</span><span class="tag">Entry C · parabolic</span><span class="tag">Crypto Tokens</span><span class="tag">heat 100 · new</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Roughly doubled in a month and sits at its 52-week high. Reported drivers in the last week: Hyperliquid perpetual futures launched on NEAR, total value locked back near $190M, and daily DEX volume around $84M (FXStreet, 18 Sep). Visser names NEAR, with Zcash, as his "canary" for AI-agent activity.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Price is not usage. The agent-payments story is circular: agents are "proven" by token prices, and the token prices are explained by agents (wiki: agent-payment-rails). RSI 82.7 and a price ~103% above its 50-day average is the most stretched reading in the book. The match of NEAR to Visser's chart row is itself medium-confidence — it could be Arbitrum.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">No forward earnings read exists for a layer-1 token. The forward case is adoption of on-chain agent payments; nothing in the wiki measures that yet. The price has run ahead of any usage evidence.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day $2.12; 21-day $2.84; 200-day $1.80; at its 52-week high $4.30. Normal daily swing ≈ $0.31 (7.15%), running ~1.14× its usual. Two normal days of noise reach ~$3.69.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade C — parabolic, do not chase. Model: heat 100, and the nearest trend support, the 21-day, is ~34% below. Nothing here favours starting a position; the risk/reward favours waiting for a pullback toward the 21-day (~$2.84) and a base, or simply watching. Hot is not a sell signal on the backtest — but it is a bad place to buy.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">A doubling on a narrative the wiki cannot yet measure — watch it, don't chase it.</p></div>
+    </div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">UNI · Uniswap</span><span class="px">$8.91</span></div>
+      <div class="tags"><span class="tag s-hot">Overheated</span><span class="tag">Entry C · parabolic</span><span class="tag">Crypto Tokens</span><span class="tag">heat 98 · new</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The only one of the three with a concrete value story: reports say the "UNIfication" fee switch is now live, directing a slice of protocol fees to UNI buybacks and burns (Talos; crypto.news, Sep 2026). That turns a governance token into one that can accrue value. +18.7% on 18 Sep alone.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">⚠️ The fee-switch status comes from secondary crypto press; the wiki has not verified it. Most spot DEX volume in InvestAnswers' 10-Sep data is on Solana, not the Ethereum-family chains Uniswap mainly runs on. The SEC exemption for tokenised stocks covers <em>permissioned</em> pools, which helps regulated venues first, not open DeFi.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">If fees really flow to holders, UNI can be valued like a cash-generating protocol — the first real forward read among the new tokens. Whether ~70% above its 50-day already prices that in depends on fee volume, which the wiki does not yet track.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day $5.23; 21-day $6.97; 200-day $3.82; at its 52-week high $8.91. Normal daily swing ≈ $0.65 (7.24%), running ~1.2× its usual — swinging a bit more than normal. Two normal days of noise reach ~$7.62.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade C — parabolic. Favours waiting: the 21-day near ~$7 is where a pullback would first find trend support, about three normal days below. Of the new tokens this is the one worth a proper wiki check (verify the fee switch) before any entry.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The best story of the new tokens, at the worst entry — verify the fee switch first.</p></div>
+    </div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">AR · Arweave</span><span class="px">$4.72</span></div>
+      <div class="tags"><span class="tag s-hot">Overheated</span><span class="tag">Entry C · parabolic</span><span class="tag">Crypto Tokens</span><span class="tag">heat 97 · new</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Nearly doubled from ~$2.4 in a month. Crypto press links it to AI-data storage demand and an exchange listing, but no primary source confirms a catalyst.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">No source in the wiki names Arweave at all. The only sourced view on its category (DePIN) is bearish: an operator says such tokens are mostly high-float launches that get abandoned if the business works. The model's 52-week high ($4.79, closing basis) disagrees with the wiki's 20-Sep snapshot, which put the one-year high near $7.86 — treat the "near its highs" read as unresolved.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">No forward read available — no earnings, no sourced adoption data. Say so plainly: this is a momentum position with nothing underneath it in the wiki.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day $2.39; 21-day $3.15; 200-day $2.06. Normal daily swing ≈ $0.39 (8.36%), running ~1.22× its usual. Two normal days of noise reach ~$3.93.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade C. The weakest-quality leadership in the book: parabolic tape, no fundamental source, a bearish category view. The risk/reward does not favour an entry here; the model would want a base near the 21-day (~$3.15) first.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">A beta ride on the crypto wave, not a thesis — the lowest-conviction name in the book.</p></div>
+    </div>
+  <div class="sec lead"><span class="dot"></span><h2>Leading</h2><span class="sub">strong and healthy</span></div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">BTC · Bitcoin</span><span class="px">$84,380</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry D · 12-mo trend negative</span><span class="tag">Crypto & Miners</span><span class="tag">+3.9% weekend · heat +14</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">+3.9% over the weekend, about 1.5 normal days, and heat up from 44 to 58. It is now above the ~$82K volume zone where, in Visser's words, people "gave up" last time, and above the $80–82K resistance InvestAnswers flagged on 9 Sep. Visser's own test — below $80K by end-October is "a problem" — now has a ~$4K cushion.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">The buyer is still the weak kind: per River data via InvestAnswers, Q3 buying came from individuals (+107K BTC) while ETFs (−40K), governments and companies sold. A retail-led rally with ETF distribution has historically been the least durable. The 12-month trend is still negative, so the trend screen gives it no grade.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">Visser's 46-name index overlay implies roughly another 15% (low-$90Ks); InvestAnswers' frame is "$90K before $60K". Both are sourced targets, not model outputs. The wiki's stated falsifier: rejection back below $82K, then a close below $75K with the 10-year still rising.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day $73,627 (price ~15% above it); 21-day $78,437; 200-day $70,572; 52-week high $96,929 (~13% above). Normal daily swing ≈ $2,305 (2.73%). Two normal days of noise reach ~$79,770 — just under Visser's $80K line.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D, but only because the 12-month return is still negative; everything shorter-term is strong. The $82K zone is now the line that matters — about one normal day below. Favours adding on a pullback that holds $82K rather than chasing strength; a daily close back under $80K would put Visser's own test in play. Position role reminder: BTC is Ben's store-of-value slot — this is a price event, not a reason to re-argue it.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Through the level everyone named — now it has to hold it without ETF help.</p></div>
+    </div>
+  <div class="sec base"><span class="dot"></span><h2>Oversold / Basing</h2><span class="sub">weak — not yet a bottom</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">ENR.DE · Siemens Energy</span><span class="px">€142.64</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D · below 200-day</span><span class="tag">Power & Grid</span><span class="tag">+4.0% Monday intraday</span><span class="tag">state: cold</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">+4.0% in Monday's Frankfurt session, heat 6 → 11, RSI +7. The Q3 FY26 print (April–June) was a record: orders €17.9B, book-to-bill 1.57, backlog €162B, and Gas Services orders +62% to €10B with a book-to-bill of 2.7 on US demand for dispatchable power. JPMorgan Overweight, €245.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">No company-specific news was found for today's move, and it is one intraday session, not a close. Barclays' peak-cycle case (Underweight, €130) argues free cash flow peaks this fiscal year. The Siemens AG stake is below 5% and still being sold. The wind unit still burns cash. The tape is cold and still making lower lows.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~23.0, next-year EPS growth ~+39%, forward PEG ~0.59 — cheap for its growth on the screen, but this is exactly the number the peak-cycle bears dispute.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">Even Barclays' bear model has revenue growing ~14% a year to FY2028. The debate is about what multiple to pay at a pricing peak, not whether the orders exist — so the market is pricing a peak, not the backlog. The November FY guide (FY27 orders and free cash flow) is the real test.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day €148.93 (~4% above); 200-day €152.01 (~7% above) — reclaiming that is what would repair the trend. 21-day €143.99, just overhead. 52-week high €187.62. Normal daily swing ≈ €5.54 (3.88%), so today is about one ordinary big day. Two normal days reach ~€131.56.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D — below the 200-day, no trend edge. On the value-accumulation screen it is the clearest cheap-for-growth power-backlog name, but cold. Model view: wait for a close back above the 21-day and then the 50-day (~€149) before treating this as a base; one intraday pop does not change that.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The orders are a record and the chart is still broken — the November guide decides which one is right.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">MP · MP Materials</span><span class="px">$47.26</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D · below 200-day</span><span class="tag">Materials & Rare Earth</span><span class="tag">heat 4 · cold</span><span class="tag">Ben holds</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The US rare-earth flagship: the Defense Department is its largest shareholder ($400M stake) and guarantees a $110/kg price floor for NdPr for ten years. China's June 2026 export blacklist of MP is escalation, not a deal — which confirms the security premium the thesis rests on.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Down ~52% from its $98.65 high, heat 4, RSI 35.6, below all three averages and still making lower lows. Cold names historically fell further. No fresh company catalyst in the last two weeks; the market is de-rating the decoupling premium it paid up for earlier in the year.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~54; next-year growth +2,887% from a very small earnings base, so PEG (0.02) is not meaningful — do not read it as cheap. Cycle-sensitive; F2 (DRAM spot) intact, but rare-earth pricing, not memory, is the cycle that matters here.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The floor and the DoD stake make the revenue side more certain than the price action suggests; the magnet ramp (10X facility ~2028) is the earnings story. Not priced as a winner any more — but the forward numbers are too thin to call it cheap. Next print reported for ~29 October (not confirmed).</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">21-day $52.15; 50-day $50.91; 200-day $57.28. Normal daily swing ≈ $2.78 (5.88%). Two normal days of noise reach ~$41.71.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D, falling knife — no base yet. Nothing in the model favours adding here; the first sign of a base would be a close back above the 50-day (~$51). The thesis (floor, security premium) is intact; the timing is not.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Thesis intact, chart broken — a hold-and-wait, not an add, until it stops making lower lows.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">UUUU · Energy Fuels</span><span class="px">$11.70</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D · below 200-day</span><span class="tag">Materials & Rare Earth</span><span class="tag">heat 2 · cold</span><span class="tag">Ben holds</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Q2 revenue +496% year on year to ~$25M; first US terbium in decades; long-term uranium contract prices still firm.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Unchanged since the 12-Sep brief, and worse on price: spot uranium is well off its early-2026 peak, it has no government price floor (unlike MP), and the ~$1.9B Vacuumschmelze deal carries dilution and execution risk. Heat 2, RSI 33.6, ~58% below its high.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~24; growth +275% from a small base, so PEG (0.09) is not meaningful. Cycle-sensitive.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The integrated mine-to-magnet story is 2027+. The price is not discounting it; the market wants proof the VAC integration works first.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">21-day $13.36; 50-day $13.34; 200-day $17.32. Normal daily swing ≈ $0.80 (6.81%). Two normal days reach ~$10.11.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D, still making lower lows. Same stance as 12 Sep: wait for a base — a close above ~$13.35, where the 21- and 50-day now sit together.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The most price-exposed rare-earth name, behaving exactly like it — no base yet.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">FLNC · Fluence Energy</span><span class="px">$7.32</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D · falling knife</span><span class="tag">Power & Grid</span><span class="tag">heat 0 · coldest name</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Nothing new since the 18-Sep brief. Jordi Visser still lists it among his AI holdings (20 Sep) — the one followed-source view on the name.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">The 16-Sep guidance cut (revenue to ~$2.4B, a much bigger EBITDA loss, Houston factory ramp problems) is the news, and the Baird downgrade followed. Heat 0 and RSI 23.7 — the most damaged name in the book, ~77% below its high.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E is negative (a loss is expected), so the PEG screen does not apply.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">21-day $10.15; 50-day $12.30; 200-day $17.70. Normal daily swing ≈ $0.82 (11.25%) — a very volatile stock now. Two normal days reach ~$5.67.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Unchanged: no base, nothing to buy on the model's logic. Visser holding it is the signal-versus-source disagreement to note — the tape says he is wrong so far. Next print reported for late November (not confirmed).</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">A followed source owns it; the model rates it the most damaged name in the book. The tape wins until it bases.</p></div>
+    </div>
+  <div class="sec plain"><span class="dot"></span><h2>What changed today</h2></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">Flips · Status changes and the benched list</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span><span class="tag">0 status flips</span><span class="tag">3 names moved</span><span class="tag">7 names added</span></div>
+      <div class="field"><p class="h">Moved</p><p class="b">BTC +3.9% (heat 44 → 58) · ENR.DE +4.0% (heat 6 → 11, intraday) · SOL +3.4% (heat 53 → 58). Every other name carries Friday's price.</p></div>
+      <div class="field"><p class="h">Added to the universe</p><p class="b">AR, NEAR, UNI, ZEC, HYPE, TAO, HOOD. Overheated on arrival: NEAR, UNI, AR, HYPE, ZEC. TAO arrives Leading (heat 59), HOOD Leading (grade B).</p></div>
+      <div class="field"><p class="h">Grade shifts (artifact)</p><p class="b">NVDA A → D, GOOGL and STLD/CB off the lists — driven by the relative-strength re-rank, not by price. Expect grades to settle once the new names have a few sessions of history in the rank.</p></div>
+      <div class="field"><p class="h">Quiet today</p><p class="b">AAOI, ALAB, ALL, AMD, AMZN, ANET, ARM, ASML, AVGO, BE, CB, CC, CEG, CIFR, CLSK, COHR, CRCL, CRWV, DELL, ENPH, ENTG, EOSE, ETN, FSLR, GEV, GLW, GOOGL, HOOD, HYPE, INTC, IREN, KRE, LITE, MARA, MRVL, MU, NBIS, NEE, NVDA, NXT, POWL, Q, QCOM, SNDK, SOL, SOLS, STLD, STX, TAO, TRV, TSLA, TSM, USAR, VRT, WDC, WOLF, ZEC.</p></div>
+    </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>What the Smart Money Is Saying</h2></div>
+  <blockquote class="quote">“If Bitcoin is below $80,000 by the end of October, there's a problem.”<span class="src">— Jordi Visser on Anthony Pompliano, 19 September 2026 · BTC now sits ~$4,400 above that line.</span></blockquote>
+
+  <div class="sec plain"><span class="dot"></span><h2>Catalyst Calendar</h2><span class="sub">next ~2 weeks</span></div>
+  <div class="cal">
+    <div class="row"><span class="d">Mon 21 Sep</span><span>Index rebalance effective — Sandisk and Arista into the S&P 100, Bloom Energy into the S&P 500. Flow, not fundamentals.</span></div>
+    <div class="row"><span class="d">Thu 24–Fri 25 Sep</span><span>Final Q2 GDP, durable goods, existing home sales; PCE inflation (the Fed's preferred gauge) due at the end of the week — exact day not confirmed.</span></div>
+    <div class="row"><span class="d">Mon 28 Sep</span><span>Bloom Energy securities class action — lead-plaintiff deadline.</span></div>
+    <div class="row key"><span class="d">Wed 30 Sep</span><span><b>Micron Q4 FY26, after the close.</b> The marquee event: Street range unusually wide (~$28–37 EPS). Decides whether the memory-shortage story extends through 2027.</span></div>
+    <div class="row"><span class="d">Thu 1 Oct</span><span>ISM manufacturing. Monthly falsifier check due — GPU rental (F1), DRAM spot (F2), plus the AAOI/CLSK deal checks and the flexible-load watch.</span></div>
+    <div class="row"><span class="d">Fri 2 Oct</span><span>September jobs report.</span></div>
+    <div class="row"><span class="d">Mon 5 Oct</span><span>ISM services.</span></div>
+    <div class="row"><span class="d">Tue 6 Oct</span><span>Marvell investor day.</span></div>
+    <div class="row"><span class="d">Late Oct / Nov</span><span>MP Materials Q3 (reported ~29 Oct, unconfirmed) · Siemens Energy FY results and FY27 guide (November) · Fluence Q4 (late November, unconfirmed).</span></div>
+  </div>
+
+  <footer class="foot"><b>Sources:</b> Signal model — local snapshot published 21 Sep 2026, 10:33 UTC (65 names, benchmark QQQ). US equities carry the completed Friday 18 September session; crypto is live to the snapshot; ENR.DE is Monday intraday. Macro from FRED (HY OAS, 10-year real rate, 2s10s, NFCI, M2). Fundamentals via Yahoo quoteSummary. News via web search, 21 September 2026 (FXStreet, Talos, crypto.news, Siemens Energy Q3 FY26 release, Investing.com, SEC 8-K for Fluence, Tom's Hardware). Commentator views from <code>Investing/wiki/</code> — bitcoin.md, ai-trade-rotation.md, near-protocol-near.md, uniswap-uni.md, arweave-ar.md, siemens-energy-enr.md, critical-minerals.md. Standing checks: §4e falsifiers — G1 shut, silent; monthly F1/F2 due 1 Oct. §4f deal checks — not run (AAOI and CLSK neither featured nor in the news). §4g leadership — silent (one-leg row, last written 18 Sep). §4h flexible-load watch — not due. Wiki write-back: siemens-energy-enr.md (Q3 FY26).<div class="nfa">Not financial advice — this surfaces signals to inform your own decisions.</div></footer>
+</div>
+</body>
+</html>
