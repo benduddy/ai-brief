@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monday Signal Brief — 28 September 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4EC; --ink:#27241D; --muted:#6E6A5E; --faint:#928C7C;
+    --hair:#E4DDCD; --hair-strong:#D8CFB9;
+    --clay:#C9663F; --clay-soft:#E8C4AE; --clay-wash:#F3E5DA;
+    --leading:#5F7355; --leading-wash:#E7ECDF;
+    --hot:#B8862F; --hot-wash:#F1E7CF;
+    --basing:#8A8475; --basing-wash:#EAE5D7;
+    --serif:"Newsreader", Georgia, "Times New Roman", serif;
+    --sans:"Inter", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink)}
+  body{font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:700px;margin:0 auto;padding:56px 28px 72px}
+  .kicker,.sec h2,.sec .sub,.tag,.badge,.meta,.cal .d,.foot{font-family:var(--sans)}
+
+  .mast{display:flex;align-items:flex-start;gap:16px;margin-bottom:8px}
+  .spark{flex:0 0 auto;margin-top:8px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin:0 0 6px}
+  h1.title{font-family:var(--serif);font-weight:500;font-size:42px;line-height:1.05;letter-spacing:-.01em;margin:0 0 10px}
+  .meta{font-size:13px;color:var(--muted);margin:0}
+  .meta b{color:var(--ink);font-weight:600}
+  .rule{height:2px;background:var(--clay);border:0;margin:22px 0 0;width:64px;border-radius:2px}
+
+  .lede{font-size:22px;line-height:1.5;margin:30px 0 8px;font-weight:400}
+  .lede em{font-style:italic}
+  .tldr{margin:14px 0 0;padding:0;list-style:none}
+  .tldr li{position:relative;padding:7px 0 7px 22px;border-bottom:1px solid var(--hair)}
+  .tldr li:last-child{border-bottom:0}
+  .tldr li::before{content:"";position:absolute;left:2px;top:16px;width:6px;height:6px;border-radius:50%;background:var(--clay)}
+  .tldr b{font-weight:600}
+
+  .sec{display:flex;align-items:center;gap:10px;margin:72px 0 24px}
+  .sec .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .sec h2{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0;color:var(--ink)}
+  .sec .sub{font-size:12.5px;color:var(--faint);margin-left:auto;font-weight:500}
+  .sec.hot .dot{background:var(--hot)} .sec.lead .dot{background:var(--leading)}
+  .sec.base .dot{background:var(--basing)} .sec.entry .dot{background:var(--clay)}
+  .sec.plain .dot{background:var(--ink)}
+
+  .grades{display:flex;flex-direction:column;gap:15px;margin:0}
+  .grade-row{display:flex;gap:13px;align-items:baseline}
+  .badge{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:15px;color:#fff;margin-top:2px}
+  .badge.A{background:var(--clay)} .badge.B{background:var(--clay-soft);color:#7a3d22}
+  .badge.C{background:var(--hot-wash);color:#7a5c14;border:1px solid #d8bd7e}
+  .badge.R{background:var(--leading)} .badge.V{background:var(--basing)}
+  .gl{font-size:16px}
+  .gl .lab{font-weight:600;color:var(--ink)} .gl .tk{font-weight:600;color:var(--clay)} .gl .muted{color:var(--muted)}
+
+  .name{padding:40px 0 8px;border-top:1px solid var(--hair)}
+  .name:first-of-type{border-top:0;padding-top:8px}
+  .name .ch{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+  .name .sdot{width:9px;height:9px;border-radius:50%;flex:0 0 auto;align-self:center}
+  .name.hot .sdot{background:var(--hot)} .name.lead .sdot{background:var(--leading)} .name.base .sdot{background:var(--basing)}
+  .name .nm{font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:-.01em}
+  .name .px{margin-left:auto;font-family:var(--serif);font-size:19px;color:var(--ink)}
+  .name .tags{display:flex;gap:6px;margin:14px 0 26px;flex-wrap:wrap}
+  .tag{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--clay-wash);color:#8a4a2c}
+  .tag.s-hot{background:var(--hot-wash);color:#7a5c14}
+  .tag.s-lead{background:var(--leading-wash);color:#445239}
+  .tag.s-base{background:var(--basing-wash);color:#5d584b}
+
+  .field{margin:0 0 24px}
+  .field .h{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:0;color:var(--ink);margin:0 0 6px}
+  .field .b{font-size:16.5px;line-height:1.6;color:var(--ink);margin:0}
+  .field.read{margin-top:28px}
+  .field.read .h{color:var(--clay)}
+  .field.read .b{font-style:italic;font-size:18px;line-height:1.55}
+
+  .quote{border-left:3px solid var(--clay);background:var(--clay-wash);padding:16px 20px;border-radius:0 10px 10px 0;margin:0;font-size:18px;line-height:1.5}
+  .quote .src{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:10px;font-style:normal;line-height:1.5}
+
+  .cal{margin:0}
+  .cal .row{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:13px 0;font-size:16px;border-top:1px solid var(--hair)}
+  .cal .row:first-child{border-top:0}
+  .cal .d{font-weight:600;color:var(--clay);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+
+  .foot{margin-top:50px;padding-top:18px;border-top:1px solid var(--hair-strong);font-size:12.5px;color:var(--faint);line-height:1.6}
+  .foot a{color:var(--clay);text-decoration:none}
+  .foot .nfa{font-style:italic;margin-top:10px;font-family:var(--serif)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <svg class="spark" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><g fill="#C9663F"><rect x="11" y="1" width="2" height="22" rx="1"/><rect x="1" y="11" width="22" height="2" rx="1"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(45 12 12)"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(-45 12 12)"/></g></svg>
+    <div>
+      <p class="kicker">AI-Trade · Daily Brief · Macro: neutral</p>
+      <h1 class="title">Monday Signal Brief</h1>
+      <p class="meta"><b>28 September 2026</b> · 65 names · benchmark <b>QQQ</b> · data 09:38 UTC</p>
+    </div>
+  </header>
+  <hr class="rule">
+
+  <p class="lede">US stocks have not traded since Friday's close, which Saturday's brief covered — so the stock numbers below are unchanged and are referenced, not repeated. What moved is crypto: the tokens that ran hardest last week gave some back, Uniswap and Arweave fell ~8%, and two names dropped out of Overheated. NEAR went the other way ahead of its first US spot ETF. The week itself is heavy: PCE inflation and Micron on Wednesday, jobs on Friday, all under a 5.17% ten-year yield.</p>
+  <ul class="tldr">
+    <li><b>A weekend brief: crypto moved, stocks did not.</b> Every US stock in the universe still shows its Friday 25 Sep close. Nine names changed over the weekend; eight are crypto, and the ninth (Siemens Energy −0.8%) is an intraday Frankfurt price, not a completed session.</li>
+    <li><b>The hot tokens cooled.</b> Uniswap −8.1% to $8.88 and Arweave −8.1% to $4.26, each about one normal day's swing. Uniswap and Bittensor (−3.6% to $301) flipped <b>Overheated → Leading</b>; Hyperliquid −3.1%. Bitcoin −1.9% to ~$82,684, Solana −2.3%. Background: the $387.5M Bitget hack (24 Sep), with phased withdrawals resuming today.</li>
+    <li><b>NEAR +5.2% to $5.10 — heat 91, still the hottest token.</b> The Bitwise NEAR spot ETF cleared its last hurdle on 24 Sep and is expected to start trading around Tuesday 29 Sep. The price is now about double its 50-day average.</li>
+    <li><b>Grades: Arweave and Uniswap C → A.</b> The pullback put both back near their 21-day averages, with the trend intact. The A row is now seven names: NVDA, TSM, ETN, GLW, HYPE, AR, UNI. Count: <b>7 A / 12 B / 3 C</b>.</li>
+    <li><b>New source: Jordi Visser, 27 Sep — "a bear market inside a bull market."</b> He sees two bears, neither a 2000-style bubble: a rate-driven one in small caps and old-economy stocks, and a competition-driven one that compresses multiples even for AI winners. His answer to "scary rates": leading indicators turned positive, credit spreads and jobless claims flat, S&amp;P earnings +17% a year. His own falsifier: S&amp;P earnings growth turning negative.</li>
+    <li><b>The week ahead is a rates week.</b> The Fed raised rates on 16 Sep for the first time since 2023 (to 3.75–4.00%), and its median forecast shows one more hike this year. August PCE (Wed), Micron results (Wed, after the close) and September jobs (Fri) all land into a 10-year yield that closed last week at 5.17%.</li>
+  </ul>
+
+  <div class="sec entry"><span class="dot"></span><h2>Entry Watchlist</h2><span class="sub">momentum gates + fundamental triggers</span></div>
+  <div class="grades">
+    <div class="grade-row"><span class="badge A">A</span><span class="gl"><span class="lab">Leader at a pullback/base — at or near its 21-day average</span> &nbsp; <span class="tk">NVDA&nbsp; TSM&nbsp; ETN&nbsp; GLW&nbsp; HYPE&nbsp; AR&nbsp; UNI</span></span></div>
+    <div class="grade-row"><span class="badge B">B</span><span class="gl"><span class="lab">Leader, extended above its short-term averages</span> &nbsp; <span class="tk">DELL&nbsp; BE&nbsp; INTC&nbsp; MU&nbsp; SNDK&nbsp; STX&nbsp; MRVL&nbsp; ENTG&nbsp; ARM&nbsp; NBIS&nbsp; QCOM&nbsp; ZEC</span></span></div>
+    <div class="grade-row"><span class="badge C">C</span><span class="gl"><span class="lab">Strong run / short pause — waiting for a pullback did not help historically</span> &nbsp; <span class="tk">AMD&nbsp; ALAB&nbsp; NEAR</span></span></div>
+    <div class="grade-row"><span class="badge R">R</span><span class="gl"><span class="lab">Re-rating — near a new high, estimates up (DELL, NVDA, ANET earnings-led; AMD multiple-led)</span> &nbsp; <span class="tk">DELL&nbsp; NVDA&nbsp; ANET&nbsp; AMD</span></span></div>
+    <div class="grade-row"><span class="badge V">V</span><span class="gl"><span class="lab">BTC — cheap (MVRV fell below 1.2) then back above its 200-day</span> &nbsp; <span class="tk">BTC</span></span></div>
+  </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>Market backdrop</h2><span class="sub">a weekend tape, the gap to the index, and what the followed sources are saying</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">TAPE · The weekend in one paragraph</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span><span class="tag">65 names</span><span class="tag">2 status flips</span><span class="tag">crypto only</span></div>
+      <div class="field"><p class="h">What happened</p><p class="b">Crypto traded through the weekend while stocks sat still. The six crypto tokens in the universe averaged about <b>−2.8%</b>, but the spread was wide: NEAR +5.2% and Zcash +1.0% rose; Uniswap and Arweave −8.1% led the falls. Bitcoin slipped 1.9% to ~$82,684. Press put the tone down to the Bitget hack — at $387.5M the largest crypto theft of 2026, attributed to North Korea's Lazarus Group — plus AI-token volatility after a very strong week (Bittensor −4.2% on Sunday alone).</p></div>
+      <div class="field"><p class="h">Theme vs index</p><p class="b">Worth noting the gap: the S&amp;P is about <b>0.7%</b> below its record high, while the 65-name AI universe sits about <b>17.8%</b> below its own 60-day high, on average. (Caveat: the live average covers today's universe, not the one the historical drawdown figures used — the two are not one series.)</p></div>
+      <div class="field"><p class="h">Re-rating row (R)</p><p class="b">Unchanged since Saturday, because the stock prices are unchanged: DELL, NVDA and ANET are earnings-led (estimates rising, forward P/E flat or down); AMD is multiple-led. See Saturday's brief for the numbers. ⚠️ Thresholds are judgement, not backtested; forward-EPS history starts 15 Jun 2026.</p></div>
+      <div class="field"><p class="h">Strong &amp; still cheap-ish</p><p class="b">Also unchanged: leaders (A or B) with a forward PEG under ~1.5 are <b>NVDA</b> 0.21, <b>TSM</b> 0.70, <b>BE</b> 0.71, <b>MRVL</b> 0.64 and <b>ETN</b> 1.45. (Forward PEG = price/earnings divided by expected growth; under ~1 means paying little for a lot of growth, over ~2 the opposite.) MU, STX, SNDK, GLW and ENTG also screen here but are cycle-sensitive — cheap only if the structural memory-demand view holds; F2 (DRAM spot) still intact. <b>ARM</b> 2.72 is the one leader priced well ahead of its growth. The new A-row crypto names carry no valuation, so they sit outside this screen.</p></div>
+      <div class="field"><p class="h">Cheap for its growth</p><p class="b">No change from Saturday. <b>Price agrees:</b> AMD, ALAB, COHR, LITE, ASML, HOOD, GOOGL, GEV, AMZN; WDC and Q are cycle-sensitive. <b>Price not confirmed</b> (watch for a close back above the 200-day): AVGO, VRT, CIFR, NXT, FSLR, POWL, ENR.DE; SOLS and CC are cycle-sensitive. AAOI, MP and UUUU screen cheap only on growth from a tiny base. One note from today's wiki work: <b>GOOGL</b> (PEG 0.82) closed Friday on its 50-day and ~2% above its 200-day (~$338); InvestAnswers' $320–325 zone has not been tested again.</p></div>
+      <div class="field"><p class="h">What the smart money is saying (from the wiki)</p><p class="b"><b>Jordi Visser</b> (27 Sep, new): rates are not yet breaking anything — leading indicators positive, spreads flat, margins still rising, earnings +17% a year; he would change his mind if S&amp;P earnings growth turned negative. The bear markets he sees are in small caps (IWM vs QQQ at new lows) and in AI-exposed incumbents losing pricing power (Salesforce his example). Nvidia at ~15× forward earnings is his proof this is not 2000. On crypto: his 46-name token index is +31% month-to-date against BTC's +6.5%, and his line is to watch the index, not Bitcoin — this weekend's token pullback is the first test of that. He also named Meta's Muse agent partners (PayPal, Expedia, Shopify, Instacart) and repeated his Visa/Mastercard disintermediation call. <b>Weight it carefully:</b> the Visa/Mastercard and "fundamentals, not liquidity" crypto lines are now three weekly repeats with no new evidence, and he says oil doesn't matter while also saying small caps need oil to fall. <b>InvestAnswers</b> — nothing new since 23 Sep (Q4 rally front-run into September). Our tape agrees with half of Jordi: semis lead financials and materials by ~8–10 points over 50 sessions, but high-yield spreads have widened slightly (HY OAS 2.80%, +0.08 over 50 days), so his "credit flat" point is close to true, not exactly true.</p></div>
+    </div>
+  <div class="sec hot"><span class="dot"></span><h2>Run too hot</h2><span class="sub">strong and stretched — heat is not a pullback signal on its own</span></div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">NEAR · NEAR Protocol</span><span class="px">$5.10</span></div>
+      <div class="tags"><span class="tag s-hot">Overheated</span><span class="tag">Entry C</span><span class="tag">Crypto Tokens</span><span class="tag">+5.2%</span><span class="tag">hot</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">A new, dated catalyst since Saturday: the <b>Bitwise NEAR ETF</b> (ticker NRR) cleared its final regulatory step on 24 Sep and is expected to start trading around 29 Sep — a new route for US money into the token. Two large short positions were sitting on ~$25.9M of losses on Sunday, so a further rise could force buying. On Hyperliquid, one leveraged trader holds a ~$29.7M NEAR long.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Saturday's point stands: the ~80% run is mostly positioning, not use of the network. "Buy the rumour, sell the news" is a common pattern around ETF launches, and the big leveraged long is also a forced seller if the price turns. RSI ~79 is the most stretched reading among the crypto names.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">No earnings or TAM read applies to a token. The ETF adds a buyer base; whether that outlasts the launch week is the open question. The wiki (<code>near-protocol-near.md</code>, 21 Sep) splits it: usage is real — NEAR Intents is a top-ranked cross-chain venue at ~$4.13B a month — but the token keeps only ~3 basis points of that, and buybacks cover ~12% of new issuance. <b>Usage yes, value to the token not yet.</b> Jordi Visser names NEAR (with Zcash) as an AI-agent activity “canary”; the wiki notes that call rests on price alone, and that he has a book to talk.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">About 99% above its 50-day average (~$2.57) and 33% above its 21-day (~$3.84), ~5% under its 52-week high (~$5.38). Normal daily swing ≈ $0.39 (7.7%), and it is swinging somewhat more than usual for it (1.21×). Two normal days down reaches ~$4.31. The support zone press commentary cites, ~$4.00–4.20, sits just below that.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade C, parabolic flavour: a strong one-sided run, and historically waiting for a pullback did not help. Heat 91 is not a top signal by itself. But the nearest average, the 21-day, is about three normal days below, and the ETF launch is a known event that can cut both ways. The risk/reward favours existing holders over new money into the launch; a new position here is a bet on the ETF bid, not on a price floor.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The hottest token, now with a real dated catalyst — which makes Tuesday's launch the test, in either direction.</p></div>
+    </div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">ZEC · Zcash</span><span class="px">$1,544.26</span></div>
+      <div class="tags"><span class="tag s-hot">Overheated</span><span class="tag">Entry B</span><span class="tag">Crypto Tokens</span><span class="tag">+1.0%</span><span class="tag">hot</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The Bitget hack put privacy back in the headlines, and Zcash rose over a weekend when most tokens fell. A proposal for a Zcash-style shielded (private) layer on Bitcoin drew attention — but it is research, not a planned upgrade.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">The same hack is a reputational risk: Bitget raised its loss estimate to $387.5M after finding stolen funds moved on the Zcash chain. Privacy coins tend to draw regulator and exchange-delisting pressure when they appear in a theft story.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">No earnings read applies. The forward case is demand for private transactions (Jordi Visser calls ZEC an agent-activity “canary”, <code>zcash-zec.md</code>); the risk is that the same demand draws restrictions.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">About 53% above its 50-day (~$1,010) and 11% above its 21-day (~$1,387), ~6% under its 52-week high (~$1,650). Normal daily swing ≈ $114.88 (7.4%), about its usual size. Two normal days down reaches ~$1,315.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade B: a leader, extended above its short-term averages but not parabolic. Heat 77 (hot) historically carried no extra pullback risk. The 21-day is about 1.4 normal days below — an ordinary dip away. The setup is constructive for holders; for new money, the swing size (~7% a day) matters more than the grade.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Held up while the group fell, on a privacy story that has a regulatory edge to it.</p></div>
+    </div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">AR · Arweave</span><span class="px">$4.26</span></div>
+      <div class="tags"><span class="tag s-hot">Overheated</span><span class="tag">Entry A</span><span class="tag">Crypto Tokens</span><span class="tag">−8.1%</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Arweave is a permanent data-storage network; its AO compute layer (live since Feb 2025) stores its data on Arweave, which gives the token a demand source tied to use. The weekend fall put the price back near its 21-day average without breaking the trend.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">A small token (market cap ~$0.3B) with no specific news behind either the run-up or the fall — the moves are flows, not fundamentals. It is swinging much more than usual for it (1.46×), and press commentary points to ~$2.76 (roughly its 50-day) as the next real support, ~35% below.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">No earnings read applies. The forward case rests on AO developer adoption. The wiki (<code>arweave-ar.md</code>) has no followed source that names Arweave; its place in Jordi Visser's 46-name index is an inference from his chart, not his words.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">About 54% above its 50-day (~$2.77) and 12% above its 21-day (~$3.81), ~11% under its 52-week high (~$4.79). Normal daily swing ≈ $0.44 (10.2%). Two normal days down reaches ~$3.39 — below the 21-day.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade A: a leader back near its short-term average (moved up from C). Heat 70 is mid, not hot. On the model's logic this is the best-positioned of the crypto names on timing. But with a 10% normal daily swing, the 21-day is barely one ordinary day away — the "pullback" is inside the noise, and there is a long way to the 50-day if it fails.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Grade A on timing, with no story and double-digit daily swings — the grade is real, the floor is not.</p></div>
+    </div>
+  <div class="sec lead"><span class="dot"></span><h2>Leading</h2><span class="sub">strong and healthy — two of these just came off Overheated</span></div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">UNI · Uniswap</span><span class="px">$8.88</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry A</span><span class="tag">Crypto Tokens</span><span class="tag">−8.1%</span><span class="tag">flip: Overheated → Leading</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The strongest fundamental story among the tokens. The fee switch is live and burns UNI with protocol revenue. On 17 Sep the SEC granted an exemption that lets tokenised stocks into automated trading pools; Uniswap v4 took over 40% of ~$20.9B of tokenised-stock trading in 30 days. (The wiki page <code>uniswap-uni.md</code> still has an open item to confirm the fee-switch timing against a primary source.) CME plans cash-settled UNI futures, tentatively from 19 Oct.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">The 18 Sep jump (+18.7% in a day, +49% in a week) front-loaded a lot of that news. The weekend −8.1% was about 1.1 normal days — ordinary for this token, but it is swinging much more than usual for it (1.41×). Tokenised-stock volume is new and could move to other venues.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">Unlike most tokens, UNI now has a revenue line: fees burned against supply. If tokenised-stock trading keeps growing on-chain, the burn grows with it. The price has already moved ~48% above its 50-day on that story, so part of it is priced; the CME listing and volume data are the next checks.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">About 48% above its 50-day (~$6.01) and 8% above its 21-day (~$8.19), ~14% under its 52-week high (~$10.27). Normal daily swing ≈ $0.76 (8.5%). Two normal days down reaches ~$7.37.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade A: leader back near its 21-day, trend intact (up from C). Heat 64, mid. This is the cleaner version of a pullback than AR: the 21-day is less than one normal day below, and there is a dated catalyst (CME futures, ~19 Oct) ahead. The setup favours a starter near the 21-day over chasing a bounce back to $10; a close below ~$7.37 would mean more than normal noise.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Cooled from Overheated to Leading on a normal-sized dip, with the best revenue story among the tokens still intact.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">TAO · Bittensor</span><span class="px">$301.30</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry D</span><span class="tag">Crypto Tokens</span><span class="tag">−3.6%</span><span class="tag">flip: Overheated → Leading</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The main AI-crypto token, and still up ~22% from its 200-day. Momentum 87 is strong, and Saturday's Overheated reading was its first in months.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Fell 4.2% on Sunday alone as AI-crypto names turned volatile. Its 50-day (~$241) is still <em>below</em> its 200-day (~$246), so the long trend has not turned up — which is why the model grades it D even while its status reads Leading.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">No earnings read applies. The case is the growth of its subnet market for AI models. Jordi Visser names it aloud among the tokens to learn, but the wiki (<code>bittensor-tao.md</code>, 20 Sep) had it as the laggard of the group — it did not match his index chart.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">About 9% above its 21-day (~$276) and ~23% above its 200-day (~$246); ~13% under its 52-week high (~$346). Normal daily swing ≈ $20.58 (6.8%), its usual size. Two normal days down reaches ~$260.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D: fails the trend gate (the 50-day has not crossed above the 200-day). That is a "not yet", not a "no". The condition to watch is the 50-day crossing above the 200-day — they are ~2% apart. Until then the model has no momentum edge here, whatever the status label says.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">A strong bounce inside a trend that has not yet turned — Leading on the day, D on the structure.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">HYPE · Hyperliquid</span><span class="px">$88.96</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry A</span><span class="tag">Crypto Tokens</span><span class="tag">−3.1%</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Binance opened HYPE spot trading on 24 Sep. US HYPE ETFs took ~$4.8M of inflows on 25 Sep. The platform targets ~75% of its volume from real-world assets (commodities, indices, single stocks) by 2027, up from 52% in July — and it is the venue for NEAR's new perpetual futures.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">It set a record ~$96 on 21 Sep and has now slipped ~8% below its high; heat fell 16 points over the weekend. Leveraged positions on its own platform (such as the $29.7M NEAR long) are a reminder that its volume depends on speculation.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The token is tied to exchange revenue, so the forward read is volume growth, especially in real-world assets. The wiki (<code>hyperliquid-hype.md</code>) has it as the one token in this group with a sourced fee-to-token case; InvestAnswers' James disclosed he holds it (Aug).</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">About 1% above its 21-day (~$88.08) and 12% above its 50-day (~$79.32); ~8% under its 52-week high (~$97.18). Normal daily swing ≈ $4.18 (4.7%), and it is swinging <em>less</em> than usual for it (0.78×). Two normal days down reaches ~$80.60 — close to the 50-day.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade A, sitting right on its 21-day with a calmer-than-usual swing. Of the crypto names this has the tightest risk: the 50-day, ~$79, is only about two normal days below. The setup favours a starter here over the hotter tokens; a close below ~$79 would break that.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The calmest of the leading tokens, sitting on its 21-day with an exchange-revenue story behind it.</p></div>
+    </div>
+  <div class="sec entry"><span class="dot"></span><h2>What changed today</h2><span class="sub">flips, the unchanged stock extremes, and the bench</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">FLIPS · Status changes and other movers</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span><span class="tag">2 flips</span></div>
+      <div class="field"><p class="h">Status flips</p><p class="b">Uniswap Overheated → <b>Leading</b>; Bittensor Overheated → <b>Leading</b>.</p></div>
+      <div class="field"><p class="h">Grade changes</p><p class="b">C → A: <b>AR</b>, <b>UNI</b> (both fell back to their 21-day averages). No stock grades changed — no stock traded.</p></div>
+      <div class="field"><p class="h">Other movers</p><p class="b">Solana −2.3% to ~$117.93; Bitcoin −1.9% to ~$82,684. BTC's MVRV (price ÷ average holder cost) is 1.58 as of 27 Sep; it fell to 1.10 on 30 Jun and BTC is back above its 200-day (~$71,134), so the V row (cheap, then confirmed) stays live.</p></div>
+      <div class="field"><p class="h">Stock extremes (unchanged since Friday)</p><p class="b">The heat extremes still include four stocks, all at their Friday close: <b>AMD</b> $630.63 (heat 95, grade C, record high), and the three coldest — <b>NEE</b> $76.08 (heat 0), <b>ENPH</b> $32.40 (heat 1) and <b>FLNC</b> $7.85 (heat 2), all grade D and still making lower lows. Nothing new since Saturday's brief; see it for the full reads.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">QUIET · Quiet today</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span><span class="tag">benched</span></div>
+      <div class="field"><p class="h">Benched</p><p class="b">Every US stock (no session since Friday): NVDA, TSLA, GOOGL, AMZN, TSM, ASML, AVGO, AMD, MRVL, QCOM, ARM, INTC, ALAB, MU, SNDK, WDC, STX, MP, USAR, UUUU, CC, SOLS, WOLF, GLW, ENTG, STLD, Q, VRT, ANET, DELL, LITE, COHR, AAOI, GEV, ETN, POWL, FLNC, MARA, CRCL, HOOD, CRWV, NBIS, IREN, CIFR, CLSK, ENPH, FSLR, NXT, BE, EOSE, NEE, CEG and the rest; plus ENR.DE (intraday only), BTC and SOL.</p></div>
+    </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>What the Smart Money Is Saying</h2></div>
+  <blockquote class="quote">“Bitcoin is not what you watch — watch the index.”<span class="src">— Jordi Visser, 27 Sep 2026 · “A Bear Market Inside a Bull Market”</span></blockquote>
+
+  <div class="sec plain"><span class="dot"></span><h2>Catalyst Calendar</h2><span class="sub">next ~2 weeks</span></div>
+  <div class="cal">
+    <div class="row"><span class="d">Mon 28 Sep</span><span>Bitget begins phased withdrawal resumption after the $387.5M hack. Bloom Energy class action — lead-plaintiff deadline.</span></div>
+    <div class="row"><span class="d">Tue 29 Sep</span><span>Bitwise NEAR spot ETF (NRR) expected to begin trading.</span></div>
+    <div class="row key"><span class="d">Wed 30 Sep</span><span><b>Micron fiscal Q4 results, after the close</b> — consensus ~$50.8B revenue, ~$31.45 EPS. <b>US August PCE inflation</b>, 8:30 ET — the first big inflation print since the 16 Sep hike.</span></div>
+    <div class="row"><span class="d">Thu 1 Oct</span><span>ISM manufacturing. Nebius GPU price increase takes effect. Monthly falsifier check (GPU rental F1, DRAM spot F2), plus the AAOI / CLSK deal checks and the flexible-load watch.</span></div>
+    <div class="row key"><span class="d">Fri 2 Oct</span><span><b>US September jobs report</b>, 8:30 ET — the week's biggest scheduled event.</span></div>
+    <div class="row"><span class="d">Tue 6 Oct</span><span>Marvell Investor Day, New York.</span></div>
+    <div class="row"><span class="d">Later</span><span>US CPI Wed 14 Oct · CME cash-settled UNI futures, tentatively Mon 19 Oct · FOMC Tue–Wed 27–28 Oct · Intel and AMD Q3 in late October (dates to confirm) · First Solar Q3 Thu 29 Oct · FERC flexible large-load dockets ~16 Nov.</span></div>
+  </div>
+
+  <footer class="foot"><b>How to read this.</b> Neutral, balanced read — bull and bear side by side. The <b>Setup</b> lines are opinions on risk/reward and timing to weigh for yourself, not directives; the call is yours.<br><br><b>Score key.</b> <b>Heat</b> — 0 = far below its highs and its 50-day average, i.e. damaged, and historically these fell further; 100 = a strong run near its highs, historically with no extra pullback risk. <b>Momentum</b> — strength of the recent up-move. <b>Status bands</b> — Leading = strong and healthy; Overheated = strong but stretched, which is not a pullback signal; Basing = weak and not yet a bottom; Neutral = no clear signal. <b>ATR</b> — the name's normal daily swing. <b>Forward PEG</b> — price/earnings divided by expected growth; under ~1 means you are paying little for a lot of growth, over ~2 the opposite. <b>Entry grades</b> — A/B/C all pass both momentum gates; the letter is where the price sits against its short-term averages, not a rank. Grades run on the real exported trend fields; they are a timing lens, not a verdict on the business.<br><br><b>Sources:</b> Signal-Model local export (65 names, data 28 Sep 09:38 UTC; US stocks at the Fri 25 Sep close, crypto live through the weekend) — all prices, momentum, heat, status, levels, ATR, valuation fields, entry grades and BTC MVRV. Macro series via FRED and Yahoo. News and catalysts via web search: The Block, Fortune, PYMNTS, The Hacker News, CoinDesk, KuCoin, CoinCentral, Blockonomi, Bitget News, CryptoTicker, CoinMarketCap, CoinStats, Trending Topics, CNBC, Fox Business, Charles Schwab, CMC Markets, TradingKey, Money Morning, TechCrunch, AdExchanger. Commentator views from <code>Investing/wiki/</code>: ai-trade-rotation, ai-midcycle-slowdown-jordi-visser, near-protocol-near, zcash-zec, uniswap-uni, arweave-ar, bittensor-tao, hyperliquid-hype, alphabet-googl.<div class="nfa">Not financial advice — this surfaces signals to inform your own decisions.</div></footer>
+</div>
+</body>
+</html>
