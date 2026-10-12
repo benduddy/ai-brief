@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monday Signal Brief — 12 October 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4EC; --ink:#27241D; --muted:#6E6A5E; --faint:#928C7C;
+    --hair:#E4DDCD; --hair-strong:#D8CFB9;
+    --clay:#C9663F; --clay-soft:#E8C4AE; --clay-wash:#F3E5DA;
+    --leading:#5F7355; --leading-wash:#E7ECDF;
+    --hot:#B8862F; --hot-wash:#F1E7CF;
+    --basing:#8A8475; --basing-wash:#EAE5D7;
+    --serif:"Newsreader", Georgia, "Times New Roman", serif;
+    --sans:"Inter", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink)}
+  body{font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:700px;margin:0 auto;padding:56px 28px 72px}
+  .kicker,.sec h2,.sec .sub,.tag,.badge,.meta,.cal .d,.foot{font-family:var(--sans)}
+
+  .mast{display:flex;align-items:flex-start;gap:16px;margin-bottom:8px}
+  .spark{flex:0 0 auto;margin-top:8px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin:0 0 6px}
+  h1.title{font-family:var(--serif);font-weight:500;font-size:42px;line-height:1.05;letter-spacing:-.01em;margin:0 0 10px}
+  .meta{font-size:13px;color:var(--muted);margin:0}
+  .meta b{color:var(--ink);font-weight:600}
+  .rule{height:2px;background:var(--clay);border:0;margin:22px 0 0;width:64px;border-radius:2px}
+
+  .lede{font-size:22px;line-height:1.5;margin:30px 0 8px;font-weight:400}
+  .lede em{font-style:italic}
+  .tldr{margin:14px 0 0;padding:0;list-style:none}
+  .tldr li{position:relative;padding:7px 0 7px 22px;border-bottom:1px solid var(--hair)}
+  .tldr li:last-child{border-bottom:0}
+  .tldr li::before{content:"";position:absolute;left:2px;top:16px;width:6px;height:6px;border-radius:50%;background:var(--clay)}
+  .tldr b{font-weight:600}
+
+  .sec{display:flex;align-items:center;gap:10px;margin:72px 0 24px}
+  .sec .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .sec h2{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0;color:var(--ink)}
+  .sec .sub{font-size:12.5px;color:var(--faint);margin-left:auto;font-weight:500}
+  .sec.hot .dot{background:var(--hot)} .sec.lead .dot{background:var(--leading)}
+  .sec.base .dot{background:var(--basing)} .sec.entry .dot{background:var(--clay)}
+  .sec.plain .dot{background:var(--ink)}
+
+  .grades{display:flex;flex-direction:column;gap:15px;margin:0}
+  .grade-row{display:flex;gap:13px;align-items:baseline}
+  .badge{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:15px;color:#fff;margin-top:2px}
+  .badge.A{background:var(--clay)} .badge.B{background:var(--clay-soft);color:#7a3d22}
+  .badge.C{background:var(--hot-wash);color:#7a5c14;border:1px solid #d8bd7e}
+  .badge.R{background:var(--leading)} .badge.V{background:var(--basing)}
+  .gl{font-size:16px}
+  .gl .lab{font-weight:600;color:var(--ink)} .gl .tk{font-weight:600;color:var(--clay)} .gl .muted{color:var(--muted)}
+
+  .name{padding:40px 0 8px;border-top:1px solid var(--hair)}
+  .name:first-of-type{border-top:0;padding-top:8px}
+  .name .ch{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+  .name .sdot{width:9px;height:9px;border-radius:50%;flex:0 0 auto;align-self:center}
+  .name.hot .sdot{background:var(--hot)} .name.lead .sdot{background:var(--leading)} .name.base .sdot{background:var(--basing)}
+  .name .nm{font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:-.01em}
+  .name .px{margin-left:auto;font-family:var(--serif);font-size:19px;color:var(--ink)}
+  .name .tags{display:flex;gap:6px;margin:14px 0 26px;flex-wrap:wrap}
+  .tag{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--clay-wash);color:#8a4a2c}
+  .tag.s-hot{background:var(--hot-wash);color:#7a5c14}
+  .tag.s-lead{background:var(--leading-wash);color:#445239}
+  .tag.s-base{background:var(--basing-wash);color:#5d584b}
+
+  .field{margin:0 0 24px}
+  .field .h{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:0;color:var(--ink);margin:0 0 6px}
+  .field .b{font-size:16.5px;line-height:1.6;color:var(--ink);margin:0}
+  .field.read{margin-top:28px}
+  .field.read .h{color:var(--clay)}
+  .field.read .b{font-style:italic;font-size:18px;line-height:1.55}
+
+  .quote{border-left:3px solid var(--clay);background:var(--clay-wash);padding:16px 20px;border-radius:0 10px 10px 0;margin:0;font-size:18px;line-height:1.5}
+  .quote .src{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:10px;font-style:normal;line-height:1.5}
+
+  .cal{margin:0}
+  .cal .row{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:13px 0;font-size:16px;border-top:1px solid var(--hair)}
+  .cal .row:first-child{border-top:0}
+  .cal .d{font-weight:600;color:var(--clay);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+
+  .foot{margin-top:50px;padding-top:18px;border-top:1px solid var(--hair-strong);font-size:12.5px;color:var(--faint);line-height:1.6}
+  .foot a{color:var(--clay);text-decoration:none}
+  .foot .nfa{font-style:italic;margin-top:10px;font-family:var(--serif)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <svg class="spark" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><g fill="#C9663F"><rect x="11" y="1" width="2" height="22" rx="1"/><rect x="1" y="11" width="22" height="2" rx="1"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(45 12 12)"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(-45 12 12)"/></g></svg>
+    <div>
+      <p class="kicker">AI-Trade · Daily Brief · Macro: neutral</p>
+      <h1 class="title">Monday Signal Brief</h1>
+      <p class="meta"><b>12 October 2026</b> · 65 names · benchmark <b>QQQ</b> · data 10:50 UTC</p>
+    </div>
+  </header>
+  <hr class="rule">
+
+  <p class="lede">A <em>calmer tape after Thursday's sell-off:</em> a handful of leaders flipped back up, three names turned Overheated, and the AI universe closed a little of its gap to the index.</p>
+  <ul class="tldr">
+    <li><b>Rebound, not a trend yet.</b> <b>CEG</b> +4.6%, <b>CRCL</b> +4.5%, <b>COHR</b> +3.4%, <b>AMZN</b> +3.3% against <b>ARM</b> -3.3% and <b>EOSE</b> -8.9%. Equity prices are the Friday 9 October close; crypto runs through this morning. I found no market wrap naming a cause, so I give none.</li>
+    <li><b>Three names turned Overheated:</b> <b>LITE</b> ($1,103, +5.2%), <b>DELL</b> ($586) and <b>NEAR</b> ($5.81, +23.9%). <b>AMD</b> cooled back to Leading. Overheated means strong and stretched, not a pullback signal.</li>
+    <li><b>Yield-curve gate (G1):</b> the 2s10s curve slipped to 0.44 from 0.47, under the 0.45 line I watch. Status stays <b>shut</b>. Shut does not mean the AI thesis is broken.</li>
+    <li><b>The gap narrowed to ~22%.</b> The AI universe sits 21.6% below its 60-day high on average, while the S&amp;P 500 is 0.09% below its own (22.6% at the last brief).</li>
+    <li><b>New source:</b> Pompliano and Visser (10 Oct) argue Bitcoin is the AI economy's settlement layer. My read in the wiki is low-medium conviction. BTC is above its 200-day (~$72,100) with MVRV 1.55.</li>
+    <li><b>Macro:</b> regime neutral, unchanged. Grades: 13 A / 5 B / 5 C.</li>
+    <li><b>Next:</b> US CPI Wed 14 Oct (date from last brief; I could not re-confirm it), TSMC Q3 Thu 15 Oct.</li>
+  </ul>
+
+  <div class="sec entry"><span class="dot"></span><h2>Entry Watchlist</h2><span class="sub">momentum gates + fundamental triggers</span></div>
+  <div class="grades">
+    <div class="grade-row"><span class="badge A">A</span><span class="gl"><span class="lab">Leader at a pullback/base — trend intact</span> &nbsp; <span class="tk">AMD&nbsp; GEV&nbsp; BE&nbsp; COHR&nbsp; TSM&nbsp; GOOGL&nbsp; ASML&nbsp; ETN&nbsp; NVDA&nbsp; AMZN&nbsp; CB&nbsp; STLD&nbsp; TRV</span></span></div>
+    <div class="grade-row"><span class="badge B">B</span><span class="gl"><span class="lab">Leader, extended above its short-term averages</span> &nbsp; <span class="tk">MRVL&nbsp; ENTG&nbsp; LITE&nbsp; DELL&nbsp; ANET</span></span></div>
+    <div class="grade-row"><span class="badge C">C</span><span class="gl"><span class="lab">Strong run — waiting for a pullback did not help historically</span> &nbsp; <span class="tk">NEAR&nbsp; ALAB&nbsp; MU&nbsp; ARM&nbsp; INTC</span></span></div>
+    <div class="grade-row"><span class="badge R">R</span><span class="gl"><span class="lab">Re-rating — near a new high, estimates up, earnings-led</span> &nbsp; <span class="tk">DELL&nbsp; NVDA&nbsp; LITE</span></span></div>
+    <div class="grade-row"><span class="badge V">V</span><span class="gl"><span class="lab">BTC — cheap (MVRV < 1.2) then above its 200-day: cheap-then-confirmed</span> &nbsp; <span class="tk">BTC</span></span></div>
+  </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>Market backdrop</h2><span class="sub">what the macro and sources say</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">BACKDROP · Market backdrop</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span><span class="tag">Regime neutral</span></div>
+      <div class="field"><p class="h">Tape</p><p class="b">Equity moves are the Friday 9 October close against Thursday's. I found no Friday market wrap, so I give no index level and no headline cause.</p></div>
+      <div class="field"><p class="h">Theme vs index</p><p class="b">Worth noting the gap: the S&amp;P 500 is <b>0.09%</b> below its high, while the 65-name AI universe sits about <b>21.6%</b> below its own 60-day high, on average (22.6% at the last brief). The live average covers today's universe, not the one the historical drawdown figures used.</p></div>
+      <div class="field"><p class="h">Yield-curve gate (G1)</p><p class="b">2s10s is <b>0.44</b> (0.47 at the last brief): it crossed under the 0.45 line, with no sign flip in the 50-day trend. Status stays <b>shut</b>. Gloss: gate open means liquidity can broaden into BTC and small caps; shut is not a sign the AI thesis broke.</p></div>
+      <div class="field"><p class="h">Falsifiers</p><p class="b">F1 (GPU rental): weekly data is still too thin to read ('insufficient'). F2 (DRAM spot): intact. F3 (capex language): next test is hyperscaler earnings in late October.</p></div>
+      <div class="field"><p class="h">Leadership</p><p class="b">Financials are 15.6 points behind semis over 50 sessions, and semis are up ~12%; credit is still flagged as worsening (HY spread 3.15, +0.37 over 50 days). One leg only, so no conclusion. IGV is 112.7, close to the ~110 level David Hunter named as a possible top. That is a level a source named, not one the model derived.</p></div>
+      <div class="field"><p class="h">Flexible-load watch</p><p class="b">No new adopter or non-ERCOT tariff found. The thing to watch is the six RTO responses to FERC's June show-cause orders, which I could not confirm in the docket. A secondary source says the deadline passed in August.</p></div>
+      <div class="field"><p class="h">Deal checks</p><p class="b">AAOI and CLSK are not featured and nothing in the tape touched them. No check run today.</p></div>
+      <div class="field"><p class="h">Smart money (wiki)</p><p class="b"><b>Pompliano / Visser (10 Oct):</b> Bitcoin as the AI economy's settlement layer. My read is low-medium conviction: the 200-day claim is checkable and agrees with the trend flip, but it never ties BTC itself to agent demand. <b>InvestAnswers (23 Sep):</b> 'everything has been front-run', yet he still owns AMD. They diverge on timing, not on direction.</p></div>
+      <div class="field"><p class="h">BTC value read</p><p class="b">MVRV (price ÷ average holder cost) is 1.55, after a low of 1.10 on 30 Jun, and BTC ($83,485) is above its 200-day (~$72,054). That is the 'cheap, then confirmed' pattern that worked in 3 of 4 past bear markets (failed in 2014).</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">A rebound day inside a still-wide gap to the index. Not a verdict.</p></div>
+    </div>
+  <div class="sec hot"><span class="dot"></span><h2>Run Too Hot</h2><span class="sub">strong, but stretched</span></div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">LITE · Lumentum</span><span class="px">$1,103</span></div>
+      <div class="tags"><span class="tag s-hot">Overheated</span><span class="tag">Entry B</span><span class="tag">Optics</span><span class="tag">Re-rating, earnings-led</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Fiscal Q4 (11 Aug) revenue was about $1.0B, +109% on the year, with a $1.225–1.275B guide. Management calls lasers effectively sold out, and customer contracts run to 2030 (wiki, 14 Aug). Bernstein started at Outperform ($1,220) and Citi went to $1,400 (wiki, 2 Oct).</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Insiders sold about $150M over 12 months. The stock is near its 52-week high ($1,133), so a miss on the OCP Summit read-through (sessions 14–15 Oct) would hit a crowded name. The repeat China-transceiver headline is not a filed rule.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~31, next-year EPS growth +63%, forward PEG 0.49. <em>PEG is price/earnings divided by expected growth; under ~1 means you pay little for a lot of growth.</em> Cheap for its growth. Forward EPS is up ~15% in 60 days while the multiple is flat, so the rise is earnings-led.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The bull case is a pricing-power break in a business that used to cut prices every year. The market has priced much of it in; the gap to Citi's $1,400 is ~27%. If gross margin starts needing mix help again, the structural story weakens.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day ~$920, 200-day ~$764, 21-day ~$1,004, 52-week high ~$1,133. Normal daily swing ≈ $67 (6.1%), a little quieter than usual for it (0.75×).</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade B: a leader, ~10% above its 21-day. That is a position note, not a 'wait'. Heat 77 is hot, which historically carries no extra pullback risk. A day's move is only about one swing, so $1,103 vs the high is noise-sized. Model: constructive while the 50-day holds; a close under ~$1,004 would be the first real crack.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The best-supported name on the hot list: rising with its estimates, not ahead of them. Falsifier: ASP or margin rolling over.</p></div>
+    </div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">DELL · Dell</span><span class="px">$586</span></div>
+      <div class="tags"><span class="tag s-hot">Overheated</span><span class="tag">Entry B</span><span class="tag">Servers</span><span class="tag">Re-rating, earnings-led</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Last quarter revenue was a record $47B (+58%), AI-server orders $60.9B, backlog near $95B, and the AI-server outlook was lifted to ~$74B. RBC started at Outperform ($640). Press reports (Sept) put the stock up ~350% this year.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Component costs: NAND and HBM shortages can squeeze AI-server margins. A ~20× forward multiple is high for a hardware maker.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~20, next-year EPS growth +12%, forward PEG 1.62: fairly priced for its growth. Forward EPS is up ~32% in 60 days while the multiple fell ~8%, so earnings are catching up with the price.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day ~$506, 200-day ~$304, 21-day ~$551, 52-week high ~$588 (0.4% away). Normal daily swing ≈ $27.85 (4.75%).</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade B at a new high zone. Over a century of data, new highs were a good entry, so a high alone is no reason to wait. The cushion is wide: the 21-day is 6% below. Model: favours holding trend while the 50-day (~$506) stands; the next test is its next quarterly report.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Fundamentally backed but the most stretched against its 200-day (~93% above). Falsifier: a margin warning tied to memory costs.</p></div>
+    </div>
+    <div class="name hot">
+      <div class="ch"><span class="sdot"></span><span class="nm">NEAR · NEAR Protocol</span><span class="px">$5.81</span></div>
+      <div class="tags"><span class="tag s-hot">Overheated</span><span class="tag">Entry C</span><span class="tag">Crypto</span><span class="tag">No valuation read</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">On-chain data (wiki, 11 Oct): stablecoin supply on NEAR is up 22.5% in 30 days and the price is up ~113%. A fresh 52-week high ($5.87) is a new-high entry, which has been historically strong.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">This is a vertical move: +24% since the last snapshot, ~165% above its 200-day. It fell 15% on the day after its last high (9 Oct brief). Fees did not follow (-1% week on week), so use is not yet keeping pace with the price.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day ~$3.51, 200-day ~$2.19, 21-day ~$4.83, 52-week high ~$5.87. Normal daily swing ≈ $0.49 (8.5%), 1.3× its usual: it is swinging more than normal.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade C (a strong, one-sided run). Waiting for a pullback has not helped historically, but a 24% jump can fully reverse in a day, as the last brief showed. Model: size the swing first. A close under the 21-day (~$4.83) would end the run for now.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The hottest chart in the book, with a thin cause. I found no October news explaining the jump. Falsifier: a close under ~$4.83.</p></div>
+    </div>
+  <div class="sec lead"><span class="dot"></span><h2>Leading</h2><span class="sub">strong and healthy</span></div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">AMD · AMD</span><span class="px">$608</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry A</span><span class="tag">Semiconductors</span><span class="tag">Cooled from Overheated</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Q2 (4 Aug): revenue $11.5B (+50%), data centre $6.7B (+107%) (wiki, 22 Sep). It broke out to a new high near $614 on 21–23 Sep.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">InvestAnswers read the 4-hour chart as 'rolling over' at the high (23 Sep). Next earnings are expected late October (unconfirmed). I found no AMD-specific October news.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~39, next-year EPS growth +107%, forward PEG 0.36: cheap for its growth.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day ~$529, 200-day ~$385, 21-day ~$595, 52-week high ~$649. Normal daily swing ≈ $23.88 (3.9%).</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade A (B on 3 Oct): the pullback to the 21-day made it a leader at a base. Model: constructive while the 21-day (~$595) holds; the 50-day (~$529) is the line that would call the trend into question.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The best trend at a PEG under 0.4, now less stretched. Falsifier: a close under ~$529.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">AMZN · Amazon</span><span class="px">$262.43</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry A</span><span class="tag">Mega-cap</span><span class="tag">Basing → Leading</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Momentum jumped 23 points as it closed above its 50-day. AWS grew 28% to $37.6B in Q1 (press, April); a fair-priced trend with a dated test in about three weeks.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Heavier AI capex weighs on free cash flow. I found no October-specific news.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~25, next-year EPS growth +26%, forward PEG 0.96: cheap-to-fair for its growth.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day ~$259, 200-day ~$242, 21-day ~$254, 52-week high ~$284. Normal daily swing ≈ $5.90 (2.25%).</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade A: sits just above its 50-day, 3% above the 21-day. Model: constructive while the 200-day (~$242) holds. Q3 results (about 28–29 Oct, unconfirmed) also test F3, hyperscaler capex language.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The quiet mega-cap that just turned. Falsifier: a close under ~$259, then ~$242.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">CEG · Constellation Energy</span><span class="px">$298</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry D</span><span class="tag">Power</span><span class="tag">+4.6%</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Momentum +21 and a +4.6% day; it closed back above its 200-day ($285).</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Entry grade D: 12-month momentum is still negative, and lower lows are in place. It failed at the 200-day on 8 Oct. Forward PEG 2.31 leaves no cushion. No wiki page, and I found no fresh catalyst.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~22, next-year EPS growth +10%, forward PEG 2.31: expensive against its growth.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day ~$274, 200-day ~$285, 21-day ~$275, 52-week high ~$402. Normal daily swing ≈ $14.23 (4.8%).</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Model: no edge until the 12-month return turns positive; one close above the 200-day has failed twice already, so confirmation needs more than one.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">A bounce on a failed-trend name. Falsifier: another rejection at ~$285.</p></div>
+    </div>
+  <div class="sec base"><span class="dot"></span><h2>Basing</h2><span class="sub">weak, not yet a bottom</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">SNDK · Sandisk</span><span class="px">$1,582</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D</span><span class="tag">Memory & Storage</span><span class="tag">Leading → Basing</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Fiscal Q4 guide was far above consensus (about $8B and $31 EPS, wiki 5 Aug). JPMorgan Overweight $2,250 (wiki, 4 Sep).</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Wells Fargo cut to $1,400 in September, near today's price. Price fell ~24% in three sessions in July on the CXMT IPO read-across, and sits ~32% under its $2,335 high. NAND ASPs can reset faster than contract volumes.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~6, next-year EPS growth +24%, forward PEG 0.25: cheap only if the structural-demand view holds. F2 (DRAM spot) is still <b>intact</b>, so the structural view is not under pressure.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day ~$1,583 (price sits on it), 200-day ~$1,182, 21-day ~$1,678, 52-week high ~$2,335. Normal daily swing ≈ $95.1 (6.0%).</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D: holds its trend but has middling relative strength. The price is confirmed above the 200-day, so the 'cheap and the price agrees' test passes. Model: the 50-day (~$1,583) is the line now; below it, the 200-day (~$1,182) is the next level.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Cheap, cyclical and in a digestion phase. Falsifier: DRAM spot rolling for weeks (F2).</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">EOSE · Eos Energy</span><span class="px">$2.52</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D</span><span class="tag">Power</span><span class="tag">Ben holding</span><span class="tag">Heat 0</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Turbine-X JDA: up to 2 GWh with first deployments in 2027, and a 2 GWh Frontier Power reservation (wiki, 17 Aug). It is aimed at the flexible-interconnection thesis.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">A niche player: 3.4 GWh backlog against Tesla's 13.5 GWh in one quarter. Heavy dilution, class actions over manufacturing readiness, and a short-seller allegation. The price is -8.9% on the day and ~65% below its 200-day.  Forward EPS is expected to fall (-97%), so no PEG read applies. I found no October news.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day ~$3.64, 200-day ~$7.13, 21-day ~$3.30, 52-week high ~$19.19. Normal daily swing ≈ $0.28 (11%), a very wide range.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D, lower lows, cold (heat 0): cold names fell further more often in the backtest, so this is damaged, not cheap. Model: no base yet. A first sign would be a stop to the lower lows.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Falling knife by the model's own test. Falsifier for the bearish view: a close back above the 21-day (~$3.30).</p></div>
+    </div>
+  <div class="sec plain"><span class="dot"></span><h2>What changed</h2></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">CHANGES · What changed</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span><span class="tag">16 status flips</span></div>
+      <div class="field"><p class="h">Flips up</p><p class="b"><b>AMZN</b>, <b>CEG</b>, <b>COHR</b>, <b>ETN</b> and <b>HYPE</b> moved to Leading; <b>CRCL</b>, <b>GLW</b> and <b>NBIS</b> from Basing to Neutral; <b>AMD</b> cooled to Leading.</p></div>
+      <div class="field"><p class="h">Flips down</p><p class="b"><b>SNDK</b> to Basing; <b>ARM</b>, <b>CB</b> and <b>TRV</b> from Leading to Neutral.</p></div>
+      <div class="field"><p class="h">Crypto</p><p class="b"><b>TAO</b> +7.3%, <b>ZEC</b> +8.0%, <b>BTC</b> +1.8%, <b>SOL</b> +1.7%.</p></div>
+      <div class="field"><p class="h">Quiet today</p><p class="b">AAOI, ALAB, ANET, ASML, AVGO, BE, CC, CIFR, ENTG, FSLR, GEV, GOOGL, HOOD, INTC, MP, MRVL, MU, NVDA, NXT, POWL, SOLS, STLD, STX, TSM, USAR, UUUU, VRT, WDC and others.</p></div>
+    </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>What the Smart Money Is Saying</h2></div>
+  <blockquote class="quote">“Everything has been front-run.”<span class="src">— InvestAnswers, 23 Sep · his read that the Q4 rally came early. A 21.6% average gap to the highs is the case for him; NVDA's early-October high is the case against.</span></blockquote>
+
+  <div class="sec plain"><span class="dot"></span><h2>Catalyst Calendar</h2><span class="sub">next ~2 weeks</span></div>
+  <div class="cal">
+    <div class="row"><span class="d">Mon 12 Oct</span><span>OCP Global Summit runs 12–15 Oct in San Jose (Lumentum sessions 14–15 Oct).</span></div>
+    <div class="row key"><span class="d">Wed 14 Oct</span><span>US September CPI: the yield test (date carried from the last brief, not re-confirmed).</span></div>
+    <div class="row key"><span class="d">Thu 15 Oct</span><span>TSMC Q3 results.</span></div>
+    <div class="row"><span class="d">Late Oct</span><span>AMD Q3 results (expected, unconfirmed). FOMC Wed 28 Oct. Amazon Q3 about 28–29 Oct, unconfirmed; tests F3.</span></div>
+    <div class="row"><span class="d">Thu 29 Oct</span><span>First Solar Q3 results.</span></div>
+    <div class="row"><span class="d">Thu 5 Nov</span><span>AAOI Q3 results (per Yahoo's calendar; unconfirmed by the company).</span></div>
+  </div>
+
+  <footer class="foot"><b>How to read this:</b> neutral, balanced read — bull and bear side by side. The <b>Setup</b> lines are opinions on risk/reward and timing to weigh for yourself, not directives; the call is yours.<br><br><b>Score key:</b> <b>Heat</b> 0 = far below its highs and its 50-day (damaged; historically these fell further), 100 = a strong run near its highs (historically no extra pullback risk). <b>Momentum</b> = strength of the recent up-move. <b>Status:</b> Leading = strong and healthy; Overheated = strong and stretched (not a pullback signal); Basing = weak, not yet a bottom; Neutral = no clear signal. <b>ATR</b> = the name's normal daily swing. <b>Forward PEG</b> = forward P/E ÷ expected EPS growth; under ~1 cheap for its growth, over ~2 expensive. <b>Entry grades</b> A/B/C: the name clears both momentum gates; the letter is position against short-term averages, not a rank. D: no momentum edge yet.<br><br><b>Sources:</b> local signal files (Yahoo, FRED), Investing wiki, web searches (Benzinga and GuruFocus via wiki, StorageReview, Crowdfund Insider on Dell, FERC summaries by Brattle and Morgan Lewis). Web searches found no Friday market wrap and no October news for AMD, AMZN, EOSE or NEAR; moves without a stated cause had none found.<div class="nfa">Not financial advice — this surfaces signals to inform your own decisions.</div></footer>
+</div>
+</body>
+</html>
