@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Friday Signal Brief — 20 November 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4EC; --ink:#27241D; --muted:#6E6A5E; --faint:#928C7C;
+    --hair:#E4DDCD; --hair-strong:#D8CFB9;
+    --clay:#C9663F; --clay-soft:#E8C4AE; --clay-wash:#F3E5DA;
+    --leading:#5F7355; --leading-wash:#E7ECDF;
+    --hot:#B8862F; --hot-wash:#F1E7CF;
+    --basing:#8A8475; --basing-wash:#EAE5D7;
+    --serif:"Newsreader", Georgia, "Times New Roman", serif;
+    --sans:"Inter", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink)}
+  body{font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:700px;margin:0 auto;padding:56px 28px 72px}
+  .kicker,.sec h2,.sec .sub,.tag,.badge,.meta,.cal .d,.foot{font-family:var(--sans)}
+
+  .mast{display:flex;align-items:flex-start;gap:16px;margin-bottom:8px}
+  .spark{flex:0 0 auto;margin-top:8px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin:0 0 6px}
+  h1.title{font-family:var(--serif);font-weight:500;font-size:42px;line-height:1.05;letter-spacing:-.01em;margin:0 0 10px}
+  .meta{font-size:13px;color:var(--muted);margin:0}
+  .meta b{color:var(--ink);font-weight:600}
+  .rule{height:2px;background:var(--clay);border:0;margin:22px 0 0;width:64px;border-radius:2px}
+
+  .lede{font-size:22px;line-height:1.5;margin:30px 0 8px;font-weight:400}
+  .lede em{font-style:italic}
+  .tldr{margin:14px 0 0;padding:0;list-style:none}
+  .tldr li{position:relative;padding:7px 0 7px 22px;border-bottom:1px solid var(--hair)}
+  .tldr li:last-child{border-bottom:0}
+  .tldr li::before{content:"";position:absolute;left:2px;top:16px;width:6px;height:6px;border-radius:50%;background:var(--clay)}
+  .tldr b{font-weight:600}
+
+  .sec{display:flex;align-items:center;gap:10px;margin:72px 0 24px}
+  .sec .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .sec h2{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0;color:var(--ink)}
+  .sec .sub{font-size:12.5px;color:var(--faint);margin-left:auto;font-weight:500}
+  .sec.hot .dot{background:var(--hot)} .sec.lead .dot{background:var(--leading)}
+  .sec.base .dot{background:var(--basing)} .sec.entry .dot{background:var(--clay)}
+  .sec.plain .dot{background:var(--ink)}
+
+  .grades{display:flex;flex-direction:column;gap:15px;margin:0}
+  .grade-row{display:flex;gap:13px;align-items:baseline}
+  .badge{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:15px;color:#fff;margin-top:2px}
+  .badge.A{background:var(--clay)} .badge.B{background:var(--clay-soft);color:#7a3d22}
+  .badge.C{background:var(--hot-wash);color:#7a5c14;border:1px solid #d8bd7e}
+  .badge.R{background:var(--leading)} .badge.V{background:var(--basing)}
+  .gl{font-size:16px}
+  .gl .lab{font-weight:600;color:var(--ink)} .gl .tk{font-weight:600;color:var(--clay)} .gl .muted{color:var(--muted)}
+
+  .name{padding:40px 0 8px;border-top:1px solid var(--hair)}
+  .name:first-of-type{border-top:0;padding-top:8px}
+  .name .ch{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+  .name .sdot{width:9px;height:9px;border-radius:50%;flex:0 0 auto;align-self:center}
+  .name.hot .sdot{background:var(--hot)} .name.lead .sdot{background:var(--leading)} .name.base .sdot{background:var(--basing)}
+  .name .nm{font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:-.01em}
+  .name .px{margin-left:auto;font-family:var(--serif);font-size:19px;color:var(--ink)}
+  .name .tags{display:flex;gap:6px;margin:14px 0 26px;flex-wrap:wrap}
+  .tag{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--clay-wash);color:#8a4a2c}
+  .tag.s-hot{background:var(--hot-wash);color:#7a5c14}
+  .tag.s-lead{background:var(--leading-wash);color:#445239}
+  .tag.s-base{background:var(--basing-wash);color:#5d584b}
+
+  .field{margin:0 0 24px}
+  .field .h{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:0;color:var(--ink);margin:0 0 6px}
+  .field .b{font-size:16.5px;line-height:1.6;color:var(--ink);margin:0}
+  .field.read{margin-top:28px}
+  .field.read .h{color:var(--clay)}
+  .field.read .b{font-style:italic;font-size:18px;line-height:1.55}
+
+  .quote{border-left:3px solid var(--clay);background:var(--clay-wash);padding:16px 20px;border-radius:0 10px 10px 0;margin:0;font-size:18px;line-height:1.5}
+  .quote .src{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:10px;font-style:normal;line-height:1.5}
+
+  .cal{margin:0}
+  .cal .row{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:13px 0;font-size:16px;border-top:1px solid var(--hair)}
+  .cal .row:first-child{border-top:0}
+  .cal .d{font-weight:600;color:var(--clay);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+
+  .foot{margin-top:50px;padding-top:18px;border-top:1px solid var(--hair-strong);font-size:12.5px;color:var(--faint);line-height:1.6}
+  .foot a{color:var(--clay);text-decoration:none}
+  .foot .nfa{font-style:italic;margin-top:10px;font-family:var(--serif)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <svg class="spark" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><g fill="#C9663F"><rect x="11" y="1" width="2" height="22" rx="1"/><rect x="1" y="11" width="22" height="2" rx="1"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(45 12 12)"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(-45 12 12)"/></g></svg>
+    <div>
+      <p class="kicker">AI-Trade · Daily Brief · Macro: deflationary-stress (day 4)</p>
+      <h1 class="title">Friday Signal Brief</h1>
+      <p class="meta"><b>20 November 2026</b> · 68 names · benchmark <b>QQQ</b> · data Thu 19 Nov close for 40 names; 28 names still show Wed 18 Nov (published 20 Nov 06:13 UTC; crypto live to ~06:10 UTC)</p>
+    </div>
+  </header>
+  <hr class="rule">
+
+  <p class="lede">A broad sell-off: the S&P 500 fell 2.0% for a sixth loss in a row, and the Nasdaq fell 2.3%. AMD gave back the whole Nvidia rotation, −7.7% on the day a short seller published a China-export report. Anthropic listed at $83 and closed at $97.17. Amazon and Alphabet, its two big holders, fell with the market. Of the 39 names with a fresh print, 8 rose; median −2.8%.</p>
+  <ul class="tldr">
+    <li><b>Macro regime: deflationary-stress, day 4.</b> High-yield spreads 3.47% (3.43% yesterday), up 0.34 points in 50 days (FRED, the real series). Dollar 3.8% above its 200-day; VIX 28.4 (24.6). A pay-attention flag, not an exit signal.</li>
+    <li><b>Data gap:</b> 28 of 68 names (incl. ANET, VRT, DELL, CRWV, NBIS, IREN, CEG) show the same price as yesterday — Wednesday’s close. Two refresh runs gave the same result. Their lines below are one day old. SanDisk’s −88% is a price-source switch, not a real move.</li>
+    <li><b>AMD −7.7% to $489.19, closed in the low part of a wide range.</b> Hunterbrook, which holds a short position, reported that blacklisted Chinese server maker IEIT kept getting AMD firmware updates. AMD denies wrongdoing (Benzinga, 24/7 Wall St., 19 Nov). It flipped Neutral → Basing and lost yesterday’s A grade (now C, under its 21-day).</li>
+    <li><b>Anthropic IPO:</b> priced at $83 (range $70–78), opened ~$110–111.50, closed $97.17, +17% (Forbes, NBC, 19 Nov). Amazon −3.9% and Alphabet −3.5%, about in line with the Nasdaq. No sign yet that the stake value helps either name.</li>
+    <li><b>Nvidia −3.3% to $145.98</b>, its second fall after the beat, closing on the day’s low. Motley Fool ties it to the CEO change; I note that view, not as the proven cause. Heat 0, RSI 20.</li>
+    <li><b>Status flips:</b> TSLA Leading → Neutral (momentum −41), AMD and ENTG Neutral → Basing. No name became Overheated.</li>
+  </ul>
+
+  <div class="sec entry"><span class="dot"></span><h2>Entry Watchlist</h2><span class="sub">momentum gates + fundamental triggers</span></div>
+  <div class="grades">
+    <div class="grade-row"><span class="badge A">A</span><span class="gl"><span class="lab">Leader at a pullback/base — trend intact</span> &nbsp; <span class="tk">ANET&nbsp; ALL&nbsp; CB</span></span></div>
+    <div class="grade-row"><span class="badge C">C</span><span class="gl"><span class="lab">Strong run or short pause — waiting for a pullback has not helped historically</span> &nbsp; <span class="tk">AMZN&nbsp; AMD&nbsp; TRV</span></span></div>
+  </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>Market backdrop</h2></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">Tape · Market backdrop</span><span class="px">Thu 19 Nov close</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span><span class="tag">Tape</span><span class="tag">Regime</span><span class="tag">Events</span></div>
+      <div class="field"><p class="h">The tape</p><p class="b">S&P 500 −2.0% to ~7,176, its sixth fall in a row and 8.2% under its record; Nasdaq −2.3% to ~23,879; Dow about −2.2%. More than 90% of S&P stocks fell (Motley Fool, Washington Post, 19 Nov). Our universe: 39 names with a fresh print, 8 up, median −2.8%. Chip equipment (LRCX, AMAT −3.8%) and crypto (NEAR, ZEC −11%, BTC −3.2%) led the fall. A few memory and old-tech names rose: WDC +3.0%, POWL +2.5%, INTC +1.9%.</p></div>
+      <div class="field"><p class="h">Data gap</p><p class="b">28 names show Wednesday’s close for the second snapshot in a row: ARM, ALAB, MP, USAR, CC, SOLS, WOLF, Q, VRT, ANET, DELL, LITE, AAOI, GEV, FLNC, MARA, CRCL, HOOD, CRWV, NBIS, IREN, CIFR, CLSK, ENPH, NXT, BE, EOSE, CEG. Two refresh runs (06:01 and 06:08 UTC) gave the same prices, so this is the data source, not timing. Their grades and levels are one day old. SanDisk moved from one price source (Twelve Data) to another (Yahoo); the two series differ by ~8×, so its −88% is not a real move.</p></div>
+      <div class="field"><p class="h">Macro regime</p><p class="b">Fourth day of <b>deflationary-stress</b>. High-yield spreads widened again to 3.47% (FRED; rising spreads mean lenders want more pay for risk). The dollar is 3.8% above its 200-day and VIX rose to 28.4. In the rotation framework this is the “deflationary bust” column, where a rotation into BTC fails — and BTC is down again, to ~$61.8k. The gate fires often with close to no edge, so read it as “conditions rhyme with past stress”. Lagging context: NFCI −0.48 as of 13 Nov (negative = looser than average).</p></div>
+      <div class="field"><p class="h">Earnings and events</p><p class="b"><b>Anthropic IPO (19 Nov):</b> priced at $83, above the $70–78 range, raising ~$81B. It opened ~$110–111.50 after a delayed start and closed $97.17, +17%, about $1.27T market value (Forbes, NBC, Fast Company; opening print differs by source). Pre-IPO coverage put Amazon’s stake at ~14.7% and Google’s at ~13.7%. Both fell about as much as the Nasdaq. The market gave a high price to the AI lab and no extra credit to the holders on the day.<br><br><b>Connecting it:</b> two AI stories on one day pulled in opposite directions. Demand for AI assets is strong enough to price a record IPO above range. But the chip names that sell into that demand fell harder than the market: China risk (AMD short report, Nvidia’s China curbs) and governance (Nvidia CEO change) now drive the price, not demand. F3 (hyperscaler spend) is not touched by any of this.</p></div>
+      <div class="field"><p class="h">What the smart money is saying (from the wiki)</p><p class="b">No new followed-source material since the last brief. IA’s AMD buy signal at $571 (14 Oct) is now ~14% under water at $489; treat it as stale until he updates it. Visser (14 Nov) expected Nvidia’s numbers to hold; they did, the price did not.</p></div>
+    </div>
+  <div class="sec entry"><span class="dot"></span><h2>Event names</h2></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">AMD · AMD</span><span class="px">$489.19</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry C · under its 21-day</span><span class="tag">Semiconductors</span><span class="tag">Neutral → Basing</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Trend still intact: above its 200-day (~$429). Forward growth is the highest of the large chip names. AMD denies the Hunterbrook claims and says it complies with export controls.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">−7.7% (−1.0 normal day) on a session that swung 2.1 normal days and closed in the bottom quarter of its range. It reversed a premarket gain of ~2.7%. Hunterbrook (short) says IEIT, on the Entity List, kept getting AMD firmware; China and Hong Kong are ~22% of revenue (24/7 Wall St.). It fell further after hours. The report came on the day new US export rules took effect.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~27.7, next-year EPS growth +118%, forward PEG ~0.23 (price/earnings divided by expected growth; under ~1 means you pay little for a lot of growth, over ~2 the opposite). Cheap for its growth.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The OpenAI 6 GW deal (wiki, Sep) carries the growth estimate. An export finding could put the China share at risk; nothing official yet.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">21-day ~$521, 50-day ~$555, 200-day ~$429, 52-week high ~$649. Normal daily swing ≈ $43.48 (8.9%), bigger than usual (1.7×). Two normal days of noise reach ~$402.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade C: a leader under its 21-day, trend intact. On the accumulation list and confirmed (above the 200-day). The 200-day is ~1.4 normal days away. The setup favours holding the 200-day as the line; a close under it would turn this into a damaged name. A regulator response is the real risk, and the chart can’t price that.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Yesterday’s winner gave it all back on a short report. Conviction: low until AMD or Commerce answers the claim. Falsifier of the bull read: a close under the 200-day (~$429).</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">NVDA · NVIDIA</span><span class="px">$145.98</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D · not confirmed</span><span class="tag">Mega-cap</span><span class="tag">Cold</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Nothing new since the 17-Nov beat and raise (Q4 guide $130B). Forward P/E under 9.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">−3.3%, closed on the day’s low (closeInRange 0.02). Heat 0, RSI 20 (very low), lower lows. Motley Fool ties the fall to the CEO change; I report it, not as proven cause.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~8.8, next-year EPS growth +72%, forward PEG ~0.12 — very cheap for its growth, if the estimates hold.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">21-day ~$181, 200-day ~$203, 50-day ~$209, high ~$239. Normal daily swing ≈ $9.88 (6.8%), twice its usual size (2.1×).</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry D, not confirmed, cold. Fundamentals pick the name; price confirmation picks the time. The 21-day is ~3.5 normal days away; the 200-day ~5.8. Cold names historically fell further. The model has no entry yet.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The price now trades on governance and China, not on demand. Conviction: high on the business, low on timing. Falsifier of the bear read: a close back over the 21-day (~$181).</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">GOOGL · Alphabet</span><span class="px">$272.66</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D · not confirmed</span><span class="tag">Mega-cap</span><span class="tag">Cold</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Holds ~13.7% of Anthropic (pre-IPO coverage), now marked at a ~$1.27T market value. The stake is new, visible value.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">−3.5% on IPO day (Motley Fool). The session swung 2.4 normal days and closed on the low. Heat 0, RSI 31, lower lows. Not in the brief since the wiki’s 28-Sep note; the price has fallen ~19% from its 200-day since.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~17.8, next-year EPS growth +17%, forward PEG ~1.06 — fairly priced for its growth.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">21-day ~$296, 50-day ~$324, 200-day ~$337, high ~$402. Normal daily swing ≈ $10.73 (3.9%). IA’s $320–325 “nibble” zone (Sep) is now far above the price.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry D, not confirmed, cold. The first repair would be a close over the 21-day (~$296), ~2.2 normal days away. Until then the model favours waiting.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The IPO put a number on the stake, and the market did not care on the day. Conviction: medium on the business, low on timing. Falsifier of the bear read: a close over ~$296.</p></div>
+    </div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">AMZN · Amazon</span><span class="px">$257.37</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry C · under its 21-day</span><span class="tag">Mega-cap</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Still Leading (momentum 86), above its 50-day and 200-day. Largest Anthropic holder (~14.7%, pre-IPO coverage).</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">−3.9% (−1.15 normal days), closed on the low of a wide session. Gave back yesterday’s +3.8%.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~23.6, next-year growth +14%, forward PEG ~1.71 — fairly priced for its growth.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day ~$255 (just $2 below), 21-day ~$260, 200-day ~$245, high ~$284. Normal daily swing ≈ $9.61 (3.7%).</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry C: a leader under its 21-day, trend intact. Yesterday’s falsifier, the 50-day (~$255), is a quarter of a normal day away. The setup holds while the 50-day holds.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The IPO did not lift it; the tape pulled it down. Conviction: medium. Falsifier: a close under the 50-day (~$255).</p></div>
+    </div>
+  <div class="sec lead"><span class="dot"></span><h2>Leading & insurers</h2></div>
+    <div class="name lead">
+      <div class="ch"><span class="sdot"></span><span class="nm">ALL / CB / TRV · Allstate, Chubb, Travelers</span><span class="px">$266.77 / $370.11 / $390.61</span></div>
+      <div class="tags"><span class="tag s-lead">Leading</span><span class="tag">Entry A / A / C</span><span class="tag">Insurers</span><span class="tag">Hottest names</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The three hottest names in the book (heat 59 / 53 / 40) on a day the market fell 2%: ALL +0.1%, CB −0.2%, TRV −0.2%. All Leading, above both averages.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">No news search done for them; they are here on heat alone. CB is pricey for its growth (forward PEG ~10).</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">ALL and CB grade A (at their 21-day), TRV grade C. Defensive leadership, not AI. Near new highs with no estimate trigger: momentum, not a re-rating.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The money that stays in equities is hiding in insurers. Conviction: medium. Falsifier: a close under the 50-day (ALL ~$247, CB ~$352, TRV ~$383).</p></div>
+    </div>
+  <div class="sec base"><span class="dot"></span><h2>Oversold / Basing</h2></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">TSLA · Tesla</span><span class="px">$374.41</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span><span class="tag">Entry D</span><span class="tag">Mega-cap</span><span class="tag">Leading → Neutral</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Holds no lower lows; still within ~$2 of its 50-day.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Lost Leading (momentum −41) on a −2.4% day; under its 21-day, 50-day and 200-day. No dated news found for 18–20 Nov.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~173, next-year growth +25%, forward PEG ~6.9 — expensive vs its growth, priced for perfection.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day ~$376, 21-day ~$382, 200-day ~$382, high ~$490. Normal daily swing ≈ $16.15 (4.3%).</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry D. All three averages sit within half a normal day. A close over ~$382 would repair it; the multiple gives no cushion if it fails.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">A high-multiple name losing its trend in a risk-off tape. Conviction: low. Falsifier of the bear read: a close over ~$382.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">ENTG · Entegris</span><span class="px">$138.14</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D</span><span class="tag">Semis materials</span><span class="tag">Neutral → Basing</span></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">−3.9%, closed on the low; slipped under its 200-day (~$140) and lost the B grade from 12 Nov. No news found.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~24, next-year growth +30%, forward PEG ~0.81 — cheap only if the structural-memory view holds; F2 (DRAM spot) still intact.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">200-day ~$140 (just over), 21-day ~$144, 50-day ~$148. Normal daily swing ≈ $11.05 (8%).</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry D, cheap but not confirmed. A close back over the 200-day is the watch line, a fifth of a normal day away.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The 12-Nov flip failed with the chip-equipment group. Conviction: low. Falsifier: a close over ~$140.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">MRVL · Marvell</span><span class="px">$138.47</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D · not confirmed</span><span class="tag">Semiconductors</span><span class="tag">Cold</span></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">−4.9%, closed on the low. Heat 1, RSI 32. No news found for 18–20 Nov.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~18.8, next-year growth +75%, forward PEG ~0.25 — cheap for its growth.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">21-day ~$175, 200-day ~$188, 50-day ~$223. Normal daily swing ≈ $15.91 (11.5%), twice its usual size.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry D, cold, not confirmed. The 21-day is ~2.3 normal days away. No entry on the model.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Cheap and still falling. Conviction: low on timing. Falsifier of the bear read: a close over the 21-day (~$175).</p></div>
+    </div>
+  <div class="sec plain"><span class="dot"></span><h2>Entry watchlist notes</h2></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">Screens · Entry watchlist notes</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span><span class="tag">Screens</span></div>
+      <div class="field"><p class="h">Strong & still cheap-ish</p><p class="b">ANET (A, PEG 0.83) — but its price is Wednesday’s close; Thursday’s move is missing. No B-grade names.</p></div>
+      <div class="field"><p class="h">Leading but pricey</p><p class="b">CB (A, PEG ~10) — the move is in the trend, not the valuation.</p></div>
+      <div class="field"><p class="h">Cheap for its growth, price agrees</p><p class="b">AMD (C, PEG 0.23), above its 200-day (~$429) after today’s fall.</p></div>
+      <div class="field"><p class="h">Cheap, price not confirmed</p><p class="b">AVGO (200-day ~$367), QCOM (~$170), NVDA, MRVL, GOOGL, KLAC, AMAT, TSM, ASML, COHR, FSLR, ETN, LRCX, ENR.DE, ENTG, and (stale prices) VRT, POWL, GEV, NXT — watch for a close back above each 200-day. Most are cold and making lower lows. Cycle-sensitive (CC, STLD, Q, WDC, GLW) and small-base (MP) names are not cheap on PEG alone.</p></div>
+      <div class="field"><p class="h">Caveat</p><p class="b">Grades use the real exported trend fields (200-day, 50/200 cross, 12-month return, EMA pullback zone). A timing lens, not a verdict on the business. 28 names are graded on Wednesday’s close.</p></div>
+    </div>
+  <div class="sec plain"><span class="dot"></span><h2>What changed today</h2></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">Changes · What changed today</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span><span class="tag">Changes</span></div>
+      <div class="field"><p class="h">Status flips</p><p class="b">TSLA Leading → Neutral (momentum −41); AMD and ENTG Neutral → Basing.</p></div>
+      <div class="field"><p class="h">Down (not featured)</p><p class="b">NEAR −10.8%, ZEC −10.6%, UNI −7.4%, AR −5.8%, TAO −5.1%, HYPE −4.4%, LRCX −3.8%, AMAT −3.8%, BTC −3.2%, ENR.DE −3.1%, SOL −3.0%, TSM −2.9%, ASML −2.8%, UUUU −2.8%.</p></div>
+      <div class="field"><p class="h">Up (not featured)</p><p class="b">WDC +3.0%, POWL +2.5%, INTC +1.9%, QCOM +1.4%, STX +1.1%, COHR +1.0%.</p></div>
+      <div class="field"><p class="h">Quiet today</p><p class="b">ETN, KLAC, MU, AVGO, STLD, GLW, KRE, NEE, FSLR, SNDK (real move ≈ −3%; see data gap) — within about ±2.3%.</p></div>
+      <div class="field"><p class="h">No Thursday print (Wed close)</p><p class="b">ARM, ALAB, MP, USAR, CC, SOLS, WOLF, Q, VRT, ANET, DELL, LITE, AAOI, GEV, FLNC, MARA, CRCL, HOOD, CRWV, NBIS, IREN, CIFR, CLSK, ENPH, NXT, BE, EOSE, CEG.</p></div>
+    </div>
+
+
+
+  <div class="sec plain"><span class="dot"></span><h2>Catalyst Calendar</h2><span class="sub">next ~2 weeks</span></div>
+  <div class="cal">
+    <div class="row"><span class="d">Mon 23 Nov</span><span>Fluence (FLNC) Q4 results, after the close (Yahoo date; Earnings Whispers agrees; consensus figures conflict).</span></div>
+    <div class="row key"><span class="d">Tue 24 Nov</span><span>Dell fiscal Q3 and CleanSpark (CLSK) results (Yahoo dates; Dell date not confirmed by the company). Weekly AAOI/CLSK and flexible-load checks.</span></div>
+    <div class="row"><span class="d">Wed 25 Nov</span><span>October PCE inflation and Q3 GDP second estimate, 8:30 ET (BEA schedule).</span></div>
+    <div class="row"><span class="d">Thu 26 Nov</span><span>US markets closed (Thanksgiving); Fri 27 Nov early close 1pm ET (unverified).</span></div>
+    <div class="row"><span class="d">Tue 1 Dec</span><span>Monthly falsifier check (F1 GPU rental, F2 DRAM spot).</span></div>
+    <div class="row"><span class="d">Wed 2 Dec</span><span>House request for an Nvidia briefing on China compute access, due by this date (unverified).</span></div>
+    <div class="row"><span class="d">8–9 Dec</span><span>FOMC meeting. Broadcom FQ4 results 9 Dec.</span></div>
+  </div>
+
+  <footer class="foot"><b>How to read this:</b> Neutral, balanced read — bull and bear side by side. The <b>Setup</b> lines are opinions on risk/reward and timing to weigh for yourself, not directives; the call is yours.<br><br><b>Score key:</b> <b>Heat</b> 0 = far below its highs and its 50-day (damaged; such names historically fell further), 100 = a strong run near its highs (historically no extra pullback risk). <b>Momentum</b> = strength of the recent up-move. <b>Status</b>: Leading = strong and healthy; Overheated = strong and stretched (not a pullback signal); Basing = weak, not yet a bottom; Neutral = no clear signal. <b>ATR</b> = the name’s normal daily swing. <b>Forward PEG</b> = price/earnings divided by expected growth. <b>Entry grades</b> A/B/C pass both momentum gates; the letter shows where price sits against short-term averages and is not a rank. D = failed a gate.<br><br><b>Sources:</b> Signal-Model signal file (Thu 19 Nov close for 40 names, Wed 18 Nov for 28; published 20 Nov 06:13 UTC), FRED, the Investing wiki, Benzinga / 24/7 Wall St. / Cryptopolitan (19 Nov, AMD short report), Forbes / NBC News / Fast Company (19 Nov, Anthropic IPO), Motley Fool / Washington Post / StockTitan (19 Nov market close), BEA release schedule, Yahoo earnings dates.<div class="nfa">Not financial advice — this surfaces signals to inform your own decisions.</div></footer>
+</div>
+</body>
+</html>
