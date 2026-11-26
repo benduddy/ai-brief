@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chips drop 8% by mid-morning, then buy back almost all of it — 26 November 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4EC; --ink:#27241D; --muted:#6E6A5E; --faint:#928C7C;
+    --hair:#E4DDCD; --hair-strong:#D8CFB9;
+    --clay:#C9663F; --clay-soft:#E8C4AE; --clay-wash:#F3E5DA;
+    --leading:#5F7355; --leading-wash:#E7ECDF;
+    --hot:#B8862F; --hot-wash:#F1E7CF;
+    --basing:#8A8475; --basing-wash:#EAE5D7;
+    --serif:"Newsreader", Georgia, "Times New Roman", serif;
+    --sans:"Inter", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink)}
+  body{font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:700px;margin:0 auto;padding:56px 28px 72px}
+  .kicker,.sec h2,.sec .sub,.tag,.badge,.meta,.cal .d,.foot{font-family:var(--sans)}
+
+  .mast{display:flex;align-items:flex-start;gap:16px;margin-bottom:8px}
+  .spark{flex:0 0 auto;margin-top:8px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin:0 0 6px}
+  h1.title{font-family:var(--serif);font-weight:500;font-size:42px;line-height:1.05;letter-spacing:-.01em;margin:0 0 10px}
+  .meta{font-size:13px;color:var(--muted);margin:0}
+  .meta b{color:var(--ink);font-weight:600}
+  .rule{height:2px;background:var(--clay);border:0;margin:22px 0 0;width:64px;border-radius:2px}
+
+  .lede{font-size:22px;line-height:1.5;margin:30px 0 8px;font-weight:400}
+  .lede em{font-style:italic}
+  .tldr{margin:14px 0 0;padding:0;list-style:none}
+  .tldr li{position:relative;padding:7px 0 7px 22px;border-bottom:1px solid var(--hair)}
+  .tldr li:last-child{border-bottom:0}
+  .tldr li::before{content:"";position:absolute;left:2px;top:16px;width:6px;height:6px;border-radius:50%;background:var(--clay)}
+  .tldr b{font-weight:600}
+
+  .sec{display:flex;align-items:center;gap:10px;margin:72px 0 24px}
+  .sec .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .sec h2{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0;color:var(--ink)}
+  .sec .sub{font-size:12.5px;color:var(--faint);margin-left:auto;font-weight:500}
+  .sec.hot .dot{background:var(--hot)} .sec.lead .dot{background:var(--leading)}
+  .sec.base .dot{background:var(--basing)} .sec.entry .dot{background:var(--clay)}
+  .sec.plain .dot{background:var(--ink)}
+
+  .grades{display:flex;flex-direction:column;gap:15px;margin:0}
+  .grade-row{display:flex;gap:13px;align-items:baseline}
+  .badge{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:15px;color:#fff;margin-top:2px}
+  .badge.A{background:var(--clay)} .badge.B{background:var(--clay-soft);color:#7a3d22}
+  .badge.C{background:var(--hot-wash);color:#7a5c14;border:1px solid #d8bd7e}
+  .badge.R{background:var(--leading)} .badge.V{background:var(--basing)}
+  .gl{font-size:16px}
+  .gl .lab{font-weight:600;color:var(--ink)} .gl .tk{font-weight:600;color:var(--clay)} .gl .muted{color:var(--muted)}
+
+  .name{padding:40px 0 8px;border-top:1px solid var(--hair)}
+  .name:first-of-type{border-top:0;padding-top:8px}
+  .name .ch{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+  .name .sdot{width:9px;height:9px;border-radius:50%;flex:0 0 auto;align-self:center}
+  .name.hot .sdot{background:var(--hot)} .name.lead .sdot{background:var(--leading)} .name.base .sdot{background:var(--basing)}
+  .name .nm{font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:-.01em}
+  .name .px{margin-left:auto;font-family:var(--serif);font-size:19px;color:var(--ink)}
+  .name .tags{display:flex;gap:6px;margin:14px 0 26px;flex-wrap:wrap}
+  .tag{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--clay-wash);color:#8a4a2c}
+  .tag.s-hot{background:var(--hot-wash);color:#7a5c14}
+  .tag.s-lead{background:var(--leading-wash);color:#445239}
+  .tag.s-base{background:var(--basing-wash);color:#5d584b}
+
+  .field{margin:0 0 24px}
+  .field .h{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:0;color:var(--ink);margin:0 0 6px}
+  .field .b{font-size:16.5px;line-height:1.6;color:var(--ink);margin:0}
+  .field.read{margin-top:28px}
+  .field.read .h{color:var(--clay)}
+  .field.read .b{font-style:italic;font-size:18px;line-height:1.55}
+
+  .quote{border-left:3px solid var(--clay);background:var(--clay-wash);padding:16px 20px;border-radius:0 10px 10px 0;margin:0;font-size:18px;line-height:1.5}
+  .quote .src{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:10px;font-style:normal;line-height:1.5}
+
+  .cal{margin:0}
+  .cal .row{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:13px 0;font-size:16px;border-top:1px solid var(--hair)}
+  .cal .row:first-child{border-top:0}
+  .cal .d{font-weight:600;color:var(--clay);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+
+  .foot{margin-top:50px;padding-top:18px;border-top:1px solid var(--hair-strong);font-size:12.5px;color:var(--faint);line-height:1.6}
+  .foot a{color:var(--clay);text-decoration:none}
+  .foot .nfa{font-style:italic;margin-top:10px;font-family:var(--serif)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <svg class="spark" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><g fill="#C9663F"><rect x="11" y="1" width="2" height="22" rx="1"/><rect x="1" y="11" width="22" height="2" rx="1"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(45 12 12)"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(-45 12 12)"/></g></svg>
+    <div>
+      <p class="kicker">AI-Trade · Daily Brief · Macro: deflationary-stress (day 8)</p>
+      <h1 class="title">Chips drop 8% by mid-morning, then buy back almost all of it</h1>
+      <p class="meta"><b>26 November 2026</b> · 68 names · benchmark <b>QQQ</b> · data Wed 25 Nov close · published 06:06 UTC</p>
+    </div>
+  </header>
+  <hr class="rule">
+
+  <p class="lede">Wednesday was a round trip. By 11:00 ET the Nasdaq-100 fund (QQQ) was down 4.4% and the chip index (SOX) was down 8%. By the close the SOX was down only 0.7%, the Nasdaq 0.6% and the S&P 500 0.25%. In our universe, 44 of 60 names closed in the top 15% of their day's range. The fall had named causes: a bank cut its 2028 memory-price forecasts, Ambarella blamed memory costs for a weak guide, the US proposed new tariffs, and core inflation was hot. I found no dated cause for the recovery. US markets are closed today for Thanksgiving.</p>
+  <ul class="tldr">
+    <li><b>Macro regime: deflationary-stress, day 8 — unchanged.</b> High-yield spreads 3.72% (FRED), up from 3.63% and +0.51 points in 50 days. VIX 28.3. The dollar is 3.7% above its 200-day; the real 10-year rate is 2.79%. After hot core PCE, futures and Kalshi still price a December Fed <i>hike</i> at ~92–96%. A pay-attention flag, not an exit signal.</li>
+    <li><b>Data (25 Nov):</b> core PCE +0.3% m/m, 3.3% y/y vs 3.2% expected — the highest since Nov 2023. Q3 GDP revised up to 4.3% (3.5% expected). Jobless claims 189k (200k expected). Strong growth plus sticky inflation is the mix that keeps a hike on the table.</li>
+    <li><b>Memory scare:</b> an unnamed “major US bank” now sees conventional DRAM prices falling 19–20% in 2028 (it had −5%), NAND −21% and HBM down more than 20%, while it still sees DRAM +32% in 2027 (Investing.com, 25 Nov). Micron was down ~13% at the low and closed −4.5% at $601.25. This is a forecast, not a spot price: falsifier F2 (DRAM spot) stays intact.</li>
+    <li><b>Chip tools also carried a China-policy worry:</b> reports tied the Lam (−5.7%) and Applied (−3.9%) falls to the MATCH Act tool-curb bill, but I found no new step on the bill since April. UBS cut its Applied target to $575 from $640 (Buy kept, 25 Nov).</li>
+    <li><b>Nvidia −3.9% to $149.30</b>, down two days in a row after Monday's +31.5%. New: S&P Global put Nvidia's AA rating on CreditWatch negative (25 Nov), citing board oversight and key-person risk after Huang's return. Still no 10-Q and no new SEC item. Hearings: 1 Dec (House, closed) and 3 Dec (Senate Banking).</li>
+    <li><b>Amazon flips Leading → Neutral</b> and closes just under its 200-day (~$245.78) at $244.43. It drops from entry grade C to D. Bernstein says web traffic on usage-based cloud platforms, AWS included, runs ~16% below Q3 levels in mid–late November.</li>
+    <li><b>The only leaders left are insurers.</b> ALL, CB and TRV hold grade A, all within 1% of their 52-week highs. No company news; this fits the defensive leadership of the past seven weeks.</li>
+  </ul>
+
+  <div class="sec entry"><span class="dot"></span><h2>Entry Watchlist</h2><span class="sub">momentum gates + fundamental triggers</span></div>
+  <div class="grades">
+    <div class="grade-row"><span class="badge A">A</span><span class="gl"><span class="lab">Leader at a pullback/base — trend intact</span> &nbsp; <span class="tk">ALL&nbsp; CB&nbsp; TRV</span></span></div>
+    <div class="grade-row"><span class="badge V">V</span><span class="gl"><span class="lab">BTC — cheap (MVRV 1.14 < 1.2), not yet above its 200-day (~$72.0k)</span> &nbsp; <span class="tk">BTC</span></span></div>
+  </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>Market backdrop</h2><span class="sub">Wednesday 25 November</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">Tape · What happened</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span></div>
+      <div class="field"><p class="h">The tape</p><p class="b">S&P 500 −0.25% to 7,183; Nasdaq −0.62% to 23,586 (Motley Fool via Yahoo, 25 Nov). Dow ~+0.3% (page ticker, not article text). SOX −0.7% to 8,775 after −8.0% at the low (TECHi). At 11:02 ET QQQ was −4.4% and SPY −2.8% (StockTitan live page). The S&P is 8.1% under its high. Our universe: 22 of 58 stocks rose; the median move was −0.4%. Crypto rose: BTC +3.2% to ~$60.6k.</p></div>
+      <div class="field"><p class="h">Why, per the press</p><p class="b">The sell-off had four named causes, all reported on 25 Nov: the bank memory-price forecast cut (Investing.com); Ambarella's Q4 guide of $70–75M vs $115.2M in Q3, blamed on the memory shortage, stock ~−20% (24/7 Wall St); USTR's proposed Section 301 tariffs on 14 economies, incl. up to 15% on Taiwan, possibly 25% (USTR release; proposals only, comments due 5 Jan 2027, hearings from 25 Jan); and hot core PCE. <b>No dated cause found for the recovery.</b> TECHi notes only that the 10-year yield fell late in the day.</p></div>
+      <div class="field"><p class="h">Macro regime</p><p class="b">Eighth day of <b>deflationary-stress</b>. High-yield spreads 3.72% on the latest FRED print (rising spreads mean lenders want more pay for risk), +0.51 points over 50 days and up from 3.63% yesterday. VIX 28.3, up 7%. Dollar 3.7% above its 200-day; real 10-year 2.79%. The 2s10s curve is 0.24 and flattening. Gold gives no debasement signal. In the rotation framework this is the “deflationary bust” column, where a rotation into BTC fails. The gate fires often with close to no edge; read it as “conditions rhyme with past stress”, not as a call. Lagging context: NFCI −0.44 as of 20 Nov (looser than average).</p></div>
+      <div class="field"><p class="h">Earnings and events</p><p class="b"><b>Dell, the session after its FQ3 beat:</b> +0.6% to $297.06, after trading under Monday's close in the morning (StockTitan). Target changes after the print, as reported (not checked against the notes): Morgan Stanley $408 (Equal-Weight), Piper $555 (OW), Mizuho $500 from $650 (OP), Wells Fargo $400 from $545 (OW). Peer HP Inc rose 11.5% on its FQ4 print (revenue $16.0B, +9.3%).<br><br><b>How the prints connect:</b> Dell's record AI backlog ($132.3B) says server demand is not the problem. Ambarella's guide and the bank note both point at the same cost: memory. That is a margin squeeze for buyers of memory and, if the bank is right about 2028, a peak-earnings risk for sellers. The market sold both on Wednesday morning and bought both back by the close. Neither print touches hyperscaler capex language (F3).</p></div>
+      <div class="field"><p class="h">What the smart money is saying (from the wiki)</p><p class="b">No new followed-source view since the last brief, and no new raw source. Visser's standing rule (21 Nov) still holds: no buying until BTC is back above its 200-day (~$72.0k), ~19% away. His “the problem is the multiple, not the business” line on Nvidia (21 Nov) has a new test this week: the S&P CreditWatch is about governance, not earnings.</p></div>
+    </div>
+  <div class="sec base"><span class="dot"></span><h2>Basing / Neutral</h2><span class="sub">featured: the morning's sellers and the day's outliers</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">NVDA · Nvidia</span><span class="px">$149.30</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D</span><span class="tag">Semiconductors</span><span class="tag">dip bought</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Bought back from the morning low: it traded ~1.1 normal days under Tuesday's close and closed in the top 12% of the range. Moody's (per AOL) says Huang's return “reduces near-term uncertainty.”</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">S&P Global put the AA rating on CreditWatch negative (25 Nov; The Star, FinChannel), citing board oversight and key-person risk; a decision is due within 90 days, likely one notch at most. The 10-Q is still not filed; an aggregator puts the deadline near 4 Dec (unverified). The SEC probe still rests on press reports; no new item. UBS reportedly cut its target to $220 from $240 (date unclear, unverified). Two down days have taken back ~$16 of Monday's ~$40 gain.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~9.0, next-year EPS growth ~+72%, forward PEG ~0.13 — price/earnings divided by expected growth; under ~1 means you pay little for a lot of growth, over ~2 the opposite. On the numbers, very cheap for its growth.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">Earnings and guidance keep rising (Q4 guide $130B); the market prices governance and accounting doubt, not demand. If the 10-Q lands clean, the gap between a ~9× and a ~13× multiple is the re-rating room Visser describes. If it does not, the cheap multiple is the market being right early.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">21-day ~$170.82, 50-day ~$203.65, 200-day ~$202.62, 52-week high ~$239.24 (−37.6%). Normal daily swing ≈ $13.38 (9.0%), and it is swinging ~2.7× more than usual for it. Still making lower lows.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D: below the 200-day, so it fails the trend gate. On the value list as “cheap for its growth, price not confirmed” — the confirmation line is the 200-day, ~$53 (about four normal days) away. The next 10 days carry three binary dates (1, 3 Dec hearings; ~4 Dec 10-Q). With a 9% normal swing, the setup favours waiting for the filing over guessing it.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Cheap on earnings, expensive on uncertainty; the 10-Q, not the price, decides which matters.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">MU · Micron</span><span class="px">$601.25</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D</span><span class="tag">Memory & Storage</span><span class="tag">cycle-sensitive</span><span class="tag">dip bought</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The same bank still sees DRAM prices +32% in 2027 — the cut is to 2028. The stock cut a ~13% intraday fall to −4.5% and closed in the top 7% of its range.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">The bank now sees 2028 conventional DRAM −19–20% (was −5%), NAND −21% and HBM down more than 20% (Investing.com, 25 Nov; the bank is unnamed). That is the cyclical case in numbers: today's earnings may be near a peak.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~2.9, next-year EPS growth ~+17%, PEG ~0.17 — cheap only if the structural-demand view holds. F2 (DRAM spot) is still intact; the new item is a forecast, not a spot print. A forward P/E under 3 is the market saying it does not believe next year's number will last.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The structural-vs-cyclical debate (wiki: memory-chips) now has a dated bear marker: a 2028 price decline. The 2027 view is still up. The price already discounts a turn: it is 50% under its high on rising estimates.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">21-day ~$742.75, 200-day ~$776.30, 50-day ~$895.41, 52-week high ~$1,213. Normal daily swing ≈ $68.78 (11.4%); swinging ~1.9× more than usual. Lower lows in place.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D, cold (heat 4). Cold names historically fell further. The 200-day (~$776) is ~2.5 normal days up; that close is the price confirmation. Until then, the low PEG is a bet on the structural view, not a timing signal.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">A strong intraday rebound against a forecast that, if right, makes today's earnings the peak.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">LRCX · Lam Research</span><span class="px">$185.01</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D</span><span class="tag">Semiconductors</span><span class="tag">dip bought</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Closed at the top of its range (0.99) after trading ~1.4 normal days under Tuesday's close; it was −11.6% at 11:02 ET (StockTitan). The last print (21 Oct) beat and guided up: Dec-quarter revenue $8.60B ± $0.4B, EPS $2.33 (wiki).</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Biggest loser in the universe at −5.7%. Reports tied it to the memory forecast and the MATCH Act China tool-curb bill (China ~35% of revenue, 24/7 Wall St). I found no new step on the bill since the April markup, so that part is framing.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~15.1, next-year growth ~+27%, PEG ~0.56: cheap for its growth.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">Memory makers are Lam's biggest buyers. A 2028 memory-price fall would cut their tool budgets for 2027–28. The price (−57% from the high) already discounts much of that; the Dec-quarter guide says it is not here yet.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">21-day ~$218.60, 50-day ~$262.78, 200-day ~$282.53, 52-week high ~$432.87. Normal daily swing ≈ $18.15 (9.8%); ~1.9× its usual swing.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D, cold (heat 4), lower lows. On the value list, price not confirmed: the 200-day is ~5 normal days up. The first sign of a base would be a close back above the 21-day (~$219).</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Fundamentals still fine, tape still broken; Wednesday's reversal is one day, not a base.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">AMAT · Applied Materials</span><span class="px">$311.18</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D</span><span class="tag">Semiconductors</span><span class="tag">dip bought</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Closed in the top 2% of its range after trading ~1.3 normal days under Tuesday's close. UBS kept its Buy.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">UBS cut its target to $575 from $640 (25 Nov), citing the MATCH Act; China was 28% of revenue in the first nine months of FY26 (24/7 Wall St). Down 3.9%.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~12.7, next-year growth ~+27%, PEG ~0.47: cheap for its growth.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">Same exposure as Lam: memory and China tool spending. Its 12 Nov print guided chip-tool spending up >30% in 2027 (brief 13 Nov). The market does not yet price that.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">50-day ~$419.48, 200-day ~$446.00, 52-week high ~$721.14. Normal daily swing ≈ $27.70 (8.9%); ~1.9× its usual swing.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D, cold (heat 5). The 200-day is ~5 normal days up. Same read as Lam: wait for a base, not a single green close.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">A target cut with a Buy kept: the analysts trim the price, not the thesis.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">AMZN · Amazon</span><span class="px">$244.43</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span><span class="tag">Entry C → D</span><span class="tag">Mega-cap</span><span class="tag">status flip</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Heat 18 and a 12-month return still positive; it is only 13.9% under its high. Q3 (29 Oct): AWS +39%, backlog $578B (wiki action list).</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Leading → Neutral; momentum −19 points to 47. It traded ~1.6 normal days under Tuesday's close and closed at 0.80 of its range, −3.1%. Bernstein: usage-based cloud web traffic, AWS included, is ~16% below Q3 levels in mid–late November (MoneyCheck, 25 Nov). Six insiders sold ~$16.6M on 23 Nov under 10b5-1 plans (pre-set sale plans). One outlet reports a −4.75% close; our data says −3.1%.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~22.4, next-year growth ~+14%, PEG ~1.62: fairly priced for its growth.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">Capex ~$76–77B a quarter buys AWS capacity that the backlog already claims. A web-traffic proxy is a weak read on AWS revenue; Q4 in February is the real test.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">Close $244.43 vs 200-day ~$245.78 — just under, by an eighth of a normal day. 50-day ~$255.12, 21-day ~$256.38. Normal daily swing ≈ $10.45 (4.3%); ~1.6× its usual swing.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D (was C): the close under the 200-day fails the trend gate. The gap is inside one day's noise, so Friday's close decides it. A close back above ~$246 restores the gate; a second close under it makes Amazon the last mega-cap leader to fall out.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">The last big-tech leader is on the 200-day line, not yet through it.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">DELL · Dell Technologies</span><span class="px">$297.06</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D</span><span class="tag">Data Center & Networking</span><span class="tag">post-earnings</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">The FQ3 print (24 Nov) was a large beat: revenue $54.9B vs ~$49.3B, AI backlog $132.3B, FY27 guide raised to $202B (yesterday's brief). Peer HPQ rose 11.5% on its own print.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">The ~4% after-hours gain shrank to +0.6% in the session. Two brokers cut targets hard on the print: Mizuho to $500 from $650 and Wells Fargo to $400 from $545 (reported, not checked). Non-GAAP gross margin was 21.2%: memory costs sit in that line.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~9.7, next-year growth ~+13%, PEG ~0.72: cheap for its growth.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">Revenue is not the question; margin is. A record backlog at a 21% gross margin, with memory prices rising into 2027, is the bear case the market chose on Wednesday.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">200-day ~$350.23, 21-day ~$355.03, 50-day ~$456.47, 52-week high ~$587.59 (−49%). Normal daily swing ≈ $38.04 (12.8%); ~2.5× its usual swing.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D; the 200-day is ~1.4 normal days up. A beat that does not lift the price is the news. Wait for the price to agree with the print.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Record orders, flat stock: the market is pricing the margin, not the demand.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">FLNC · Fluence Energy</span><span class="px">$4.72</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D</span><span class="tag">Energy storage</span><span class="tag">+15.1%</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Best stock in the universe, +15.1%, the second up day after the 23 Nov results (+18% at the high on 24 Nov, Seeking Alpha). The plan: Houston output to ~10 units a day, $855M of liquidity, no outside capital needed in FY27. RBC raised its target to $6.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Eight of nine brokers cut targets after the print (Barclays $5, Jefferies $4, BMO $4.25, Goldman $5, MS $7, Canaccord $9, Roth $9, JPM $6; StockAnalysis feed, dates approximate). Q4 revenue $744M missed. No FY27 guide until February. A class action is open (lead-plaintiff deadline 27 Nov). No dated cause found for Wednesday's move.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward earnings are negative (forward P/E ~−8.9), so the PEG screen does not apply.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The question is cash, not demand (wiki: fluence-flnc). The no-new-capital claim is the bull case; February's guide tests it.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">21-day ~$4.80 (just above), 50-day ~$6.08, 200-day ~$13.52, 52-week high ~$32.23 (−85%). Normal daily swing ≈ $0.55 (11.6%). Wednesday's range was 2.2 normal days, and it closed near the high (0.87).</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D, cold (heat 10), lower lows. Two strong days have not reached the 21-day yet. A close above ~$4.80 is the first test; the 200-day is ~16 normal days away. A squeeze-like bounce against broad target cuts is not a base.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">A bounce from deep damage, with the brokers going the other way.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">BTC · Bitcoin</span><span class="px">$60,573</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Crypto</span><span class="tag">coldest</span><span class="tag">V row</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">+3.2% after a low near $57.6k on 25 Nov; ~$692M of crypto short positions were forced closed in 24 hours, ~$264M in BTC (Proactive Investors, Crypto Briefing, 26 Nov). MVRV 1.14 (25 Nov): price is only 14% above the average holder's cost.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Spot BTC funds had nearly $5B of net outflows in November to 24 Nov, IBIT over $4B of it; BTC is −23% for the month (Proactive Investors). A rally made of forced short covering has no new buyer behind it. Heat 0, the coldest in the book.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">21-day ~$66.2k, 200-day ~$72.0k, 50-day ~$75.1k, 52-week high ~$86.6k. Normal daily swing ≈ $2,880 (4.8%).</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">V row: cheap on MVRV, not confirmed. The rule that worked in 3 of 4 past bear markets waits for a close above the 200-day (~$72.0k), ~4 normal days up. Visser uses the same line. Below ~$57.6k, Wednesday's low, the bounce failed.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Cheap and short-covered; still not confirmed.</p></div>
+    </div>
+  <div class="sec entry"><span class="dot"></span><h2>Entry watchlist notes</h2><span class="sub">grades are a timing lens, not a verdict</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">Grades · Entry watchlist</span></div>
+      <div class="tags"></div>
+      <div class="field"><p class="h">Leaders</p><p class="b">A: ALL, CB, TRV (insurers, all within 1% of their 52-week highs; heat 61–67). AMZN fell from C to D. No B or C names. Grades read the real trend fields; they are a timing lens, not a verdict on the business.</p></div>
+      <div class="field"><p class="h">Leading but pricey</p><p class="b">CB: grade A, PEG ~10.5 — the move is in the trend, not the valuation.</p></div>
+      <div class="field"><p class="h">Cheap for its growth, and the price agrees — candidate now</p><p class="b">None. Every name on the accumulation list (41 names) is under its 200-day.</p></div>
+      <div class="field"><p class="h">Cheap for its growth, price not confirmed</p><p class="b">Closest to the 200-day, in normal daily swings: ANET (~$169; ~0.4 days up), QCOM (~$170; ~0.1 days up after +2.2%), STLD (~$227; cycle-sensitive), AMD (~$433; ~0.6 days). The large ones: NVDA (~$203), MU (~$776, cycle-sensitive), AVGO (~$366). Nearly all are cold; cold names historically fell further. MP, UUUU and AAOI show tiny PEGs only because growth starts from a tiny base.</p></div>
+      <div class="field"><p class="h">BTC value row (V)</p><p class="b">MVRV 1.14 (25 Nov): cheap on holder cost (1.0 = average holder at break-even). BTC ~$60.6k, under its 200-day (~$72.0k). Not confirmed.</p></div>
+    </div>
+  <div class="sec plain"><span class="dot"></span><h2>What changed today</h2><span class="sub">Wed 25 Nov vs Tue 24 Nov</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">Changes · Day over day</span></div>
+      <div class="tags"></div>
+      <div class="field"><p class="h">Status flips</p><p class="b">AMZN Leading → Neutral. No other flips.</p></div>
+      <div class="field"><p class="h">Dips bought (≥1 normal day under Tuesday's close, closed in the top 15%)</p><p class="b">LRCX, MU, AMAT, ASML, TSM, AVGO, GOOGL, KLAC, NVDA, ANET, ARM, GLW, INTC, QCOM, WDC, MP and TSLA. AVGO (−7.7% at the low, −0.1% at the close) and TSM (−8% low, −2.0% close) had the widest reversals (TECHi). No company news found for ASML, TSM, AVGO, QCOM, TSLA. Note: one reversal day is not a base; most of these still make lower lows.</p></div>
+      <div class="field"><p class="h">Other moves</p><p class="b">CEG −3.9% to $235.28, a new 52-week closing low (24/7 Wall St); no company cause found. NXT +4.9%, no dated item. Crypto rose across the board: NEAR +9.1%, ZEC +6.8%, HYPE +6.4%, TAO +5.8%; no dated item beyond the short covering.</p></div>
+      <div class="field"><p class="h">Quiet today</p><p class="b">ALL, CB, TRV, NEE, KRE, POWL, STLD, ENTG, CRCL, CLSK, SOLS, UUUU, ENPH, EOSE, CC, ENR.DE, HOOD, SNDK, MARA, and the rest of the Basing group.</p></div>
+    </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>What the Smart Money Is Saying</h2></div>
+  <blockquote class="quote">“Board oversight and key-man risk.”<span class="src">— S&P Global Ratings, placing Nvidia's AA on CreditWatch negative, 25 Nov (via The Star / FinChannel). Hearings 1 and 3 Dec.</span></blockquote>
+
+  <div class="sec plain"><span class="dot"></span><h2>Catalyst Calendar</h2><span class="sub">next ~2 weeks</span></div>
+  <div class="cal">
+    <div class="row"><span class="d">Thu 26 Nov</span><span>US markets closed (Thanksgiving). Fri 27 Nov early close, 1 pm ET.</span></div>
+    <div class="row key"><span class="d">Tue 1 Dec</span><span>Marvell (MRVL) FQ3 after the close, call 1:30 pm PT (Marvell IR; guide $3.15B, EPS $1.10). Huang closed-door House interview (CNBC). JOLTS 10:00 ET (BLS). Monthly falsifier check (F1, F2).</span></div>
+    <div class="row"><span class="d">Wed 2 Dec</span><span>Nvidia general counsel Tim Teter, House interview (CNBC). Kress briefing to Energy & Commerce: “next month”, no date (unverified).</span></div>
+    <div class="row key"><span class="d">Thu 3 Dec</span><span>Huang public testimony, Senate Banking (CNBC).</span></div>
+    <div class="row key"><span class="d">~Fri 4 Dec</span><span>Nvidia 10-Q deadline (aggregator estimate, unverified). November jobs report, 8:30 ET (BLS).</span></div>
+    <div class="row key"><span class="d">8–9 Dec</span><span>FOMC, decision 9 Dec 2 pm ET; a 25bp hike priced at ~92–96% (Kalshi, futures, 25 Nov). Broadcom (AVGO) FQ4 on 9 Dec after the close (Broadcom IR).</span></div>
+    <div class="row"><span class="d">Thu 10 Dec</span><span>November CPI, 8:30 ET (BLS) — after the FOMC.</span></div>
+    <div class="row"><span class="d">5 Jan 2027</span><span>Comment deadline on the USTR Section 301 tariff proposals; hearings from 25 Jan (USTR).</span></div>
+  </div>
+
+  <footer class="foot"><b>How to read this:</b> Neutral, balanced read — bull and bear side by side. The <b>Setup</b> lines are opinions on risk/reward and timing to weigh for yourself, not directives; the call is yours.<br><br><b>Score key:</b> <b>Heat</b> 0 = far below its highs and its 50-day (damaged; such names historically fell further), 100 = a strong run near its highs (historically no extra pullback risk). <b>Momentum</b> = strength of the recent up-move. <b>Status</b>: Leading = strong and healthy; Overheated = strong and stretched (not a pullback signal); Basing = weak, not yet a bottom; Neutral = no clear signal. <b>ATR</b> = the name’s normal daily swing. <b>Forward PEG</b> = price/earnings divided by expected growth. <b>Entry grades</b> A/B/C pass both momentum gates; the letter shows where price sits against short-term averages and is not a rank. D = failed a gate. <b>MVRV</b> = BTC market price ÷ average holder cost.<br><br><b>Sources:</b> Signal-Model signal file (Wed 25 Nov close; published 26 Nov 06:06 UTC), FRED, the Investing wiki, USTR release (25 Nov), BLS schedule, Marvell and Broadcom IR notices, Motley Fool via Yahoo Finance, TECHi, StockTitan, 24/7 Wall St, Investing.com, MoneyCheck, MarketBeat, Seeking Alpha, StockAnalysis, The Star, FinChannel, AOL, Proactive Investors, Crypto Briefing, PredictionMarketsPicks, Seoul Economic Daily, CNBC (hearing dates). Search coverage for 25 Nov was thin: no Reuters, Bloomberg or AP wrap found. No company news found for ASML, TSM, AVGO, QCOM, TSLA, NXT, ALL, CB, TRV, NEAR, ZEC or HYPE.<div class="nfa">Not financial advice — this surfaces signals to inform your own decisions.</div></footer>
+</div>
+</body>
+</html>
