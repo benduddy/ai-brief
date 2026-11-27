@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thanksgiving pause: the US tape is frozen, futures bid into a half-day — 27 November 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4EC; --ink:#27241D; --muted:#6E6A5E; --faint:#928C7C;
+    --hair:#E4DDCD; --hair-strong:#D8CFB9;
+    --clay:#C9663F; --clay-soft:#E8C4AE; --clay-wash:#F3E5DA;
+    --leading:#5F7355; --leading-wash:#E7ECDF;
+    --hot:#B8862F; --hot-wash:#F1E7CF;
+    --basing:#8A8475; --basing-wash:#EAE5D7;
+    --serif:"Newsreader", Georgia, "Times New Roman", serif;
+    --sans:"Inter", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink)}
+  body{font-family:var(--serif);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:700px;margin:0 auto;padding:56px 28px 72px}
+  .kicker,.sec h2,.sec .sub,.tag,.badge,.meta,.cal .d,.foot{font-family:var(--sans)}
+
+  .mast{display:flex;align-items:flex-start;gap:16px;margin-bottom:8px}
+  .spark{flex:0 0 auto;margin-top:8px}
+  .kicker{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin:0 0 6px}
+  h1.title{font-family:var(--serif);font-weight:500;font-size:42px;line-height:1.05;letter-spacing:-.01em;margin:0 0 10px}
+  .meta{font-size:13px;color:var(--muted);margin:0}
+  .meta b{color:var(--ink);font-weight:600}
+  .rule{height:2px;background:var(--clay);border:0;margin:22px 0 0;width:64px;border-radius:2px}
+
+  .lede{font-size:22px;line-height:1.5;margin:30px 0 8px;font-weight:400}
+  .lede em{font-style:italic}
+  .tldr{margin:14px 0 0;padding:0;list-style:none}
+  .tldr li{position:relative;padding:7px 0 7px 22px;border-bottom:1px solid var(--hair)}
+  .tldr li:last-child{border-bottom:0}
+  .tldr li::before{content:"";position:absolute;left:2px;top:16px;width:6px;height:6px;border-radius:50%;background:var(--clay)}
+  .tldr b{font-weight:600}
+
+  .sec{display:flex;align-items:center;gap:10px;margin:72px 0 24px}
+  .sec .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+  .sec h2{font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0;color:var(--ink)}
+  .sec .sub{font-size:12.5px;color:var(--faint);margin-left:auto;font-weight:500}
+  .sec.hot .dot{background:var(--hot)} .sec.lead .dot{background:var(--leading)}
+  .sec.base .dot{background:var(--basing)} .sec.entry .dot{background:var(--clay)}
+  .sec.plain .dot{background:var(--ink)}
+
+  .grades{display:flex;flex-direction:column;gap:15px;margin:0}
+  .grade-row{display:flex;gap:13px;align-items:baseline}
+  .badge{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:15px;color:#fff;margin-top:2px}
+  .badge.A{background:var(--clay)} .badge.B{background:var(--clay-soft);color:#7a3d22}
+  .badge.C{background:var(--hot-wash);color:#7a5c14;border:1px solid #d8bd7e}
+  .badge.R{background:var(--leading)} .badge.V{background:var(--basing)}
+  .gl{font-size:16px}
+  .gl .lab{font-weight:600;color:var(--ink)} .gl .tk{font-weight:600;color:var(--clay)} .gl .muted{color:var(--muted)}
+
+  .name{padding:40px 0 8px;border-top:1px solid var(--hair)}
+  .name:first-of-type{border-top:0;padding-top:8px}
+  .name .ch{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap}
+  .name .sdot{width:9px;height:9px;border-radius:50%;flex:0 0 auto;align-self:center}
+  .name.hot .sdot{background:var(--hot)} .name.lead .sdot{background:var(--leading)} .name.base .sdot{background:var(--basing)}
+  .name .nm{font-family:var(--serif);font-size:24px;font-weight:600;letter-spacing:-.01em}
+  .name .px{margin-left:auto;font-family:var(--serif);font-size:19px;color:var(--ink)}
+  .name .tags{display:flex;gap:6px;margin:14px 0 26px;flex-wrap:wrap}
+  .tag{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:999px;background:var(--clay-wash);color:#8a4a2c}
+  .tag.s-hot{background:var(--hot-wash);color:#7a5c14}
+  .tag.s-lead{background:var(--leading-wash);color:#445239}
+  .tag.s-base{background:var(--basing-wash);color:#5d584b}
+
+  .field{margin:0 0 24px}
+  .field .h{font-family:var(--serif);font-size:17px;font-weight:600;letter-spacing:0;color:var(--ink);margin:0 0 6px}
+  .field .b{font-size:16.5px;line-height:1.6;color:var(--ink);margin:0}
+  .field.read{margin-top:28px}
+  .field.read .h{color:var(--clay)}
+  .field.read .b{font-style:italic;font-size:18px;line-height:1.55}
+
+  .quote{border-left:3px solid var(--clay);background:var(--clay-wash);padding:16px 20px;border-radius:0 10px 10px 0;margin:0;font-size:18px;line-height:1.5}
+  .quote .src{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:10px;font-style:normal;line-height:1.5}
+
+  .cal{margin:0}
+  .cal .row{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:13px 0;font-size:16px;border-top:1px solid var(--hair)}
+  .cal .row:first-child{border-top:0}
+  .cal .d{font-weight:600;color:var(--clay);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+
+  .foot{margin-top:50px;padding-top:18px;border-top:1px solid var(--hair-strong);font-size:12.5px;color:var(--faint);line-height:1.6}
+  .foot a{color:var(--clay);text-decoration:none}
+  .foot .nfa{font-style:italic;margin-top:10px;font-family:var(--serif)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <svg class="spark" width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><g fill="#C9663F"><rect x="11" y="1" width="2" height="22" rx="1"/><rect x="1" y="11" width="22" height="2" rx="1"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(45 12 12)"/><rect x="11" y="1" width="2" height="22" rx="1" transform="rotate(-45 12 12)"/></g></svg>
+    <div>
+      <p class="kicker">AI-Trade · Daily Brief · Macro: deflationary-stress (day 9)</p>
+      <h1 class="title">Thanksgiving pause: the US tape is frozen, futures bid into a half-day</h1>
+      <p class="meta"><b>27 November 2026</b> · 68 names · benchmark <b>QQQ</b> · data US stocks: Wed 25 Nov close (Thu closed) · crypto + Frankfurt: Thu 26 Nov · published 06:06 UTC</p>
+    </div>
+  </header>
+  <hr class="rule">
+
+  <p class="lede">A partial day. US markets were shut on Thursday for Thanksgiving, so every US price below is still Wednesday's close and yesterday's brief already covered it. Only crypto and Siemens Energy (Frankfurt) moved in our data. Outside it, the mood turned: Nasdaq futures were up ~2.4% in Asia this morning and Korea rose ~4%. New news is mostly about financing and export rules, not demand. Today's US session closes early, at 1 pm ET.</p>
+  <ul class="tldr">
+    <li><b>Macro regime: deflationary-stress, day 9 — unchanged.</b> High-yield spreads 3.72% (FRED), +0.51 points in 50 days. VIX closed Wednesday at 28.3 after a spike to 35 (ZeroHedge); our file reads 26.8. The dollar is 3.6% above its 200-day; the real 10-year rate is 2.79%. A December Fed <i>hike</i> is still ~96% priced (Deutsche Bank, Wed close). A pay-attention flag, not an exit signal.</li>
+    <li><b>Partial-day note:</b> the freshness script said “build”, but only 9 rows changed and all are crypto plus ENR.DE. The US tape has not moved since Wednesday, so this brief leads on what is new and refers back to the 26-Nov brief for the rest.</li>
+    <li><b>Futures and Asia turned up.</b> Thursday: Nasdaq futures +0.8%, S&P +0.7%; Goldman called it “an abatement of supply”, not new buying (ZeroHedge, 26 Nov). Friday in Asia: Nasdaq futures ~+2.4%, Kospi ~+4%, SK Hynix +4.6%, Samsung +4.2% (investingLive, 27 Nov). The 10-year yield rose ~7bp to ~4.91% in Asia.</li>
+    <li><b>Nvidia export item:</b> per an FT report, Nvidia told Dell and Super Micro to stop AI-server shipments to Malaysia, Singapore, Thailand and Indonesia under the US licence rules in force since 19 Nov (via Stocktwits/TechTimes, 26–27 Nov; FT timing not confirmed). Moody's affirmed Aa1 stable (ZeroHedge, 26 Nov), against S&P's CreditWatch negative. Hearings 1–3 Dec.</li>
+    <li><b>Financing stress is the new thread.</b> CoreWeave 5-year credit-default swaps (the price of insurance against default) widened 122bp to a record 1,452bp; Oracle's hit 371bp (ZeroHedge, Wed data). Citi, StanChart and Singapore lenders paused or are reviewing data-centre loans tied to ByteDance, Alibaba and Tencent (Bloomberg via Swissinfo, 26 Nov).</li>
+    <li><b>Memory:</b> TrendForce cut its 2027 DRAM revenue forecast but still sees contract prices +10–15% in Q4 and +5–10% in Q1 2027; BNP Exane cut Micron to Neutral ($775). Spot is not falling: F2 stays intact.</li>
+    <li><b>Crypto bounced.</b> HYPE +8.2% to $66.11 (reported cause: a Franklin Templeton index ETF to add HYPE ~1 Dec, per an SEC filing — filing date unverified). BTC +1.4% to ~$61.7k. Spot BTC ETFs lost $453M on Wednesday, the 7th outflow day; November is ~−$5.4B, a monthly record (The Block). NEAR is the new grade C.</li>
+  </ul>
+
+  <div class="sec entry"><span class="dot"></span><h2>Entry Watchlist</h2><span class="sub">momentum gates + fundamental triggers</span></div>
+  <div class="grades">
+    <div class="grade-row"><span class="badge A">A</span><span class="gl"><span class="lab">Leader at a pullback/base — trend intact</span> &nbsp; <span class="tk">ALL&nbsp; CB&nbsp; TRV</span></span></div>
+    <div class="grade-row"><span class="badge C">C</span><span class="gl"><span class="lab">Leader under its 21-day — trend intact (new today)</span> &nbsp; <span class="tk">NEAR</span></span></div>
+    <div class="grade-row"><span class="badge V">V</span><span class="gl"><span class="lab">BTC — cheap (MVRV 1.14 < 1.2), not yet above its 200-day (~$71.9k)</span> &nbsp; <span class="tk">BTC</span></span></div>
+  </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>Market backdrop</h2><span class="sub">Thursday 26 – Friday 27 November (US closed Thursday)</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">Tape · What happened</span></div>
+      <div class="tags"><span class="tag s-base">Neutral</span></div>
+      <div class="field"><p class="h">The tape</p><p class="b">No US cash session on Thursday. US futures rose: Nasdaq +0.8% and S&P +0.7% by 9:00 ET Thursday (ZeroHedge), then ~+2.4% and ~+1.7% in Asia on Friday (investingLive, 04:45 UTC). Asia Thursday: Taiex +2.5%, Nikkei +0.9%, Kospi +0.3% after −6.2% Wednesday; Kioxia +12.6%, SK Hynix +2.2%, TSMC −0.2% (AP via BNN Bloomberg). Europe opened Thursday with the DAX +1.9% (AP). Oil ~$84–86 on Houthi strikes on Saudi Red Sea ports (AP, ZeroHedge). The S&P is 8.1% under its high on Wednesday's close.</p></div>
+      <div class="field"><p class="h">Macro regime</p><p class="b">Ninth day of <b>deflationary-stress</b> — not a new call, so the detail stays short. High-yield spreads 3.72% (FRED), +0.51 points over 50 days: lenders still want more pay for risk. The dollar is bid and VIX elevated. In the rotation framework this is the “deflationary bust” column, where a rotation into BTC fails. The gate fires often with close to no edge: read it as “conditions rhyme with past stress”, not as a call. The 2s10s curve is 0.24 (falsifier G1 shut).</p></div>
+      <div class="field"><p class="h">Credit and financing</p><p class="b">The stress shows up in single-name credit, not only in the index. CoreWeave 5-year CDS +122bp to a record 1,452bp; Oracle 371bp, a new wide (ZeroHedge, 26 Nov, Wednesday data). A secondary report says lenders want ~18% on CoreWeave 2031 bonds (unverified). CoreWeave is reported to be arranging a $4.5B GPU-backed loan with Morgan Stanley and MUFG, tied to Meta (secondary, unverified). Separately, banks paused data-centre loans tied to Chinese tenants after the chip curbs (Bloomberg via Swissinfo).</p></div>
+      <div class="field"><p class="h">What the smart money is saying (from the wiki)</p><p class="b">The newest followed-source note is Visser's of 8 Nov — <b>19 days old, likely stale</b>. One of his tests was a high-yield spread through 3.46%; FRED now reads 3.72%, so that test has been met on the stress side. His scenario odds then were shakeout 30 / grind 40 / reset 30. No new followed-source material since; a refresh is due.</p></div>
+      <div class="field"><p class="h">Earnings and events</p><p class="b">No prints in the window. Marvell reports 1 Dec after the close. The Nvidia hearings (1–3 Dec) and a ~4 Dec 10-Q deadline (unverified) are the next hard dates.</p></div>
+    </div>
+  <div class="sec base"><span class="dot"></span><h2>Basing / Neutral</h2><span class="sub">featured: only the names that actually moved</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">HYPE · Hyperliquid</span><span class="px">$66.11</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D</span><span class="tag">Crypto Tokens</span><span class="tag">+8.2%</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">+8.2% on the day, closed in the top 8% of its range. Reported cause: a Franklin Templeton crypto index ETF will add HYPE on or around 1 Dec, per an SEC filing (CoinCentral, TradersUnion, ~26 Nov; filing date unverified). Second up day in a row (+6.4% Wednesday).</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Sources disagree on the size of the move (+4.6% to +7.5%) and one credits the broad bounce, not the ETF. Price is still below its 50-day and 200-day and still making lower lows.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">No earnings to value. The ETF-inclusion story is a flow item, not a change in the fee business (wiki: hyperliquid-hype, fundamentals written 21 Sep).</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">21-day ~$68.20, 200-day ~$70.41, 50-day ~$76.22, 52-week high ~$97.18. Normal daily swing ≈ $5.25 (7.9%); swinging ~1.5× more than usual. The 200-day is under one normal day away.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D (below 200-day), heat 9 — cold. Cold names historically fell further. The test is a close back above the 200-day (~$70.4), less than one normal swing up; until then the bounce is a bounce, not a trend.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">A real move on a plausible flow catalyst, inside a downtrend. The 200-day is the line that turns it into something more.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">ENR.DE · Siemens Energy</span><span class="px">€112.46</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry D</span><span class="tag">Power & Grid</span><span class="tag">−4.1%</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">Nothing new found. The order book and the transformer shortage thesis are unchanged (wiki: siemens-energy-enr).</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">−4.1% on Thursday while the DAX rose ~1.9%, closing near the low of its range (15% up from the low). <b>No cause found.</b> Earlier falls (−5.2% to €111.78 on 25 Nov, per aktiencheck.de) were tied to the AI/chip sell-off and tariff worries, not company news. That makes it ~12% in two days, per aktiencheck.</p></div>
+      <div class="field"><p class="h">Valuation</p><p class="b">Forward P/E ~13.2, next-year EPS growth ~+38%, forward PEG ~0.35 — price/earnings divided by expected growth; under ~1 means you pay little for a lot of growth, over ~2 the opposite. Cheap for its growth on these numbers.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">The wiki page (last updated 21 Sep — stale) frames transformers as the five-year power bottleneck and asks whether earnings are near a cycle peak. The price now trades as a high-beta AI-power proxy: it fell with chips, not on its own news.</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">21-day ~€125.14, 50-day ~€133.09, 200-day ~€152.16, 52-week high ~€187.62. Normal daily swing ≈ €7.06 (6.3%); swinging ~1.4× more than usual. The 200-day is ~5.6 normal days up.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Entry grade D, heat 6 — cold, lower lows. On the accumulation list (PEG 0.35) but not confirmed: the watch line is a close back above the 200-day (~€152). Cold names historically fell further; fundamentals pick the name, price confirmation picks the time.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">Cheap for its growth and still falling with the AI-power group; no company news behind it.</p></div>
+    </div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">NEAR · NEAR Protocol</span><span class="px">$3.13</span></div>
+      <div class="tags"><span class="tag s-base">Basing</span><span class="tag">Entry C</span><span class="tag">Crypto Tokens</span><span class="tag">new grade</span></div>
+      <div class="field"><p class="h">Bullish</p><p class="b">New entry grade C: it passes both momentum gates (above its 200-day, positive 12-month return, relative strength in the top half). It is the only name outside the three insurers to do so. +1.6% Thursday; +9.1% Wednesday.</p></div>
+      <div class="field"><p class="h">Bearish</p><p class="b">Status is still Basing and heat 8 (cold). Price is ~23% under its 50-day and still makes lower lows. The C partly reflects how weak everything else is: relative strength is a rank.</p></div>
+      <div class="field"><p class="h">Forward view</p><p class="b">No earnings to value. The wiki's 7 Nov primary-source pass on the Milk Road claims is the current reference (wiki: near-protocol-near).</p></div>
+      <div class="field"><p class="h">Levels</p><p class="b">200-day ~$2.78 (the trend line under it), 21-day ~$3.31, 50-day ~$4.09, 52-week high ~$5.87. Normal daily swing ≈ $0.31 (9.9%); swinging ~1.5× more than usual. The 200-day is ~1.1 normal days down.</p></div>
+      <div class="field"><p class="h">Setup</p><p class="b">Grade C, “below” flavour: dipped under its 21-day with the long trend intact. Historically waiting for a pullback did not help C names. The 200-day (~$2.78) is barely more than one normal swing away, so the trend cushion is thin.</p></div>
+      <div class="field read"><p class="h">Read</p><p class="b">A leader by default in a weak tape; the 200-day is the line to respect.</p></div>
+    </div>
+  <div class="sec entry"><span class="dot"></span><h2>Entry watchlist notes</h2><span class="sub">entry grades are a timing lens, not a verdict</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">Grades · Entry watchlist</span></div>
+      <div class="tags"></div>
+      <div class="field"><p class="h">Leaders</p><p class="b">A: ALL ($271.39), CB ($380.51), TRV ($406.86) — insurers, unchanged since Wednesday (no US trading). C: NEAR (new). No B names. Grades read the real trend fields; they are a timing lens, not a verdict on the business.</p></div>
+      <div class="field"><p class="h">Leading but pricey</p><p class="b">CB: grade A, PEG ~10.5 — the move is in the trend, not the valuation.</p></div>
+      <div class="field"><p class="h">Cheap for its growth, and the price agrees — candidate now</p><p class="b">None. Every name on the accumulation list is under its 200-day. Unchanged from 26 Nov; see that brief for the closest names (ANET, QCOM, AMD).</p></div>
+      <div class="field"><p class="h">BTC value row (V)</p><p class="b">MVRV 1.14 (26 Nov): cheap on holder cost (1.0 = average holder at break-even). BTC ~$61.7k, under its 200-day (~$71.9k). Not confirmed. JPMorgan flagged a record discount at Strategy (MSTR) as a possible capitulation sign (investingLive, 27 Nov).</p></div>
+    </div>
+  <div class="sec plain"><span class="dot"></span><h2>What changed today</h2><span class="sub">Thu 26 Nov vs Wed 25 Nov (crypto + Frankfurt only)</span></div>
+    <div class="name base">
+      <div class="ch"><span class="sdot"></span><span class="nm">Changes · Day over day</span></div>
+      <div class="tags"></div>
+      <div class="field"><p class="h">Status flips</p><p class="b">None.</p></div>
+      <div class="field"><p class="h">Moves</p><p class="b">Crypto up across the board: HYPE +8.2%, ZEC +4.7%, UNI +3.0%, SOL +2.9%, TAO +2.0%, NEAR +1.6%, BTC +1.4%, AR +0.7%. ENR.DE −4.1%. No dated cause found beyond HYPE's ETF item.</p></div>
+      <div class="field"><p class="h">Carried from 26 Nov (not repeated)</p><p class="b">Wednesday's dip-buys (LRCX, MU, AMAT, ASML, TSM, AVGO, GOOGL, KLAC, NVDA, ANET, ARM, GLW, INTC, QCOM, WDC, MP, TSLA), the coldest names (CRCL, SNDK, UUUU, heat 0) and the hottest (ALL, CB, TRV) are unchanged — see the 26-Nov brief.</p></div>
+      <div class="field"><p class="h">Quiet today</p><p class="b">Every US-listed name (market closed).</p></div>
+    </div>
+
+  <div class="sec plain"><span class="dot"></span><h2>What the Smart Money Is Saying</h2></div>
+  <blockquote class="quote">“An abatement of supply.”<span class="src">— Goldman Sachs on Thursday's futures bounce, via ZeroHedge, 26 Nov: less selling, not new buying.</span></blockquote>
+
+  <div class="sec plain"><span class="dot"></span><h2>Catalyst Calendar</h2><span class="sub">next ~2 weeks</span></div>
+  <div class="cal">
+    <div class="row"><span class="d">Fri 27 Nov</span><span>US early close, 1 pm ET (bond market 2 pm ET).</span></div>
+    <div class="row"><span class="d">~Mon 30 Nov – Tue 1 Dec</span><span>HYPE added to a Franklin Templeton crypto index ETF “on or around 1 Dec” (filing date unverified).</span></div>
+    <div class="row key"><span class="d">Tue 1 Dec</span><span>Marvell (MRVL) FQ3 after the close (consensus EPS ~$1.10, revenue ~$3.15B). Huang closed-door House interview (CNBC). JOLTS 10:00 ET (BLS). Monthly falsifier check (F1, F2).</span></div>
+    <div class="row"><span class="d">Wed 2 Dec</span><span>Nvidia general counsel Tim Teter, House interview (CNBC). Kress briefing to Energy & Commerce: “next month”, no date (unverified).</span></div>
+    <div class="row key"><span class="d">Thu 3 Dec</span><span>Huang public testimony, Senate Banking (CNBC, 24 Nov; today's search could not reconfirm the date).</span></div>
+    <div class="row key"><span class="d">~Fri 4 Dec</span><span>Nvidia 10-Q deadline (aggregator estimate, unverified). November jobs report, 8:30 ET (BLS).</span></div>
+    <div class="row key"><span class="d">8–9 Dec</span><span>FOMC, decision 9 Dec 2 pm ET; a hike ~96% priced (Deutsche Bank, 25 Nov). Broadcom (AVGO) FQ4 on 9 Dec after the close.</span></div>
+  </div>
+
+  <footer class="foot"><b>How to read this:</b> Neutral, balanced read — bull and bear side by side. The <b>Setup</b> lines are opinions on risk/reward and timing to weigh for yourself, not directives; the call is yours.<br><br><b>Score key:</b> <b>Heat</b> 0 = far below its highs and its 50-day (damaged; such names historically fell further), 100 = a strong run near its highs (historically no extra pullback risk). <b>Momentum</b> = strength of the recent up-move. <b>Status</b>: Leading = strong and healthy; Overheated = strong and stretched (not a pullback signal); Basing = weak, not yet a bottom; Neutral = no clear signal. <b>ATR</b> = the name’s normal daily swing. <b>Forward PEG</b> = price/earnings divided by expected growth. <b>Entry grades</b> A/B/C pass both momentum gates; the letter shows where price sits against short-term averages and is not a rank. D = failed a gate. <b>MVRV</b> = BTC market price ÷ average holder cost. <b>CDS</b> = credit-default swap, the price of insurance against a company's default.<br><br><b>Sources:</b> Signal-Model signal file (US: Wed 25 Nov close; crypto and Frankfurt: Thu 26 Nov; published 27 Nov 06:06 UTC), FRED, the Investing wiki, AP via BNN Bloomberg, ZeroHedge, investingLive, The Block (SoSoValue data), CoinCentral, TradersUnion, Stocktwits, TechTimes (FT report), Bloomberg via Swissinfo, TrendForce via GuruFocus, ad-hoc-news, aktiencheck.de, CNBC (hearing dates), Marvell IR. Most backdrop sources are secondary; no Reuters or Bloomberg wrap was read directly. No cause found for ENR.DE or the crypto moves other than HYPE.<div class="nfa">Not financial advice — this surfaces signals to inform your own decisions.</div></footer>
+</div>
+</body>
+</html>
